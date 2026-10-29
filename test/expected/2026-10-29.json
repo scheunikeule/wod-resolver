@@ -1,0 +1,124 @@
+{
+  "date": "2026-10-29",
+  "source": "feed",
+  "schema": 1,
+  "resolver": { "by": "hand-claude-fable-5", "at": "2026-10-29T13:00:00Z", "confidence": 1.0, "issues": [] },
+  "hashtag": "#welovetopracticeeveryday",
+  "rpe": "8",
+  "flags": [],
+  "programs": [
+    {
+      "name": "class",
+      "title": null,
+      "blocks": [
+        {
+          "ordinal": 1, "letter": null, "kind": "warmup", "tags": ["warmup"], "label": "warm up",
+          "focus": null, "name": null, "benchmark": false, "minutes": 6,
+          "series": null, "cycleNote": null, "partner": null, "optional": false, "bonus": false,
+          "segments": [
+            {
+              "role": "main", "chain": null, "title": null, "intent": null,
+              "clock": { "type": "interval", "workSec": 45, "restSec": 15, "rounds": 6, "stationMode": "rotate" },
+              "scheme": null,
+              "work": {
+                "mode": "stations",
+                "stations": [
+                  { "n": 1, "repeat": 1, "rest": false, "items": [ { "id": "down-up", "name": "Down up", "qty": { "mode": "none" }, "perSide": false, "load": { "mode": "none" }, "mods": {}, "alternatives": [], "text": "down ups" } ] },
+                  { "n": 2, "repeat": 1, "rest": false, "items": [ { "id": "instep-stretch-rotation", "name": "Instep stretch + rotation", "qty": { "mode": "none" }, "perSide": false, "load": { "mode": "none" }, "mods": {}, "alternatives": ["sumo squat stretch", "down dog & seal"], "text": "instep stretch + rotation/sumo squat stretch/down dog & seal" } ] }
+                ]
+              },
+              "riders": [], "capSec": null, "restAfterSec": null,
+              "raw": "3 sets\n45sec on/15sec off"
+            }
+          ],
+          "scale": [], "notes": [],
+          "raw": "warm up (6min)\n3 sets\n45sec on/15sec off\ndown ups\ninstep stretch + rotation/sumo squat stretch/down dog & seal"
+        },
+        {
+          "ordinal": 2, "letter": null, "kind": "prehab", "tags": ["prehab"], "label": "prehab",
+          "focus": null, "name": null, "benchmark": false, "minutes": 5,
+          "series": null, "cycleNote": null, "partner": null, "optional": false, "bonus": false,
+          "segments": [
+            {
+              "role": "main", "chain": null, "title": null, "intent": null,
+              "clock": { "type": "interval", "workSec": 30, "restSec": 10, "rounds": 6, "stationMode": "rotate" },
+              "scheme": null,
+              "work": {
+                "mode": "stations",
+                "stations": [
+                  { "n": 1, "repeat": 1, "rest": false, "items": [ { "id": "roll-out", "name": "Roll out", "qty": { "mode": "none" }, "perSide": false, "load": { "mode": "none" }, "mods": {}, "alternatives": [], "text": "barbell roll outs" } ] },
+                  { "n": 2, "repeat": 1, "rest": false, "items": [ { "id": "tuck-sit-hang", "name": "Tuck sit hang", "qty": { "mode": "none" }, "perSide": false, "load": { "mode": "none" }, "mods": {}, "alternatives": [], "text": "tuck sit hang" } ] }
+                ]
+              },
+              "riders": [], "capSec": null, "restAfterSec": null,
+              "raw": "3 sets\n30sec on/10sec off"
+            }
+          ],
+          "scale": [], "notes": [],
+          "raw": "prehab (5min)\n3 sets\n30sec on/10sec off\nbarbell roll outs\ntuck sit hang"
+        },
+        {
+          "ordinal": 3, "letter": null, "kind": "strength", "tags": ["strength"], "label": "strength",
+          "focus": "squat clean", "name": null, "benchmark": false, "minutes": 20,
+          "series": { "n": 2, "of": 4 }, "cycleNote": null, "partner": null, "optional": false, "bonus": false,
+          "segments": [
+            {
+              "role": "main", "chain": null, "title": null, "intent": null,
+              "clock": { "type": "emom", "everySec": 60, "rounds": 10, "alternate": false, "ranges": [] },
+              "scheme": null,
+              "work": {
+                "mode": "rows",
+                "rows": [
+                  {
+                    "id": "squat-clean", "name": "Squat Clean Complex",
+                    "qty": { "mode": "reps", "value": 1 }, "perSide": false,
+                    "load": { "mode": "pct", "pct": 74, "pctOf": "1rm" },
+                    "mods": {},
+                    "parts": [
+                      { "id": "hang-squat-clean", "name": "Hang Squat Clean", "reps": 1 },
+                      { "id": "squat-clean", "name": "Below-the-knee Squat Clean", "reps": 1 }
+                    ],
+                    "alternatives": [],
+                    "text": "1hang squat clean + 1 below the knee squat clean @74%"
+                  }
+                ]
+              },
+              "riders": [], "capSec": null, "restAfterSec": null,
+              "raw": "squat clean 2/4\nemom x 10"
+            }
+          ],
+          "scale": [], "notes": [],
+          "raw": "strength (20min)\nsquat clean 2/4\nemom x 10\n1hang squat clean + 1 below the knee squat clean @74%"
+        },
+        {
+          "ordinal": 4, "letter": null, "kind": "metcon", "tags": ["metcon"], "label": "metcon",
+          "focus": null, "name": null, "benchmark": false, "minutes": 15,
+          "series": null, "cycleNote": null, "partner": null, "optional": false, "bonus": false,
+          "segments": [
+            {
+              "role": "main", "chain": null, "title": null, "intent": "time",
+              "clock": { "type": "forTime", "rounds": 5, "capSec": 900, "roundRestSec": null, "eachForTime": false },
+              "scheme": { "type": "descending", "steps": [15, 12, 9, 6, 3], "unit": "reps", "by": null, "appliesTo": "all", "scaled": null, "pcts": null },
+              "work": {
+                "mode": "rows",
+                "rows": [
+                  { "id": "thruster", "name": "Thruster", "qty": { "mode": "reps", "value": null }, "perSide": false, "load": { "mode": "pair", "m": 40, "f": 30, "unit": "kg" }, "mods": {}, "alternatives": [], "text": "thruster 40/30" },
+                  { "id": "pull-up", "name": "Pull Up", "qty": { "mode": "reps", "value": null }, "perSide": false, "load": { "mode": "bw" }, "mods": {}, "alternatives": [], "text": "pull ups" },
+                  { "id": "burpee-over-bar", "name": "Burpee Over Bar", "qty": { "mode": "reps", "value": null }, "perSide": false, "load": { "mode": "none" }, "mods": {}, "alternatives": [], "text": "burpees over bar" }
+                ]
+              },
+              "riders": [], "capSec": 900, "restAfterSec": null,
+              "raw": "for time\n15-12-9-6-3 reps"
+            }
+          ],
+          "scale": [
+            { "target": "thruster", "options": ["30/20"] },
+            { "target": "pull-up", "options": ["ring rows"] }
+          ],
+          "notes": ["scale 30/20, ring rows"],
+          "raw": "metcon (15min)\nfor time\n15-12-9-6-3 reps\nthruster 40/30\npull ups\nburpees over bar\nscale 30/20, ring rows"
+        }
+      ]
+    }
+  ]
+}
