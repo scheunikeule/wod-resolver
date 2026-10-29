@@ -15,3 +15,8 @@ The app never parses text again; it fetches `wod/today.json`.
 - `wod/` — published output: `YYYY-MM-DD.json`, `index.json`, `today.json`.
 
 Run the gate: `python3 scripts/validate.py test/expected/2026-10-27.json test/corpus/2026-10-27.txt`
+
+**Hash recipe** (`wod/index.json`): `sha256` hex over the entry's normalized
+lines joined with `\n` — i.e. `hashlib.sha256("\n".join(normalize_lines(raw_entry_text)).encode()).hexdigest()`,
+BEFORE the class/HYROX split (the `hyrox` marker line is included). A nightly
+run recomputes this per date and skips dates whose hash is unchanged.

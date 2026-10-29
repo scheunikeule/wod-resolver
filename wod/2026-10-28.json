@@ -1,0 +1,473 @@
+{
+ "date": "2026-10-28",
+ "source": "feed",
+ "schema": 1,
+ "resolver": {
+  "by": "hand-claude-fable-5",
+  "at": "2026-10-29T10:40:00Z",
+  "confidence": 1.0,
+  "issues": []
+ },
+ "hashtag": "#buildingstrength",
+ "rpe": "7",
+ "flags": [],
+ "programs": [
+  {
+   "name": "class",
+   "title": null,
+   "blocks": [
+    {
+     "ordinal": 1,
+     "letter": null,
+     "kind": "warmup",
+     "tags": [
+      "warmup"
+     ],
+     "label": "warm up",
+     "focus": null,
+     "name": null,
+     "benchmark": false,
+     "minutes": 6,
+     "series": null,
+     "cycleNote": null,
+     "partner": null,
+     "optional": false,
+     "bonus": false,
+     "segments": [
+      {
+       "role": "main",
+       "chain": null,
+       "title": null,
+       "intent": null,
+       "clock": {
+        "type": "interval",
+        "workSec": 45,
+        "restSec": 15,
+        "rounds": 6,
+        "stationMode": "rotate"
+       },
+       "scheme": null,
+       "work": {
+        "mode": "stations",
+        "stations": [
+         {
+          "n": 1,
+          "repeat": 1,
+          "rest": false,
+          "items": [
+           {
+            "id": "single-under",
+            "name": "Single under",
+            "qty": {
+             "mode": "none"
+            },
+            "perSide": false,
+            "load": {
+             "mode": "none"
+            },
+            "mods": {},
+            "alternatives": [],
+            "text": "rope jumps"
+           }
+          ]
+         },
+         {
+          "n": 2,
+          "repeat": 1,
+          "rest": false,
+          "items": [
+           {
+            "id": "instep-stretch-rotation",
+            "name": "Instep stretch + rotation",
+            "qty": {
+             "mode": "none"
+            },
+            "perSide": false,
+            "load": {
+             "mode": "none"
+            },
+            "mods": {},
+            "alternatives": [
+             "down dog & seal",
+             "dynamic bridge"
+            ],
+            "text": "instep stretch + rotation/down dog & seal/dynamic bridge"
+           }
+          ]
+         }
+        ]
+       },
+       "riders": [],
+       "capSec": null,
+       "restAfterSec": null,
+       "raw": "3 sets\n45sec on/15sec off"
+      }
+     ],
+     "scale": [],
+     "notes": [],
+     "raw": "warm up (6min)\n3 sets\n45sec on/15sec off\nrope jumps\ninstep stretch + rotation/down dog & seal/dynamic bridge"
+    },
+    {
+     "ordinal": 2,
+     "letter": null,
+     "kind": "prehab",
+     "tags": [
+      "prehab"
+     ],
+     "label": "prehab",
+     "focus": null,
+     "name": null,
+     "benchmark": false,
+     "minutes": 5,
+     "series": null,
+     "cycleNote": null,
+     "partner": null,
+     "optional": false,
+     "bonus": false,
+     "segments": [
+      {
+       "role": "main",
+       "chain": null,
+       "title": null,
+       "intent": null,
+       "clock": {
+        "type": "interval",
+        "workSec": 30,
+        "restSec": 10,
+        "rounds": 6,
+        "stationMode": "rotate"
+       },
+       "scheme": null,
+       "work": {
+        "mode": "stations",
+        "stations": [
+         {
+          "n": 1,
+          "repeat": 1,
+          "rest": false,
+          "items": [
+           {
+            "id": "good-morning",
+            "name": "Good morning",
+            "qty": {
+             "mode": "none"
+            },
+            "perSide": false,
+            "load": {
+             "mode": "implement"
+            },
+            "mods": {},
+            "alternatives": [],
+            "text": "barbell good mornings"
+           }
+          ]
+         },
+         {
+          "n": 2,
+          "repeat": 1,
+          "rest": false,
+          "items": [
+           {
+            "id": "kb-twist",
+            "name": "KB twist",
+            "qty": {
+             "mode": "none"
+            },
+            "perSide": false,
+            "load": {
+             "mode": "none"
+            },
+            "mods": {},
+            "alternatives": [],
+            "text": "kb twist"
+           }
+          ]
+         }
+        ]
+       },
+       "riders": [],
+       "capSec": null,
+       "restAfterSec": null,
+       "raw": "3 sets\n30sec on/10sec off"
+      }
+     ],
+     "scale": [],
+     "notes": [],
+     "raw": "prehab (5min)\n3 sets\n30sec on/10sec off\nbarbell good mornings\nkb twist"
+    },
+    {
+     "ordinal": 3,
+     "letter": null,
+     "kind": "strength",
+     "tags": [
+      "strength"
+     ],
+     "label": "strength",
+     "focus": "deadlift",
+     "name": null,
+     "benchmark": false,
+     "minutes": 20,
+     "series": {
+      "n": 2,
+      "of": 6
+     },
+     "cycleNote": null,
+     "partner": null,
+     "optional": false,
+     "bonus": false,
+     "segments": [
+      {
+       "role": "warmup",
+       "chain": null,
+       "title": "warm up",
+       "intent": null,
+       "clock": {
+        "type": "sets",
+        "sets": 2,
+        "reps": 5,
+        "restSec": 120,
+        "restBetweenRepsSec": null,
+        "groups": []
+       },
+       "scheme": null,
+       "work": {
+        "mode": "rows",
+        "rows": [
+         {
+          "id": "deadlift",
+          "name": "Deadlift",
+          "qty": {
+           "mode": "reps",
+           "value": 5
+          },
+          "perSide": false,
+          "load": {
+           "mode": "pct",
+           "pct": 55,
+           "pctOf": "1rm"
+          },
+          "mods": {
+           "tempo": "31X1"
+          },
+          "alternatives": [],
+          "text": "5 reps @55%"
+         }
+        ]
+       },
+       "riders": [
+        {
+         "kind": "note",
+         "text": "*tempo 31X1"
+        }
+       ],
+       "capSec": null,
+       "restAfterSec": null,
+       "raw": "warm up\n2 sets\n5 reps @55%\n2min rest"
+      },
+      {
+       "role": "main",
+       "chain": "into",
+       "title": null,
+       "intent": null,
+       "clock": {
+        "type": "sets",
+        "sets": 4,
+        "reps": 7,
+        "restSec": 120,
+        "restBetweenRepsSec": null,
+        "groups": []
+       },
+       "scheme": null,
+       "work": {
+        "mode": "rows",
+        "rows": [
+         {
+          "id": "deadlift",
+          "name": "Deadlift",
+          "qty": {
+           "mode": "reps",
+           "value": 7
+          },
+          "perSide": false,
+          "load": {
+           "mode": "pct",
+           "pct": null,
+           "pctRange": [
+            60,
+            65
+           ],
+           "pctOf": "1rm"
+          },
+          "mods": {
+           "tempo": "31X1"
+          },
+          "alternatives": [],
+          "text": "7 reps @60-65%"
+         }
+        ]
+       },
+       "riders": [
+        {
+         "kind": "note",
+         "text": "*tempo 31X1"
+        }
+       ],
+       "capSec": null,
+       "restAfterSec": null,
+       "raw": "into\n4 sets\n7 reps @60-65%\n2min rest"
+      }
+     ],
+     "scale": [],
+     "notes": [],
+     "raw": "strength (20min)\ndeadlift 2/6\nwarm up\n2 sets\n5 reps @55%\n2min rest\n*tempo 31X1\ninto\n4 sets\n7 reps @60-65%\n2min rest\n*tempo 31X1"
+    },
+    {
+     "ordinal": 4,
+     "letter": null,
+     "kind": "metcon",
+     "tags": [
+      "metcon"
+     ],
+     "label": "metcon",
+     "focus": null,
+     "name": null,
+     "benchmark": false,
+     "minutes": 14,
+     "series": null,
+     "cycleNote": null,
+     "partner": null,
+     "optional": false,
+     "bonus": false,
+     "segments": [
+      {
+       "role": "main",
+       "chain": null,
+       "title": null,
+       "intent": null,
+       "clock": {
+        "type": "amrap",
+        "sec": 840,
+        "maxSec": null
+       },
+       "scheme": null,
+       "work": {
+        "mode": "rows",
+        "rows": [
+         {
+          "id": "kb-swing",
+          "name": "KB Swing",
+          "qty": {
+           "mode": "reps",
+           "value": 18
+          },
+          "perSide": false,
+          "load": {
+           "mode": "pair",
+           "m": 32,
+           "f": 24,
+           "unit": "kg"
+          },
+          "mods": {},
+          "alternatives": [],
+          "text": "18 swings 32/24"
+         },
+         {
+          "id": "double-under",
+          "name": "Double Under",
+          "qty": {
+           "mode": "reps",
+           "value": 36
+          },
+          "perSide": false,
+          "load": {
+           "mode": "none"
+          },
+          "mods": {},
+          "alternatives": [],
+          "text": "36 double unders"
+         },
+         {
+          "id": "kb-goblet-lunge",
+          "name": "KB Goblet Lunge",
+          "qty": {
+           "mode": "reps",
+           "value": 18
+          },
+          "perSide": false,
+          "load": {
+           "mode": "pair",
+           "m": 32,
+           "f": 24,
+           "unit": "kg"
+          },
+          "mods": {},
+          "alternatives": [],
+          "text": "18 alt goblet lunges 32/24"
+         },
+         {
+          "id": "double-under",
+          "name": "Double Under",
+          "qty": {
+           "mode": "reps",
+           "value": 36
+          },
+          "perSide": false,
+          "load": {
+           "mode": "none"
+          },
+          "mods": {},
+          "alternatives": [],
+          "text": "36 double unders"
+         },
+         {
+          "id": "wall-walk",
+          "name": "Wall Walk",
+          "qty": {
+           "mode": "reps",
+           "value": 4
+          },
+          "perSide": false,
+          "load": {
+           "mode": "none"
+          },
+          "mods": {},
+          "alternatives": [],
+          "text": "4 wall walks"
+         }
+        ]
+       },
+       "riders": [],
+       "capSec": null,
+       "restAfterSec": null,
+       "raw": "amrap 14min"
+      }
+     ],
+     "scale": [
+      {
+       "target": "kb-swing",
+       "options": [
+        "24/12"
+       ]
+      },
+      {
+       "target": "kb-goblet-lunge",
+       "options": [
+        "24/12"
+       ]
+      },
+      {
+       "target": "double-under",
+       "options": [
+        "single unders (x2)"
+       ]
+      }
+     ],
+     "notes": [
+      "scale 24/12, single unders (x2)"
+     ],
+     "raw": "metcon (14min)\namrap 14min\n18 swings 32/24\n36 double unders\n18 alt goblet lunges 32/24\n36 double unders\n4 wall walks\nscale 24/12, single unders (x2)"
+    }
+   ]
+  }
+ ]
+}

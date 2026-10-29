@@ -1,0 +1,20 @@
+[
+ {
+  "date": "2026-10-29",
+  "hash": "5f45bd02fa11803324141c1f84488f177a07891f04acdc6da2d681d345d202fd",
+  "resolvedAt": "2026-10-29T10:45:00Z",
+  "confidence": 1.0
+ },
+ {
+  "date": "2026-10-28",
+  "hash": "5bf05641d5eab9e9ba88a4cdf2dd6cb666ca91430d9c8f92a7b2af9a993f4a6f",
+  "resolvedAt": "2026-10-29T10:45:00Z",
+  "confidence": 1.0
+ },
+ {
+  "date": "2026-10-27",
+  "hash": "5b0cdd7055ad14960c1b8ecbb18c827d57c606e8baa09db4e6d16a17881c4061",
+  "resolvedAt": "2026-10-29T10:45:00Z",
+  "confidence": 1.0
+ }
+]
