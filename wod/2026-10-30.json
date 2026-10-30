@@ -1,0 +1,460 @@
+{
+ "date": "2026-10-30",
+ "source": "feed",
+ "schema": 1,
+ "resolver": {
+  "by": "nightly-claude-fable-5",
+  "at": "2026-10-30T08:45:00Z",
+  "confidence": 0.95,
+  "issues": [
+   "load '22;5/15' read as 22,5/15 kg (semicolon decimal typo, line kept verbatim)"
+  ]
+ },
+ "hashtag": "#upperbodystrength",
+ "rpe": "8",
+ "flags": [],
+ "programs": [
+  {
+   "name": "class",
+   "title": null,
+   "blocks": [
+    {
+     "ordinal": 1,
+     "letter": null,
+     "kind": "warmup",
+     "tags": [
+      "warmup"
+     ],
+     "label": "warm up",
+     "focus": null,
+     "name": null,
+     "benchmark": false,
+     "minutes": 4,
+     "series": null,
+     "cycleNote": null,
+     "partner": null,
+     "optional": false,
+     "bonus": false,
+     "segments": [
+      {
+       "role": "main",
+       "chain": null,
+       "title": null,
+       "intent": null,
+       "clock": {
+        "type": "sets",
+        "sets": 2,
+        "restSec": null,
+        "restBetweenRepsSec": null,
+        "groups": []
+       },
+       "scheme": null,
+       "work": {
+        "mode": "stations",
+        "stations": [
+         {
+          "n": 1,
+          "repeat": 1,
+          "rest": false,
+          "items": [
+           {
+            "id": "row",
+            "name": "Row",
+            "qty": {
+             "mode": "none"
+            },
+            "perSide": false,
+            "load": {
+             "mode": "none"
+            },
+            "mods": {},
+            "alternatives": [],
+            "text": "row"
+           }
+          ]
+         },
+         {
+          "n": 2,
+          "repeat": 1,
+          "rest": false,
+          "items": [
+           {
+            "id": "down-dog-seal",
+            "name": "Down dog & seal",
+            "qty": {
+             "mode": "none"
+            },
+            "perSide": false,
+            "load": {
+             "mode": "none"
+            },
+            "mods": {},
+            "alternatives": [
+             "twisted cross"
+            ],
+            "text": "down dog & seal/twisted cross"
+           }
+          ]
+         }
+        ]
+       },
+       "riders": [],
+       "capSec": null,
+       "restAfterSec": null,
+       "raw": "2 sets"
+      }
+     ],
+     "scale": [],
+     "notes": [],
+     "raw": "warm up (4min)\n2 sets\nrow\ndown dog & seal/twisted cross"
+    },
+    {
+     "ordinal": 2,
+     "letter": null,
+     "kind": "prehab",
+     "tags": [
+      "prehab"
+     ],
+     "label": "prehab",
+     "focus": null,
+     "name": null,
+     "benchmark": false,
+     "minutes": 5,
+     "series": null,
+     "cycleNote": null,
+     "partner": null,
+     "optional": false,
+     "bonus": false,
+     "segments": [
+      {
+       "role": "main",
+       "chain": null,
+       "title": null,
+       "intent": null,
+       "clock": {
+        "type": "sets",
+        "sets": 3,
+        "restSec": null,
+        "restBetweenRepsSec": null,
+        "groups": []
+       },
+       "scheme": null,
+       "work": {
+        "mode": "stations",
+        "stations": [
+         {
+          "n": 1,
+          "repeat": 1,
+          "rest": false,
+          "items": [
+           {
+            "id": "barbell-top-press-hold",
+            "name": "Barbell top-of-press hold",
+            "qty": {
+             "mode": "none"
+            },
+            "perSide": false,
+            "load": {
+             "mode": "none"
+            },
+            "mods": {},
+            "alternatives": [],
+            "text": "top of press hold"
+           }
+          ]
+         },
+         {
+          "n": 2,
+          "repeat": 1,
+          "rest": false,
+          "items": [
+           {
+            "id": "rower-pike-up",
+            "name": "Rower pike up",
+            "qty": {
+             "mode": "none"
+            },
+            "perSide": false,
+            "load": {
+             "mode": "none"
+            },
+            "mods": {},
+            "alternatives": [],
+            "text": "rower pike ups"
+           }
+          ]
+         }
+        ]
+       },
+       "riders": [],
+       "capSec": null,
+       "restAfterSec": null,
+       "raw": "3 sets"
+      }
+     ],
+     "scale": [],
+     "notes": [],
+     "raw": "prehab (5min)\n3 sets\ntop of press hold\nrower pike ups"
+    },
+    {
+     "ordinal": 3,
+     "letter": null,
+     "kind": "strength",
+     "tags": [
+      "strength"
+     ],
+     "label": "strength",
+     "focus": "shoulder press",
+     "name": null,
+     "benchmark": false,
+     "minutes": 18,
+     "series": {
+      "n": 2,
+      "of": 6
+     },
+     "cycleNote": null,
+     "partner": null,
+     "optional": false,
+     "bonus": false,
+     "segments": [
+      {
+       "role": "warmup",
+       "chain": null,
+       "title": "warm up",
+       "intent": null,
+       "clock": {
+        "type": "sets",
+        "sets": 2,
+        "reps": 5,
+        "restSec": 120,
+        "restBetweenRepsSec": null,
+        "groups": []
+       },
+       "scheme": null,
+       "work": {
+        "mode": "rows",
+        "rows": [
+         {
+          "id": "shoulder-press",
+          "name": "Shoulder press",
+          "qty": {
+           "mode": "reps",
+           "value": 5
+          },
+          "perSide": false,
+          "load": {
+           "mode": "pct",
+           "pct": 45,
+           "pctOf": "1rm"
+          },
+          "mods": {
+           "tempo": "31X1"
+          },
+          "alternatives": [],
+          "text": "5 reps @45%"
+         }
+        ]
+       },
+       "riders": [
+        {
+         "kind": "note",
+         "text": "*tempo 31X1"
+        }
+       ],
+       "capSec": null,
+       "restAfterSec": null,
+       "raw": "warm up\n2 sets\n5 reps @45%\n2min rest"
+      },
+      {
+       "role": "main",
+       "chain": "into",
+       "title": null,
+       "intent": null,
+       "clock": {
+        "type": "sets",
+        "sets": 4,
+        "reps": 8,
+        "restSec": 120,
+        "restBetweenRepsSec": null,
+        "groups": []
+       },
+       "scheme": null,
+       "work": {
+        "mode": "rows",
+        "rows": [
+         {
+          "id": "shoulder-press",
+          "name": "Shoulder press",
+          "qty": {
+           "mode": "reps",
+           "value": 8
+          },
+          "perSide": false,
+          "load": {
+           "mode": "pct",
+           "pct": null,
+           "pctRange": [
+            60,
+            65
+           ],
+           "pctOf": "1rm"
+          },
+          "mods": {
+           "tempo": "31X1"
+          },
+          "alternatives": [],
+          "text": "8 reps @60-65%"
+         }
+        ]
+       },
+       "riders": [
+        {
+         "kind": "note",
+         "text": "*tempo 31X1"
+        }
+       ],
+       "capSec": null,
+       "restAfterSec": null,
+       "raw": "into\n4 sets\n8 reps @60-65%\n2min rest"
+      }
+     ],
+     "scale": [],
+     "notes": [],
+     "raw": "strength (18min)\nshoulder press 2/6\nwarm up\n2 sets\n5 reps @45%\n2min rest\n*tempo 31X1\ninto\n4 sets\n8 reps @60-65%\n2min rest\n*tempo 31X1"
+    },
+    {
+     "ordinal": 4,
+     "letter": null,
+     "kind": "metcon",
+     "tags": [
+      "metcon"
+     ],
+     "label": "metcon",
+     "focus": null,
+     "name": null,
+     "benchmark": false,
+     "minutes": 20,
+     "series": null,
+     "cycleNote": null,
+     "partner": null,
+     "optional": false,
+     "bonus": false,
+     "segments": [
+      {
+       "role": "main",
+       "chain": null,
+       "title": null,
+       "intent": "time",
+       "clock": {
+        "type": "forTime",
+        "rounds": 6,
+        "capSec": 1200,
+        "roundRestSec": null,
+        "eachForTime": false
+       },
+       "scheme": null,
+       "work": {
+        "mode": "rows",
+        "rows": [
+         {
+          "id": "db-hang-power-snatch",
+          "name": "DB hang power snatch",
+          "qty": {
+           "mode": "reps",
+           "value": 8
+          },
+          "perSide": false,
+          "load": {
+           "mode": "pair",
+           "m": 22.5,
+           "f": 15,
+           "unit": "kg"
+          },
+          "mods": {
+           "double": true
+          },
+          "alternatives": [],
+          "text": "8 double db hang power snatches 22;5/15"
+         },
+         {
+          "id": "row",
+          "name": "Row",
+          "qty": {
+           "mode": "cal",
+           "value": 20,
+           "f": 15
+          },
+          "perSide": false,
+          "load": {
+           "mode": "none"
+          },
+          "mods": {},
+          "alternatives": [],
+          "text": "20/15cal row"
+         },
+         {
+          "id": "db-devils-press",
+          "name": "DB devils press",
+          "qty": {
+           "mode": "reps",
+           "value": 4
+          },
+          "perSide": false,
+          "load": {
+           "mode": "pair",
+           "m": 22.5,
+           "f": 15,
+           "unit": "kg"
+          },
+          "mods": {
+           "double": true
+          },
+          "alternatives": [],
+          "text": "4 double db devils press 22,5/15"
+         },
+         {
+          "id": "sit-up",
+          "name": "Sit up",
+          "qty": {
+           "mode": "reps",
+           "value": 20
+          },
+          "perSide": false,
+          "load": {
+           "mode": "none"
+          },
+          "mods": {},
+          "alternatives": [],
+          "text": "20 sit ups"
+         }
+        ]
+       },
+       "riders": [],
+       "capSec": 1200,
+       "restAfterSec": null,
+       "raw": "6 rounds\nfor time"
+      }
+     ],
+     "scale": [
+      {
+       "target": "db-hang-power-snatch",
+       "options": [
+        "15/10"
+       ]
+      },
+      {
+       "target": "db-devils-press",
+       "options": [
+        "15/10"
+       ]
+      }
+     ],
+     "notes": [
+      "scale 15/10"
+     ],
+     "raw": "metcon (20min)\n6 rounds\nfor time\n8 double db hang power snatches 22;5/15\n20/15cal row\n4 double db devils press 22,5/15\n20 sit ups\nscale 15/10"
+    }
+   ]
+  }
+ ]
+}
