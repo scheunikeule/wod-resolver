@@ -1,11 +1,5 @@
 [
  {
-  "date": "2026-10-30",
-  "hash": "e1e8b199e11ff6e15d89ca3054a4f959f2f15f7a97ac6c7673610258fe2cb7f3",
-  "resolvedAt": "2026-10-30T09:40:00Z",
-  "confidence": 0.95
- },
- {
   "date": "2026-10-29",
   "hash": "5f45bd02fa11803324141c1f84488f177a07891f04acdc6da2d681d345d202fd",
   "resolvedAt": "2026-10-29T10:45:00Z",
