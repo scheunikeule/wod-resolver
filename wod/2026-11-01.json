@@ -1,0 +1,621 @@
+{
+ "date": "2026-11-01",
+ "source": "feed",
+ "schema": 1,
+ "resolver": {
+  "by": "nightly-claude",
+  "at": "2026-11-01T07:39:46Z",
+  "confidence": 0.8,
+  "issues": [
+   "rounds derived: warm up 6 = 3 sets x 2 stations",
+   "rounds derived: prehab 6 = 3 sets x 2 stations",
+   "rounds derived: conditioning 6 = 1 pass x 6 numbered stations (no pass count in text)",
+   "movement ids unverified: prompt/catalog.json absent in repo (run, wall-ball, kb-farmers-carry)"
+  ]
+ },
+ "hashtag": null,
+ "rpe": null,
+ "flags": [],
+ "programs": [
+  {
+   "name": "hyrox",
+   "title": null,
+   "blocks": [
+    {
+     "ordinal": 1,
+     "letter": null,
+     "kind": "warmup",
+     "tags": [
+      "warmup"
+     ],
+     "label": "warm up",
+     "focus": null,
+     "name": null,
+     "benchmark": false,
+     "minutes": null,
+     "series": null,
+     "cycleNote": null,
+     "partner": null,
+     "optional": false,
+     "bonus": false,
+     "segments": [
+      {
+       "role": "main",
+       "chain": null,
+       "title": null,
+       "intent": null,
+       "clock": {
+        "type": "none"
+       },
+       "scheme": null,
+       "work": {
+        "mode": "rows",
+        "rows": [
+         {
+          "id": "run",
+          "name": "Run",
+          "qty": {
+           "mode": "m",
+           "value": 200
+          },
+          "perSide": false,
+          "load": {
+           "mode": "none"
+          },
+          "mods": {},
+          "alternatives": [],
+          "text": "200m run"
+         }
+        ]
+       },
+       "riders": [],
+       "capSec": null,
+       "restAfterSec": null,
+       "raw": "200m run"
+      },
+      {
+       "role": "main",
+       "chain": "into",
+       "title": null,
+       "intent": null,
+       "clock": {
+        "type": "interval",
+        "workSec": 45,
+        "restSec": 15,
+        "rounds": 6,
+        "stationMode": "rotate"
+       },
+       "scheme": null,
+       "work": {
+        "mode": "stations",
+        "stations": [
+         {
+          "n": 1,
+          "repeat": 1,
+          "rest": false,
+          "items": [
+           {
+            "id": "down-up",
+            "name": "Down up",
+            "qty": {
+             "mode": "none"
+            },
+            "perSide": false,
+            "load": {
+             "mode": "none"
+            },
+            "mods": {},
+            "alternatives": [],
+            "text": "down ups"
+           }
+          ]
+         },
+         {
+          "n": 2,
+          "repeat": 1,
+          "rest": false,
+          "items": [
+           {
+            "id": "instep-stretch-rotation",
+            "name": "Instep stretch + rotation",
+            "qty": {
+             "mode": "none"
+            },
+            "perSide": false,
+            "load": {
+             "mode": "none"
+            },
+            "mods": {},
+            "alternatives": [
+             "sumo squat stretch",
+             "handwalk+push up"
+            ],
+            "text": "instep stretch+rotation/sumo squat stretch/handwalk+push up"
+           }
+          ]
+         }
+        ]
+       },
+       "riders": [],
+       "capSec": null,
+       "restAfterSec": null,
+       "raw": "into\n3sets\n45sec on/15sec off"
+      }
+     ],
+     "scale": [],
+     "notes": [],
+     "raw": "warm up\n200m run\ninto\n3sets\n45sec on/15sec off\ndown ups\ninstep stretch+rotation/sumo squat stretch/handwalk+push up"
+    },
+    {
+     "ordinal": 2,
+     "letter": null,
+     "kind": "prehab",
+     "tags": [
+      "prehab"
+     ],
+     "label": "prehab",
+     "focus": null,
+     "name": null,
+     "benchmark": false,
+     "minutes": null,
+     "series": null,
+     "cycleNote": null,
+     "partner": null,
+     "optional": false,
+     "bonus": false,
+     "segments": [
+      {
+       "role": "main",
+       "chain": null,
+       "title": null,
+       "intent": null,
+       "clock": {
+        "type": "interval",
+        "workSec": 30,
+        "restSec": 10,
+        "rounds": 6,
+        "stationMode": "rotate"
+       },
+       "scheme": null,
+       "work": {
+        "mode": "stations",
+        "stations": [
+         {
+          "n": 1,
+          "repeat": 1,
+          "rest": false,
+          "items": [
+           {
+            "id": "top-push-up-hold",
+            "name": "Top of push up hold",
+            "qty": {
+             "mode": "none"
+            },
+            "perSide": false,
+            "load": {
+             "mode": "none"
+            },
+            "mods": {},
+            "alternatives": [],
+            "text": "top of push up hold"
+           }
+          ]
+         },
+         {
+          "n": 2,
+          "repeat": 1,
+          "rest": false,
+          "items": [
+           {
+            "id": "hollow-hold",
+            "name": "Hollow hold",
+            "qty": {
+             "mode": "none"
+            },
+            "perSide": false,
+            "load": {
+             "mode": "none"
+            },
+            "mods": {},
+            "alternatives": [],
+            "text": "hollow hold"
+           }
+          ]
+         }
+        ]
+       },
+       "riders": [],
+       "capSec": null,
+       "restAfterSec": null,
+       "raw": "3sets\n30sec on/10sec off"
+      }
+     ],
+     "scale": [],
+     "notes": [],
+     "raw": "prehab\n3sets\n30sec on/10sec off\ntop of push up hold\nhollow hold"
+    },
+    {
+     "ordinal": 3,
+     "letter": null,
+     "kind": "conditioning",
+     "tags": [
+      "conditioning"
+     ],
+     "label": "conditioning",
+     "focus": null,
+     "name": null,
+     "benchmark": false,
+     "minutes": null,
+     "series": null,
+     "cycleNote": null,
+     "partner": {
+      "mode": "teams",
+      "note": "in teams of two"
+     },
+     "optional": false,
+     "bonus": false,
+     "segments": [
+      {
+       "role": "main",
+       "chain": null,
+       "title": null,
+       "intent": null,
+       "clock": {
+        "type": "interval",
+        "workSec": 600,
+        "restSec": 120,
+        "rounds": 6,
+        "stationMode": "rotate"
+       },
+       "scheme": null,
+       "work": {
+        "mode": "stations",
+        "stations": [
+         {
+          "n": 1,
+          "repeat": 1,
+          "rest": false,
+          "items": [],
+          "sub": [
+           {
+            "letter": "a",
+            "repeat": 1,
+            "rest": false,
+            "items": [
+             {
+              "id": "ski",
+              "name": "Ski",
+              "qty": {
+               "mode": "m",
+               "value": 500,
+               "f": 400
+              },
+              "perSide": false,
+              "load": {
+               "mode": "none"
+              },
+              "mods": {},
+              "alternatives": [],
+              "text": "a) 500/400m ski"
+             }
+            ]
+           },
+           {
+            "letter": "b",
+            "repeat": 1,
+            "rest": false,
+            "items": [
+             {
+              "id": "sled-push",
+              "name": "Sled Push",
+              "qty": {
+               "mode": "max",
+               "maxUnit": "m"
+              },
+              "perSide": false,
+              "load": {
+               "mode": "pair",
+               "m": 100,
+               "f": 80,
+               "unit": "kg"
+              },
+              "mods": {},
+              "alternatives": [],
+              "text": "b) max m sled push 100/80"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "n": 2,
+          "repeat": 1,
+          "rest": false,
+          "items": [],
+          "sub": [
+           {
+            "letter": "a",
+            "repeat": 1,
+            "rest": false,
+            "items": [
+             {
+              "id": "row",
+              "name": "Row",
+              "qty": {
+               "mode": "m",
+               "value": 500,
+               "f": 400
+              },
+              "perSide": false,
+              "load": {
+               "mode": "none"
+              },
+              "mods": {},
+              "alternatives": [],
+              "text": "a) 500/400m row"
+             }
+            ]
+           },
+           {
+            "letter": "b",
+            "repeat": 1,
+            "rest": false,
+            "items": [
+             {
+              "id": "kb-farmers-carry",
+              "name": "KB farmers carry",
+              "qty": {
+               "mode": "max",
+               "maxUnit": "m"
+              },
+              "perSide": false,
+              "load": {
+               "mode": "pair",
+               "m": 24,
+               "f": 16,
+               "unit": "kg"
+              },
+              "mods": {
+               "double": true
+              },
+              "alternatives": [],
+              "text": "b) max m double kb farmers carry 24/16"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "n": 3,
+          "repeat": 1,
+          "rest": false,
+          "items": [],
+          "sub": [
+           {
+            "letter": "a",
+            "repeat": 1,
+            "rest": false,
+            "items": [
+             {
+              "id": "run",
+              "name": "Run",
+              "qty": {
+               "mode": "m",
+               "value": 400
+              },
+              "perSide": false,
+              "load": {
+               "mode": "none"
+              },
+              "mods": {},
+              "alternatives": [],
+              "text": "a) 400m run"
+             }
+            ]
+           },
+           {
+            "letter": "b",
+            "repeat": 1,
+            "rest": false,
+            "items": [
+             {
+              "id": "ski",
+              "name": "Ski",
+              "qty": {
+               "mode": "max",
+               "maxUnit": "m"
+              },
+              "perSide": false,
+              "load": {
+               "mode": "none"
+              },
+              "mods": {},
+              "alternatives": [],
+              "text": "b) max m ski"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "n": 4,
+          "repeat": 1,
+          "rest": false,
+          "items": [],
+          "sub": [
+           {
+            "letter": "a",
+            "repeat": 1,
+            "rest": false,
+            "items": [
+             {
+              "id": "ski",
+              "name": "Ski",
+              "qty": {
+               "mode": "m",
+               "value": 500,
+               "f": 400
+              },
+              "perSide": false,
+              "load": {
+               "mode": "none"
+              },
+              "mods": {},
+              "alternatives": [],
+              "text": "a) 500/400m ski"
+             }
+            ]
+           },
+           {
+            "letter": "b",
+            "repeat": 1,
+            "rest": false,
+            "items": [
+             {
+              "id": "sandbag-lunge",
+              "name": "Sandbag lunge",
+              "qty": {
+               "mode": "max",
+               "maxUnit": "m"
+              },
+              "perSide": false,
+              "load": {
+               "mode": "pair",
+               "m": 30,
+               "f": 20,
+               "unit": "kg"
+              },
+              "mods": {
+               "alternating": true
+              },
+              "alternatives": [],
+              "text": "b) max alt sandbag lunges 30/20"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "n": 5,
+          "repeat": 1,
+          "rest": false,
+          "items": [],
+          "sub": [
+           {
+            "letter": "a",
+            "repeat": 1,
+            "rest": false,
+            "items": [
+             {
+              "id": "row",
+              "name": "Row",
+              "qty": {
+               "mode": "m",
+               "value": 500,
+               "f": 400
+              },
+              "perSide": false,
+              "load": {
+               "mode": "none"
+              },
+              "mods": {},
+              "alternatives": [],
+              "text": "a) 500/400m row"
+             }
+            ]
+           },
+           {
+            "letter": "b",
+            "repeat": 1,
+            "rest": false,
+            "items": [
+             {
+              "id": "wall-ball",
+              "name": "Wall ball",
+              "qty": {
+               "mode": "max",
+               "maxUnit": "reps"
+              },
+              "perSide": false,
+              "load": {
+               "mode": "pair",
+               "m": 9,
+               "f": 6,
+               "unit": "kg"
+              },
+              "mods": {},
+              "alternatives": [],
+              "text": "b) max wall balls 9/6"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "n": 6,
+          "repeat": 1,
+          "rest": false,
+          "items": [],
+          "sub": [
+           {
+            "letter": "a",
+            "repeat": 1,
+            "rest": false,
+            "items": [
+             {
+              "id": "run",
+              "name": "Run",
+              "qty": {
+               "mode": "m",
+               "value": 400
+              },
+              "perSide": false,
+              "load": {
+               "mode": "none"
+              },
+              "mods": {},
+              "alternatives": [],
+              "text": "a) 400m run"
+             }
+            ]
+           },
+           {
+            "letter": "b",
+            "repeat": 1,
+            "rest": false,
+            "items": [
+             {
+              "id": "row",
+              "name": "Row",
+              "qty": {
+               "mode": "max",
+               "maxUnit": "m"
+              },
+              "perSide": false,
+              "load": {
+               "mode": "none"
+              },
+              "mods": {},
+              "alternatives": [],
+              "text": "b) max m row"
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       "riders": [],
+       "capSec": null,
+       "restAfterSec": null,
+       "raw": "10min on/2min off"
+      }
+     ],
+     "scale": [],
+     "notes": [],
+     "raw": "conditioning\nin teams of two\n10min on/2min off\n1.\na) 500/400m ski\nb) max m sled push 100/80\n2.\na) 500/400m row\nb) max m double kb farmers carry 24/16\n3.\na) 400m run\nb) max m ski\n4.\na) 500/400m ski\nb) max alt sandbag lunges 30/20\n5.\na) 500/400m row\nb) max wall balls 9/6\n6.\na) 400m run\nb) max m row"
+    }
+   ]
+  }
+ ]
+}
