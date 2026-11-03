@@ -1,0 +1,858 @@
+{
+ "date": "2026-11-03",
+ "source": "feed",
+ "schema": 1,
+ "resolver": {
+  "by": "nightly-claude",
+  "at": "2026-11-03T07:39:15Z",
+  "confidence": 0.35,
+  "issues": [
+   "rounds derived: class warm up 6 = 3 sets x 2 stations",
+   "rounds derived: class prehab 6 = 3 sets x 2 stations",
+   "rounds derived: hyrox warm up 6 = 2 sets x 3 stations",
+   "rounds derived: hyrox prehab 6 = 3 sets x 2 stations",
+   "warm up '/' lines read as per-set rotation (alternatives list the other sets' movements)",
+   "source typo '45sec on715sec off' (hyrox warm up) read as 45sec on/15sec off; not covered by normalize.py",
+   "unknown movement 'samson stretch' -> custom:samson stretch",
+   "unknown movement 'sumo squat stretch' -> custom:sumo squat stretch",
+   "unknown movement 'medball plank hold' -> custom:medball plank hold",
+   "strength '+' line read as one bundle per set window; 6 sets, no minutes-derived rounds",
+   "60/50 after burpee box jump overs read as box height cm; 9/6 after wall balls read as ball kg",
+   "hyrox conditioning emom x 42 over 7 numbered stations (rotate, 6 passes); station 7 rest",
+   "movement ids unverified: prompt/catalog.json absent in repo"
+  ]
+ },
+ "hashtag": "#functionaltraining",
+ "rpe": "7",
+ "flags": [],
+ "programs": [
+  {
+   "name": "class",
+   "title": null,
+   "blocks": [
+    {
+     "ordinal": 1,
+     "letter": null,
+     "kind": "warmup",
+     "tags": [
+      "warmup"
+     ],
+     "label": "warm up",
+     "focus": null,
+     "name": null,
+     "benchmark": false,
+     "minutes": 6,
+     "series": null,
+     "cycleNote": null,
+     "partner": null,
+     "optional": false,
+     "bonus": false,
+     "segments": [
+      {
+       "role": "main",
+       "chain": null,
+       "title": null,
+       "intent": null,
+       "clock": {
+        "type": "interval",
+        "workSec": 45,
+        "restSec": 15,
+        "rounds": 6,
+        "stationMode": "rotate"
+       },
+       "scheme": null,
+       "work": {
+        "mode": "stations",
+        "stations": [
+         {
+          "n": 1,
+          "repeat": 1,
+          "rest": false,
+          "items": [
+           {
+            "id": "down-ups",
+            "name": "Down ups",
+            "qty": {
+             "mode": "none"
+            },
+            "perSide": false,
+            "load": {
+             "mode": "none"
+            },
+            "mods": {},
+            "alternatives": [],
+            "text": "down ups"
+           }
+          ]
+         },
+         {
+          "n": 2,
+          "repeat": 1,
+          "rest": false,
+          "items": [
+           {
+            "id": "custom:samson stretch",
+            "name": "Samson stretch",
+            "qty": {
+             "mode": "none"
+            },
+            "perSide": false,
+            "load": {
+             "mode": "none"
+            },
+            "mods": {},
+            "alternatives": [
+             "lateral squat stretch",
+             "down dog & seal"
+            ],
+            "text": "samson stretch/lateral squat stretch/down dog & seal"
+           }
+          ]
+         }
+        ]
+       },
+       "riders": [],
+       "capSec": null,
+       "restAfterSec": null,
+       "raw": "3 sets\n45sec on/15sec off\ndown ups\nsamson stretch/lateral squat stretch/down dog & seal"
+      }
+     ],
+     "scale": [],
+     "notes": [],
+     "raw": "warm up (6min)\n3 sets\n45sec on/15sec off\ndown ups\nsamson stretch/lateral squat stretch/down dog & seal"
+    },
+    {
+     "ordinal": 2,
+     "letter": null,
+     "kind": "prehab",
+     "tags": [
+      "prehab"
+     ],
+     "label": "prehab",
+     "focus": null,
+     "name": null,
+     "benchmark": false,
+     "minutes": 5,
+     "series": null,
+     "cycleNote": null,
+     "partner": null,
+     "optional": false,
+     "bonus": false,
+     "segments": [
+      {
+       "role": "main",
+       "chain": null,
+       "title": null,
+       "intent": null,
+       "clock": {
+        "type": "interval",
+        "workSec": 30,
+        "restSec": 10,
+        "rounds": 6,
+        "stationMode": "rotate"
+       },
+       "scheme": null,
+       "work": {
+        "mode": "stations",
+        "stations": [
+         {
+          "n": 1,
+          "repeat": 1,
+          "rest": false,
+          "items": [
+           {
+            "id": "kb-hollow-hold",
+            "name": "KB hollow hold",
+            "qty": {
+             "mode": "none"
+            },
+            "perSide": false,
+            "load": {
+             "mode": "none"
+            },
+            "mods": {},
+            "alternatives": [],
+            "text": "kb hollow hold"
+           }
+          ]
+         },
+         {
+          "n": 2,
+          "repeat": 1,
+          "rest": false,
+          "items": [
+           {
+            "id": "kb-pass-through",
+            "name": "KB pass through",
+            "qty": {
+             "mode": "none"
+            },
+            "perSide": false,
+            "load": {
+             "mode": "none"
+            },
+            "mods": {},
+            "alternatives": [],
+            "text": "kb pass through"
+           }
+          ]
+         }
+        ]
+       },
+       "riders": [],
+       "capSec": null,
+       "restAfterSec": null,
+       "raw": "3 sets\n30sec on/10sec off\nkb hollow hold\nkb pass through"
+      }
+     ],
+     "scale": [],
+     "notes": [],
+     "raw": "prehab (5min)\n3 sets\n30sec on/10sec off\nkb hollow hold\nkb pass through"
+    },
+    {
+     "ordinal": 3,
+     "letter": null,
+     "kind": "strength",
+     "tags": [
+      "strength"
+     ],
+     "label": "strength/functional",
+     "focus": null,
+     "name": null,
+     "benchmark": false,
+     "minutes": 20,
+     "series": null,
+     "cycleNote": null,
+     "partner": {
+      "mode": "ygig",
+      "note": "teams of two"
+     },
+     "optional": false,
+     "bonus": false,
+     "segments": [
+      {
+       "role": "main",
+       "chain": null,
+       "title": null,
+       "intent": null,
+       "clock": {
+        "type": "sets",
+        "sets": 6,
+        "reps": null,
+        "restSec": null,
+        "restBetweenRepsSec": null,
+        "groups": []
+       },
+       "scheme": null,
+       "work": {
+        "mode": "stations",
+        "stations": [
+         {
+          "n": null,
+          "repeat": 1,
+          "rest": false,
+          "items": [
+           {
+            "id": "turkish-get-up",
+            "name": "Turkish get up (up)",
+            "qty": {
+             "mode": "none"
+            },
+            "perSide": false,
+            "load": {
+             "mode": "pair",
+             "m": 24,
+             "f": 16,
+             "unit": "kg"
+            },
+            "mods": {},
+            "alternatives": [],
+            "text": "turkish get up (up) 24/16"
+           },
+           {
+            "id": "single-arm-kb-overhead-carry",
+            "name": "Single arm KB overhead carry",
+            "qty": {
+             "mode": "m",
+             "value": 20
+            },
+            "perSide": false,
+            "load": {
+             "mode": "pair",
+             "m": 24,
+             "f": 16,
+             "unit": "kg"
+            },
+            "mods": {},
+            "alternatives": [],
+            "text": "20m single arm kb overhead carry 24/16"
+           },
+           {
+            "id": "turkish-get-up",
+            "name": "Turkish get up (down)",
+            "qty": {
+             "mode": "none"
+            },
+            "perSide": false,
+            "load": {
+             "mode": "pair",
+             "m": 24,
+             "f": 16,
+             "unit": "kg"
+            },
+            "mods": {},
+            "alternatives": [],
+            "text": "turkish get ups (down) 24/16"
+           },
+           {
+            "id": "kb-twist",
+            "name": "KB twist",
+            "qty": {
+             "mode": "reps",
+             "value": 10
+            },
+            "perSide": false,
+            "load": {
+             "mode": "pair",
+             "m": 24,
+             "f": 16,
+             "unit": "kg"
+            },
+            "mods": {},
+            "alternatives": [],
+            "text": "10 kb twist 24/16"
+           }
+          ]
+         }
+        ]
+       },
+       "riders": [],
+       "capSec": null,
+       "restAfterSec": null,
+       "raw": "YGIG\n6 sets\nturkish get up (up) 24/16 + 20m single arm kb overhead carry 24/16 + turkish get ups (down) 24/16 + 10 kb twist 24/16"
+      }
+     ],
+     "scale": [
+      {
+       "target": "24/16",
+       "options": [
+        "16/12",
+        "db"
+       ]
+      }
+     ],
+     "notes": [
+      "scale 16/12, db"
+     ],
+     "raw": "strength/functional (20min)\nteams of two\nYGIG\n6 sets\nturkish get up (up) 24/16 + 20m single arm kb overhead carry 24/16 + turkish get ups (down) 24/16 + 10 kb twist 24/16\nscale 16/12, db"
+    },
+    {
+     "ordinal": 4,
+     "letter": null,
+     "kind": "metcon",
+     "tags": [
+      "metcon"
+     ],
+     "label": "metcon",
+     "focus": null,
+     "name": null,
+     "benchmark": false,
+     "minutes": 16,
+     "series": null,
+     "cycleNote": null,
+     "partner": null,
+     "optional": false,
+     "bonus": false,
+     "segments": [
+      {
+       "role": "main",
+       "chain": null,
+       "title": null,
+       "intent": null,
+       "clock": {
+        "type": "amrap",
+        "sec": 960,
+        "maxSec": null
+       },
+       "scheme": null,
+       "work": {
+        "mode": "rows",
+        "rows": [
+         {
+          "id": "wall-walk",
+          "name": "Wall walk",
+          "qty": {
+           "mode": "reps",
+           "value": 4
+          },
+          "perSide": false,
+          "load": {
+           "mode": "none"
+          },
+          "mods": {},
+          "alternatives": [],
+          "text": "4 wall walks"
+         },
+         {
+          "id": "burpee-box-jump-over",
+          "name": "Burpee box jump over",
+          "qty": {
+           "mode": "reps",
+           "value": 8
+          },
+          "perSide": false,
+          "load": {
+           "mode": "pair",
+           "m": 60,
+           "f": 50,
+           "unit": "cm"
+          },
+          "mods": {},
+          "alternatives": [],
+          "text": "8 burpee box jump overs 60/50"
+         },
+         {
+          "id": "kb-swing",
+          "name": "KB swing",
+          "qty": {
+           "mode": "reps",
+           "value": 12
+          },
+          "perSide": false,
+          "load": {
+           "mode": "pair",
+           "m": 32,
+           "f": 24,
+           "unit": "kg"
+          },
+          "mods": {},
+          "alternatives": [],
+          "text": "12 swings 32/24"
+         }
+        ]
+       },
+       "riders": [],
+       "capSec": null,
+       "restAfterSec": null,
+       "raw": "amrap 16min\n4 wall walks\n8 burpee box jump overs 60/50"
+      }
+     ],
+     "scale": [
+      {
+       "target": "32/24",
+       "options": [
+        "20/12"
+       ]
+      }
+     ],
+     "notes": [
+      "scale 20/12"
+     ],
+     "raw": "metcon (16min)\namrap 16min\n4 wall walks\n8 burpee box jump overs 60/50\n12 swings 32/24\nscale 20/12"
+    }
+   ]
+  },
+  {
+   "name": "hyrox",
+   "title": null,
+   "blocks": [
+    {
+     "ordinal": 1,
+     "letter": null,
+     "kind": "warmup",
+     "tags": [
+      "warmup"
+     ],
+     "label": "warm up",
+     "focus": null,
+     "name": null,
+     "benchmark": false,
+     "minutes": null,
+     "series": null,
+     "cycleNote": null,
+     "partner": null,
+     "optional": false,
+     "bonus": false,
+     "segments": [
+      {
+       "role": "main",
+       "chain": null,
+       "title": null,
+       "intent": null,
+       "clock": {
+        "type": "interval",
+        "workSec": 45,
+        "restSec": 15,
+        "rounds": 6,
+        "stationMode": "rotate"
+       },
+       "scheme": null,
+       "work": {
+        "mode": "stations",
+        "stations": [
+         {
+          "n": 1,
+          "repeat": 1,
+          "rest": false,
+          "items": [
+           {
+            "id": "ski-erg",
+            "name": "Ski erg",
+            "qty": {
+             "mode": "none"
+            },
+            "perSide": false,
+            "load": {
+             "mode": "none"
+            },
+            "mods": {},
+            "alternatives": [
+             "row"
+            ],
+            "text": "ski/row"
+           }
+          ]
+         },
+         {
+          "n": 2,
+          "repeat": 1,
+          "rest": false,
+          "items": [
+           {
+            "id": "down-ups",
+            "name": "Down ups",
+            "qty": {
+             "mode": "none"
+            },
+            "perSide": false,
+            "load": {
+             "mode": "none"
+            },
+            "mods": {},
+            "alternatives": [],
+            "text": "down ups"
+           }
+          ]
+         },
+         {
+          "n": 3,
+          "repeat": 1,
+          "rest": false,
+          "items": [
+           {
+            "id": "custom:sumo squat stretch",
+            "name": "Sumo squat stretch",
+            "qty": {
+             "mode": "none"
+            },
+            "perSide": false,
+            "load": {
+             "mode": "none"
+            },
+            "mods": {},
+            "alternatives": [
+             "samson stretch"
+            ],
+            "text": "sumo squat stretch/samson stretch"
+           }
+          ]
+         }
+        ]
+       },
+       "riders": [],
+       "capSec": null,
+       "restAfterSec": null,
+       "raw": "2sets\n45sec on715sec off\nski/row\ndown ups\nsumo squat stretch/samson stretch"
+      }
+     ],
+     "scale": [],
+     "notes": [],
+     "raw": "warm up\n2sets\n45sec on715sec off\nski/row\ndown ups\nsumo squat stretch/samson stretch"
+    },
+    {
+     "ordinal": 2,
+     "letter": null,
+     "kind": "prehab",
+     "tags": [
+      "prehab"
+     ],
+     "label": "prehab",
+     "focus": null,
+     "name": null,
+     "benchmark": false,
+     "minutes": null,
+     "series": null,
+     "cycleNote": null,
+     "partner": null,
+     "optional": false,
+     "bonus": false,
+     "segments": [
+      {
+       "role": "main",
+       "chain": null,
+       "title": null,
+       "intent": null,
+       "clock": {
+        "type": "interval",
+        "workSec": 30,
+        "restSec": 10,
+        "rounds": 6,
+        "stationMode": "rotate"
+       },
+       "scheme": null,
+       "work": {
+        "mode": "stations",
+        "stations": [
+         {
+          "n": 1,
+          "repeat": 1,
+          "rest": false,
+          "items": [
+           {
+            "id": "custom:medball plank hold",
+            "name": "Medball plank hold",
+            "qty": {
+             "mode": "none"
+            },
+            "perSide": false,
+            "load": {
+             "mode": "none"
+            },
+            "mods": {},
+            "alternatives": [],
+            "text": "medball plank hold"
+           }
+          ]
+         },
+         {
+          "n": 2,
+          "repeat": 1,
+          "rest": false,
+          "items": [
+           {
+            "id": "tuck-up",
+            "name": "Tuck ups",
+            "qty": {
+             "mode": "none"
+            },
+            "perSide": false,
+            "load": {
+             "mode": "none"
+            },
+            "mods": {},
+            "alternatives": [],
+            "text": "tuck ups"
+           }
+          ]
+         }
+        ]
+       },
+       "riders": [],
+       "capSec": null,
+       "restAfterSec": null,
+       "raw": "3sets\n30sec on/10sec off\nmedball plank hold\ntuck ups"
+      }
+     ],
+     "scale": [],
+     "notes": [],
+     "raw": "prehab\n3sets\n30sec on/10sec off\nmedball plank hold\ntuck ups"
+    },
+    {
+     "ordinal": 3,
+     "letter": null,
+     "kind": "conditioning",
+     "tags": [
+      "conditioning"
+     ],
+     "label": "conditioning",
+     "focus": null,
+     "name": null,
+     "benchmark": false,
+     "minutes": null,
+     "series": null,
+     "cycleNote": null,
+     "partner": null,
+     "optional": false,
+     "bonus": false,
+     "segments": [
+      {
+       "role": "main",
+       "chain": null,
+       "title": null,
+       "intent": null,
+       "clock": {
+        "type": "emom",
+        "everySec": 60,
+        "rounds": 42,
+        "alternate": false
+       },
+       "scheme": null,
+       "work": {
+        "mode": "stations",
+        "stations": [
+         {
+          "n": 1,
+          "repeat": 1,
+          "rest": false,
+          "items": [
+           {
+            "id": "ski-erg",
+            "name": "Ski erg",
+            "qty": {
+             "mode": "cal",
+             "value": 12,
+             "f": 9
+            },
+            "perSide": false,
+            "load": {
+             "mode": "none"
+            },
+            "mods": {},
+            "alternatives": [],
+            "text": "12/9cal ski"
+           }
+          ]
+         },
+         {
+          "n": 2,
+          "repeat": 1,
+          "rest": false,
+          "items": [
+           {
+            "id": "burpee-broad-jump",
+            "name": "Burpee broad jump",
+            "qty": {
+             "mode": "reps",
+             "value": 8
+            },
+            "perSide": false,
+            "load": {
+             "mode": "none"
+            },
+            "mods": {},
+            "alternatives": [],
+            "text": "8 burpee broad jumps"
+           }
+          ]
+         },
+         {
+          "n": 3,
+          "repeat": 1,
+          "rest": false,
+          "items": [
+           {
+            "id": "wall-ball",
+            "name": "Wall ball",
+            "qty": {
+             "mode": "reps",
+             "value": 20
+            },
+            "perSide": false,
+            "load": {
+             "mode": "pair",
+             "m": 9,
+             "f": 6,
+             "unit": "kg"
+            },
+            "mods": {},
+            "alternatives": [],
+            "text": "20 wall balls 9/6"
+           }
+          ]
+         },
+         {
+          "n": 4,
+          "repeat": 1,
+          "rest": false,
+          "items": [
+           {
+            "id": "row",
+            "name": "Row",
+            "qty": {
+             "mode": "cal",
+             "value": 12,
+             "f": 9
+            },
+            "perSide": false,
+            "load": {
+             "mode": "none"
+            },
+            "mods": {},
+            "alternatives": [],
+            "text": "12/9cal row"
+           }
+          ]
+         },
+         {
+          "n": 5,
+          "repeat": 1,
+          "rest": false,
+          "items": [
+           {
+            "id": "sandbag-lunge",
+            "name": "Alt sandbag lunge",
+            "qty": {
+             "mode": "reps",
+             "value": 20
+            },
+            "perSide": false,
+            "load": {
+             "mode": "pair",
+             "m": 30,
+             "f": 20,
+             "unit": "kg"
+            },
+            "mods": {},
+            "alternatives": [],
+            "text": "20 alt sandbag lunges 30/20"
+           }
+          ]
+         },
+         {
+          "n": 6,
+          "repeat": 1,
+          "rest": false,
+          "items": [
+           {
+            "id": "double-kb-farmers-carry",
+            "name": "Double KB farmers carry",
+            "qty": {
+             "mode": "m",
+             "value": 50
+            },
+            "perSide": false,
+            "load": {
+             "mode": "pair",
+             "m": 32,
+             "f": 24,
+             "unit": "kg"
+            },
+            "mods": {},
+            "alternatives": [],
+            "text": "50m double kb farmers carry 32/24"
+           }
+          ]
+         },
+         {
+          "n": 7,
+          "repeat": 1,
+          "rest": true,
+          "items": [],
+          "raw": "7. rest"
+         }
+        ]
+       },
+       "riders": [],
+       "capSec": null,
+       "restAfterSec": null,
+       "raw": "emom x 42\n1. 12/9cal ski\n2. 8 burpee broad jumps\n3. 20 wall balls 9/6\n4. 12/9cal row\n5. 20 alt sandbag lunges 30/20\n6. 50m double kb farmers carry 32/24\n7. rest"
+      }
+     ],
+     "scale": [],
+     "notes": [],
+     "raw": "conditioning\nemom x 42\n1. 12/9cal ski\n2. 8 burpee broad jumps\n3. 20 wall balls 9/6\n4. 12/9cal row\n5. 20 alt sandbag lunges 30/20\n6. 50m double kb farmers carry 32/24\n7. rest"
+    }
+   ]
+  }
+ ]
+}
