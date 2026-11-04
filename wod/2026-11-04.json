@@ -1,0 +1,383 @@
+{
+ "date": "2026-11-04",
+ "source": "feed",
+ "schema": 1,
+ "resolver": {
+  "by": "nightly-claude",
+  "at": "2026-11-04T07:39:15Z",
+  "confidence": 0.75,
+  "issues": [
+   "rounds derived: class warm up 6 = 3 sets x 2 stations",
+   "rounds derived: class prehab 6 = 3 sets x 2 stations",
+   "unknown movement 'instep stretch + rotation' -> custom:instep stretch + rotation",
+   "warm up '/' line read as per-set rotation (alternatives list the other sets' movements)",
+   "movement ids unverified: prompt/catalog.json absent in repo"
+  ]
+ },
+ "hashtag": "#legslegsleg",
+ "rpe": "8",
+ "flags": [],
+ "programs": [
+  {
+   "name": "class",
+   "title": null,
+   "blocks": [
+    {
+     "ordinal": 1,
+     "letter": null,
+     "kind": "warmup",
+     "tags": [
+      "warmup"
+     ],
+     "label": "warm up",
+     "focus": null,
+     "name": null,
+     "benchmark": false,
+     "minutes": 6,
+     "series": null,
+     "cycleNote": null,
+     "partner": null,
+     "optional": false,
+     "bonus": false,
+     "segments": [
+      {
+       "role": "main",
+       "chain": null,
+       "title": null,
+       "intent": null,
+       "clock": {
+        "type": "interval",
+        "workSec": 45,
+        "restSec": 15,
+        "rounds": 6,
+        "stationMode": "rotate"
+       },
+       "scheme": null,
+       "work": {
+        "mode": "stations",
+        "stations": [
+         {
+          "n": 1,
+          "repeat": 1,
+          "rest": false,
+          "items": [
+           {
+            "id": "down-up",
+            "name": "Down up",
+            "qty": {
+             "mode": "none"
+            },
+            "perSide": false,
+            "load": {
+             "mode": "none"
+            },
+            "mods": {},
+            "alternatives": [],
+            "text": "down ups"
+           }
+          ]
+         },
+         {
+          "n": 2,
+          "repeat": 1,
+          "rest": false,
+          "items": [
+           {
+            "id": "custom:instep stretch + rotation",
+            "name": "Instep stretch + rotation",
+            "qty": {
+             "mode": "none"
+            },
+            "perSide": false,
+            "load": {
+             "mode": "none"
+            },
+            "mods": {},
+            "alternatives": [
+             "handwalk + push up",
+             "down dog & seal"
+            ],
+            "text": "instep stretch + rotation/handwalk + push up/down dog & seal"
+           }
+          ]
+         }
+        ]
+       },
+       "riders": [],
+       "capSec": null,
+       "restAfterSec": null,
+       "raw": "3 sets\n45sec on/15sec off"
+      }
+     ],
+     "scale": [],
+     "notes": [],
+     "raw": "warm up (6min)\n3 sets\n45sec on/15sec off\ndown ups\ninstep stretch + rotation/handwalk + push up/down dog & seal"
+    },
+    {
+     "ordinal": 2,
+     "letter": null,
+     "kind": "prehab",
+     "tags": [
+      "prehab"
+     ],
+     "label": "prehab",
+     "focus": null,
+     "name": null,
+     "benchmark": false,
+     "minutes": 5,
+     "series": null,
+     "cycleNote": null,
+     "partner": null,
+     "optional": false,
+     "bonus": false,
+     "segments": [
+      {
+       "role": "main",
+       "chain": null,
+       "title": null,
+       "intent": null,
+       "clock": {
+        "type": "interval",
+        "workSec": 30,
+        "restSec": 10,
+        "rounds": 6,
+        "stationMode": "rotate"
+       },
+       "scheme": null,
+       "work": {
+        "mode": "stations",
+        "stations": [
+         {
+          "n": 1,
+          "repeat": 1,
+          "rest": false,
+          "items": [
+           {
+            "id": "wall-squat",
+            "name": "Wall squat",
+            "qty": {
+             "mode": "none"
+            },
+            "perSide": false,
+            "load": {
+             "mode": "none"
+            },
+            "mods": {},
+            "alternatives": [],
+            "text": "wall squats with 2sec pause in bottom"
+           }
+          ]
+         },
+         {
+          "n": 2,
+          "repeat": 1,
+          "rest": false,
+          "items": [
+           {
+            "id": "tuck-sit-hang",
+            "name": "Tuck sit hang",
+            "qty": {
+             "mode": "none"
+            },
+            "perSide": false,
+            "load": {
+             "mode": "none"
+            },
+            "mods": {},
+            "alternatives": [],
+            "text": "tuck sit hang"
+           }
+          ]
+         }
+        ]
+       },
+       "riders": [],
+       "capSec": null,
+       "restAfterSec": null,
+       "raw": "3 sets\n30sec on/10sec off"
+      }
+     ],
+     "scale": [],
+     "notes": [],
+     "raw": "prehab (5min)\n3 sets\n30sec on/10sec off\nwall squats with 2sec pause in bottom\ntuck sit hang\nstrength (20min)"
+    },
+    {
+     "ordinal": 3,
+     "letter": null,
+     "kind": "strength",
+     "tags": [
+      "strength"
+     ],
+     "label": "strength",
+     "focus": null,
+     "name": null,
+     "benchmark": false,
+     "minutes": 20,
+     "series": null,
+     "cycleNote": null,
+     "partner": null,
+     "optional": false,
+     "bonus": false,
+     "segments": [
+      {
+       "role": "heavy",
+       "chain": null,
+       "title": null,
+       "intent": null,
+       "clock": {
+        "type": "emom",
+        "everySec": 180,
+        "rounds": 5,
+        "alternate": false
+       },
+       "scheme": null,
+       "work": {
+        "mode": "rows",
+        "rows": [
+         {
+          "id": "back-squat",
+          "name": "Back squat",
+          "qty": {
+           "mode": "reps",
+           "value": 2
+          },
+          "perSide": false,
+          "load": {
+           "mode": "pct",
+           "pct": 86,
+           "pctOf": null
+          },
+          "mods": {},
+          "alternatives": [],
+          "text": "2 reps @86% (heavy)"
+         }
+        ]
+       },
+       "riders": [],
+       "capSec": null,
+       "restAfterSec": null,
+       "raw": "backsquat\nevery 3min x 5"
+      }
+     ],
+     "scale": [],
+     "notes": [],
+     "raw": "backsquat\nevery 3min x 5\n2 reps @86% (heavy)\nmetcon (16min)"
+    },
+    {
+     "ordinal": 4,
+     "letter": null,
+     "kind": "metcon",
+     "tags": [
+      "metcon"
+     ],
+     "label": "metcon",
+     "focus": null,
+     "name": null,
+     "benchmark": false,
+     "minutes": 16,
+     "series": null,
+     "cycleNote": null,
+     "partner": null,
+     "optional": false,
+     "bonus": false,
+     "segments": [
+      {
+       "role": "main",
+       "chain": null,
+       "title": null,
+       "intent": null,
+       "clock": {
+        "type": "forTime",
+        "rounds": 10,
+        "capSec": null
+       },
+       "scheme": null,
+       "work": {
+        "mode": "rows",
+        "rows": [
+         {
+          "id": "power-snatch",
+          "name": "Power snatch",
+          "qty": {
+           "mode": "reps",
+           "value": 3
+          },
+          "perSide": false,
+          "load": {
+           "mode": "pair",
+           "m": 60,
+           "f": 45,
+           "unit": "kg"
+          },
+          "mods": {},
+          "alternatives": [],
+          "text": "3 power snatches 60/45"
+         },
+         {
+          "id": "overhead-squat",
+          "name": "Overhead squat",
+          "qty": {
+           "mode": "reps",
+           "value": 6
+          },
+          "perSide": false,
+          "load": {
+           "mode": "pair",
+           "m": 60,
+           "f": 45,
+           "unit": "kg"
+          },
+          "mods": {},
+          "alternatives": [],
+          "text": "6 overhead squats 60/45"
+         },
+         {
+          "id": "toes-to-bar",
+          "name": "Toes to bar",
+          "qty": {
+           "mode": "reps",
+           "value": 9
+          },
+          "perSide": false,
+          "load": {
+           "mode": "none"
+          },
+          "mods": {},
+          "alternatives": [],
+          "text": "9 toes to bar"
+         }
+        ]
+       },
+       "riders": [],
+       "capSec": null,
+       "restAfterSec": null,
+       "raw": "10 rounds\nfor time"
+      }
+     ],
+     "scale": [
+      {
+       "target": "load",
+       "options": [
+        "scale 40/25, frontsquats, knee raises"
+       ]
+      },
+      {
+       "target": "overhead-squat",
+       "options": [
+        "frontsquats"
+       ]
+      },
+      {
+       "target": "toes-to-bar",
+       "options": [
+        "knee raises"
+       ]
+      }
+     ],
+     "notes": [],
+     "raw": "10 rounds\nfor time\n3 power snatches 60/45\n6 overhead squats 60/45\n9 toes to bar\nscale 40/25, frontsquats, knee raises\n#legslegsleg\nrpe8"
+    }
+   ]
+  }
+ ]
+}
