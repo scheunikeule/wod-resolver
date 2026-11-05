@@ -1,20 +1,25 @@
 {
- "date": "2026-11-04",
+ "date": "2026-11-05",
  "source": "feed",
  "schema": 1,
  "resolver": {
   "by": "nightly-claude",
-  "at": "2026-11-04T07:39:15Z",
-  "confidence": 0.75,
+  "at": "2026-11-05T07:39:39Z",
+  "confidence": 0,
   "issues": [
    "rounds derived: class warm up 6 = 3 sets x 2 stations",
    "rounds derived: class prehab 6 = 3 sets x 2 stations",
-   "unknown movement 'instep stretch + rotation' -> custom:instep stretch + rotation",
-   "warm up '/' line read as per-set rotation (alternatives list the other sets' movements)",
+   "unknown movement 'instep stretch + rotation' -> custom",
+   "unknown movement 'rower pike up' -> custom",
+   "unknown movement 'db pass through' -> custom",
+   "warm up '/' line read as per-set rotation (3 alternatives over 3 sets)",
+   "emom everySec 60 implied by 'emom' (no interval written)",
+   "strength: pause squat clean + hang squat clean bundle kept as one row (text verbatim)",
+   "metcon: 50-35-20 scheme applies to both rows; row in cal, hang clean & jerks in reps",
    "movement ids unverified: prompt/catalog.json absent in repo"
   ]
  },
- "hashtag": "#legslegsleg",
+ "hashtag": "#skillskillskill",
  "rpe": "8",
  "flags": [],
  "programs": [
@@ -62,8 +67,8 @@
           "rest": false,
           "items": [
            {
-            "id": "down-up",
-            "name": "Down up",
+            "id": "row",
+            "name": "Row",
             "qty": {
              "mode": "none"
             },
@@ -73,7 +78,7 @@
             },
             "mods": {},
             "alternatives": [],
-            "text": "down ups"
+            "text": "row"
            }
           ]
          },
@@ -94,10 +99,10 @@
             },
             "mods": {},
             "alternatives": [
-             "handwalk + push up",
+             "sumo squat stretch",
              "down dog & seal"
             ],
-            "text": "instep stretch + rotation/handwalk + push up/down dog & seal"
+            "text": "instep stretch + rotation/sumo squat stretch/down dog & seal"
            }
           ]
          }
@@ -111,7 +116,7 @@
      ],
      "scale": [],
      "notes": [],
-     "raw": "warm up (6min)\n3 sets\n45sec on/15sec off\ndown ups\ninstep stretch + rotation/handwalk + push up/down dog & seal"
+     "raw": "warm up (6min)\n3 sets\n45sec on/15sec off\nrow\ninstep stretch + rotation/sumo squat stretch/down dog & seal\nprehab (5min)"
     },
     {
      "ordinal": 2,
@@ -153,8 +158,8 @@
           "rest": false,
           "items": [
            {
-            "id": "wall-squat",
-            "name": "Wall squat",
+            "id": "custom:rower pike up",
+            "name": "Rower pike up",
             "qty": {
              "mode": "none"
             },
@@ -164,7 +169,7 @@
             },
             "mods": {},
             "alternatives": [],
-            "text": "wall squats with 2sec pause in bottom"
+            "text": "rower pike ups"
            }
           ]
          },
@@ -174,8 +179,8 @@
           "rest": false,
           "items": [
            {
-            "id": "tuck-sit-hang",
-            "name": "Tuck sit hang",
+            "id": "custom:db pass through",
+            "name": "DB pass through",
             "qty": {
              "mode": "none"
             },
@@ -185,7 +190,7 @@
             },
             "mods": {},
             "alternatives": [],
-            "text": "tuck sit hang"
+            "text": "db pass through"
            }
           ]
          }
@@ -199,7 +204,7 @@
      ],
      "scale": [],
      "notes": [],
-     "raw": "prehab (5min)\n3 sets\n30sec on/10sec off\nwall squats with 2sec pause in bottom\ntuck sit hang\nstrength (20min)"
+     "raw": "prehab (5min)\n3 sets\n30sec on/10sec off\nrower pike ups\ndb pass through\nstrength (18min)"
     },
     {
      "ordinal": 3,
@@ -212,8 +217,11 @@
      "focus": null,
      "name": null,
      "benchmark": false,
-     "minutes": 20,
-     "series": null,
+     "minutes": 18,
+     "series": {
+      "n": 3,
+      "of": 4
+     },
      "cycleNote": null,
      "partner": null,
      "optional": false,
@@ -226,8 +234,8 @@
        "intent": null,
        "clock": {
         "type": "emom",
-        "everySec": 180,
-        "rounds": 5,
+        "everySec": 60,
+        "rounds": 10,
         "alternate": false
        },
        "scheme": null,
@@ -235,33 +243,38 @@
         "mode": "rows",
         "rows": [
          {
-          "id": "back-squat",
-          "name": "Back squat",
+          "id": "squat-clean",
+          "name": "Squat clean",
           "qty": {
            "mode": "reps",
-           "value": 2
+           "value": 1
           },
           "perSide": false,
           "load": {
-           "mode": "pct",
-           "pct": 86,
-           "pctOf": null
+           "mode": "none"
           },
           "mods": {},
           "alternatives": [],
-          "text": "2 reps @86% (heavy)"
+          "text": "1 pause squat clean + 1 hang squat clean"
          }
         ]
        },
-       "riders": [],
+       "riders": [
+        {
+         "kind": "note",
+         "text": "*pause for 2sec below the knee"
+        }
+       ],
        "capSec": null,
        "restAfterSec": null,
-       "raw": "backsquat\nevery 3min x 5"
+       "raw": "squat clean 3/4\nemom x 10"
       }
      ],
      "scale": [],
-     "notes": [],
-     "raw": "backsquat\nevery 3min x 5\n2 reps @86% (heavy)\nmetcon (16min)"
+     "notes": [
+      "*pause for 2sec below the knee"
+     ],
+     "raw": "squat clean 3/4\nemom x 10\n1 pause squat clean + 1 hang squat clean\n*pause for 2sec below the knee\nmetcon (18min)"
     },
     {
      "ordinal": 4,
@@ -274,7 +287,7 @@
      "focus": null,
      "name": null,
      "benchmark": false,
-     "minutes": 16,
+     "minutes": 18,
      "series": null,
      "cycleNote": null,
      "partner": null,
@@ -285,58 +298,36 @@
        "role": "main",
        "chain": null,
        "title": null,
-       "intent": null,
+       "intent": "time",
        "clock": {
         "type": "forTime",
-        "rounds": 10,
-        "capSec": null
+        "rounds": null,
+        "capSec": null,
+        "roundRestSec": null,
+        "eachForTime": false
        },
-       "scheme": null,
+       "scheme": {
+        "type": "descending",
+        "steps": [
+         50,
+         35,
+         20
+        ],
+        "unit": "reps",
+        "by": null,
+        "appliesTo": "all",
+        "scaled": null,
+        "pcts": null
+       },
        "work": {
         "mode": "rows",
         "rows": [
          {
-          "id": "power-snatch",
-          "name": "Power snatch",
+          "id": "row",
+          "name": "Row",
           "qty": {
-           "mode": "reps",
-           "value": 3
-          },
-          "perSide": false,
-          "load": {
-           "mode": "pair",
-           "m": 60,
-           "f": 45,
-           "unit": "kg"
-          },
-          "mods": {},
-          "alternatives": [],
-          "text": "3 power snatches 60/45"
-         },
-         {
-          "id": "overhead-squat",
-          "name": "Overhead squat",
-          "qty": {
-           "mode": "reps",
-           "value": 6
-          },
-          "perSide": false,
-          "load": {
-           "mode": "pair",
-           "m": 60,
-           "f": 45,
-           "unit": "kg"
-          },
-          "mods": {},
-          "alternatives": [],
-          "text": "6 overhead squats 60/45"
-         },
-         {
-          "id": "toes-to-bar",
-          "name": "Toes to bar",
-          "qty": {
-           "mode": "reps",
-           "value": 9
+           "mode": "cal",
+           "value": null
           },
           "perSide": false,
           "load": {
@@ -344,38 +335,46 @@
           },
           "mods": {},
           "alternatives": [],
-          "text": "9 toes to bar"
+          "text": "row (cal)"
+         },
+         {
+          "id": "db-hang-clean-and-jerk",
+          "name": "Alt single arm DB hang clean & jerk",
+          "qty": {
+           "mode": "reps",
+           "value": null
+          },
+          "perSide": false,
+          "load": {
+           "mode": "pair",
+           "m": 22.5,
+           "f": 15,
+           "unit": "kg"
+          },
+          "mods": {},
+          "alternatives": [],
+          "text": "alt single arm db hang clean & jerks 22,5/15"
          }
         ]
        },
        "riders": [],
        "capSec": null,
        "restAfterSec": null,
-       "raw": "10 rounds\nfor time"
+       "raw": "50-35-20 reps\nfor time"
       }
      ],
      "scale": [
       {
        "target": "load",
        "options": [
-        "scale 40/25, frontsquats, knee raises"
-       ]
-      },
-      {
-       "target": "overhead-squat",
-       "options": [
-        "frontsquats"
-       ]
-      },
-      {
-       "target": "toes-to-bar",
-       "options": [
-        "knee raises"
+        "scale 15/10"
        ]
       }
      ],
-     "notes": [],
-     "raw": "10 rounds\nfor time\n3 power snatches 60/45\n6 overhead squats 60/45\n9 toes to bar\nscale 40/25, frontsquats, knee raises\n#legslegsleg\nrpe8"
+     "notes": [
+      "scale 15/10"
+     ],
+     "raw": "50-35-20 reps\nfor time\nrow (cal)\nalt single arm db hang clean & jerks 22,5/15\nscale 15/10\n#skillskillskill\nrpe8"
     }
    ]
   }

@@ -1,5 +1,11 @@
 [
  {
+  "date": "2026-11-05",
+  "hash": "b366f724c70adda640050c944ef53313bea21db3d3cf8d71a133009a93310ed7",
+  "resolvedAt": "2026-11-05T07:39:39Z",
+  "confidence": 0.5
+ },
+ {
   "date": "2026-11-04",
   "hash": "addd1e96480baf88fa44acccd077efa3e6b37e48d62fba01f8b70f67fde7f759",
   "resolvedAt": "2026-11-04T07:39:15Z",
