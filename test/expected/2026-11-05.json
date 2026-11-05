@@ -1,0 +1,381 @@
+{
+  "date": "2026-11-05",
+  "source": "feed",
+  "schema": 1,
+  "resolver": {
+    "by": "hand-claude-fable-5",
+    "at": "2026-11-05T09:19:53Z",
+    "confidence": 1.0,
+    "issues": []
+  },
+  "hashtag": "#skillskillskill",
+  "rpe": "8",
+  "flags": [],
+  "programs": [
+    {
+      "name": "class",
+      "title": null,
+      "blocks": [
+        {
+          "ordinal": 1,
+          "letter": null,
+          "kind": "warmup",
+          "tags": [
+            "warmup"
+          ],
+          "label": "warm up",
+          "focus": null,
+          "name": null,
+          "benchmark": false,
+          "minutes": 6,
+          "series": null,
+          "cycleNote": null,
+          "partner": null,
+          "optional": false,
+          "bonus": false,
+          "segments": [
+            {
+              "role": "main",
+              "chain": null,
+              "title": null,
+              "intent": null,
+              "clock": {
+                "type": "interval",
+                "workSec": 45,
+                "restSec": 15,
+                "rounds": 6,
+                "stationMode": "rotate"
+              },
+              "scheme": null,
+              "work": {
+                "mode": "stations",
+                "stations": [
+                  {
+                    "n": 1,
+                    "repeat": 1,
+                    "rest": false,
+                    "items": [
+                      {
+                        "id": "row",
+                        "name": "Row",
+                        "qty": {
+                          "mode": "none"
+                        },
+                        "perSide": false,
+                        "load": {
+                          "mode": "none"
+                        },
+                        "mods": {},
+                        "alternatives": [],
+                        "text": "row"
+                      }
+                    ]
+                  },
+                  {
+                    "n": 2,
+                    "repeat": 1,
+                    "rest": false,
+                    "items": [
+                      {
+                        "id": "custom:instep stretch + rotation",
+                        "name": "Instep stretch + rotation",
+                        "qty": {
+                          "mode": "none"
+                        },
+                        "perSide": false,
+                        "load": {
+                          "mode": "none"
+                        },
+                        "mods": {},
+                        "alternatives": [
+                          "sumo squat stretch",
+                          "down dog & seal"
+                        ],
+                        "text": "instep stretch + rotation/sumo squat stretch/down dog & seal"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "riders": [],
+              "capSec": null,
+              "restAfterSec": null,
+              "raw": "3 sets\n45sec on/15sec off"
+            }
+          ],
+          "scale": [],
+          "notes": [],
+          "raw": "warm up (6min)\n3 sets\n45sec on/15sec off\nrow\ninstep stretch + rotation/sumo squat stretch/down dog & seal\nprehab (5min)"
+        },
+        {
+          "ordinal": 2,
+          "letter": null,
+          "kind": "prehab",
+          "tags": [
+            "prehab"
+          ],
+          "label": "prehab",
+          "focus": null,
+          "name": null,
+          "benchmark": false,
+          "minutes": 5,
+          "series": null,
+          "cycleNote": null,
+          "partner": null,
+          "optional": false,
+          "bonus": false,
+          "segments": [
+            {
+              "role": "main",
+              "chain": null,
+              "title": null,
+              "intent": null,
+              "clock": {
+                "type": "interval",
+                "workSec": 30,
+                "restSec": 10,
+                "rounds": 6,
+                "stationMode": "rotate"
+              },
+              "scheme": null,
+              "work": {
+                "mode": "stations",
+                "stations": [
+                  {
+                    "n": 1,
+                    "repeat": 1,
+                    "rest": false,
+                    "items": [
+                      {
+                        "id": "custom:rower pike up",
+                        "name": "Rower pike up",
+                        "qty": {
+                          "mode": "none"
+                        },
+                        "perSide": false,
+                        "load": {
+                          "mode": "none"
+                        },
+                        "mods": {},
+                        "alternatives": [],
+                        "text": "rower pike ups"
+                      }
+                    ]
+                  },
+                  {
+                    "n": 2,
+                    "repeat": 1,
+                    "rest": false,
+                    "items": [
+                      {
+                        "id": "custom:db pass through",
+                        "name": "DB pass through",
+                        "qty": {
+                          "mode": "none"
+                        },
+                        "perSide": false,
+                        "load": {
+                          "mode": "none"
+                        },
+                        "mods": {},
+                        "alternatives": [],
+                        "text": "db pass through"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "riders": [],
+              "capSec": null,
+              "restAfterSec": null,
+              "raw": "3 sets\n30sec on/10sec off"
+            }
+          ],
+          "scale": [],
+          "notes": [],
+          "raw": "prehab (5min)\n3 sets\n30sec on/10sec off\nrower pike ups\ndb pass through\nstrength (18min)"
+        },
+        {
+          "ordinal": 3,
+          "letter": null,
+          "kind": "strength",
+          "tags": [
+            "strength"
+          ],
+          "label": "strength",
+          "focus": null,
+          "name": null,
+          "benchmark": false,
+          "minutes": 18,
+          "series": {
+            "n": 3,
+            "of": 4
+          },
+          "cycleNote": null,
+          "partner": null,
+          "optional": false,
+          "bonus": false,
+          "segments": [
+            {
+              "role": "heavy",
+              "chain": null,
+              "title": null,
+              "intent": null,
+              "clock": {
+                "type": "emom",
+                "everySec": 60,
+                "rounds": 10,
+                "alternate": false
+              },
+              "scheme": null,
+              "work": {
+                "mode": "rows",
+                "rows": [
+                  {
+                    "id": "squat-clean",
+                    "name": "Squat clean",
+                    "qty": {
+                      "mode": "reps",
+                      "value": 1
+                    },
+                    "perSide": false,
+                    "load": {
+                      "mode": "none"
+                    },
+                    "mods": {},
+                    "alternatives": [],
+                    "text": "1 pause squat clean + 1 hang squat clean",
+                    "parts": [
+                      {
+                        "id": "squat-clean",
+                        "name": "Pause squat clean",
+                        "reps": 1
+                      },
+                      {
+                        "id": "squat-clean",
+                        "name": "Hang squat clean",
+                        "reps": 1
+                      }
+                    ]
+                  }
+                ]
+              },
+              "riders": [
+                {
+                  "kind": "note",
+                  "text": "*pause for 2sec below the knee"
+                }
+              ],
+              "capSec": null,
+              "restAfterSec": null,
+              "raw": "squat clean 3/4\nemom x 10"
+            }
+          ],
+          "scale": [],
+          "notes": [],
+          "raw": "squat clean 3/4\nemom x 10\n1 pause squat clean + 1 hang squat clean\n*pause for 2sec below the knee\nmetcon (18min)"
+        },
+        {
+          "ordinal": 4,
+          "letter": null,
+          "kind": "metcon",
+          "tags": [
+            "metcon"
+          ],
+          "label": "metcon",
+          "focus": null,
+          "name": null,
+          "benchmark": false,
+          "minutes": 18,
+          "series": null,
+          "cycleNote": null,
+          "partner": null,
+          "optional": false,
+          "bonus": false,
+          "segments": [
+            {
+              "role": "main",
+              "chain": null,
+              "title": null,
+              "intent": "time",
+              "clock": {
+                "type": "forTime",
+                "rounds": null,
+                "capSec": null,
+                "roundRestSec": null,
+                "eachForTime": false
+              },
+              "scheme": {
+                "type": "descending",
+                "steps": [
+                  50,
+                  35,
+                  20
+                ],
+                "unit": "reps",
+                "by": null,
+                "appliesTo": "all",
+                "scaled": null,
+                "pcts": null
+              },
+              "work": {
+                "mode": "rows",
+                "rows": [
+                  {
+                    "id": "row",
+                    "name": "Row",
+                    "qty": {
+                      "mode": "cal",
+                      "value": null
+                    },
+                    "perSide": false,
+                    "load": {
+                      "mode": "none"
+                    },
+                    "mods": {},
+                    "alternatives": [],
+                    "text": "row (cal)"
+                  },
+                  {
+                    "id": "db-hang-clean-and-jerk",
+                    "name": "Alt single arm DB hang clean & jerk",
+                    "qty": {
+                      "mode": "reps",
+                      "value": null
+                    },
+                    "perSide": false,
+                    "load": {
+                      "mode": "pair",
+                      "m": 22.5,
+                      "f": 15,
+                      "unit": "kg"
+                    },
+                    "mods": {},
+                    "alternatives": [],
+                    "text": "alt single arm db hang clean & jerks 22,5/15"
+                  }
+                ]
+              },
+              "riders": [],
+              "capSec": null,
+              "restAfterSec": null,
+              "raw": "50-35-20 reps\nfor time"
+            }
+          ],
+          "scale": [
+            {
+              "target": "load",
+              "options": [
+                "scale 15/10"
+              ]
+            }
+          ],
+          "notes": [
+            "scale 15/10"
+          ],
+          "raw": "50-35-20 reps\nfor time\nrow (cal)\nalt single arm db hang clean & jerks 22,5/15\nscale 15/10\n#skillskillskill\nrpe8"
+        }
+      ]
+    }
+  ]
+}
