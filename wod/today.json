@@ -1,15 +1,19 @@
 {
-  "date": "2026-11-05",
+  "date": "2026-11-06",
   "source": "feed",
   "schema": 1,
   "resolver": {
-    "by": "hand-claude-fable-5",
-    "at": "2026-11-05T09:19:53Z",
-    "confidence": 1.0,
-    "issues": []
+    "by": "claude-nightly",
+    "at": "2026-11-06T07:40:02Z",
+    "confidence": 0.85,
+    "issues": [
+      "warm up: single station line with slash variants; rounds 3 = 3 sets x 1 station (slashes kept as alternatives)",
+      "scale 6/4 mapped to wall ball kg (bike 12/9 cal ambiguous)",
+      "hashtag '#owerbodypull' kept verbatim (probable typo)"
+    ]
   },
-  "hashtag": "#skillskillskill",
-  "rpe": "8",
+  "hashtag": "#owerbodypull",
+  "rpe": "7",
   "flags": [],
   "programs": [
     {
@@ -43,7 +47,7 @@
                 "type": "interval",
                 "workSec": 45,
                 "restSec": 15,
-                "rounds": 6,
+                "rounds": 3,
                 "stationMode": "rotate"
               },
               "scheme": null,
@@ -52,27 +56,6 @@
                 "stations": [
                   {
                     "n": 1,
-                    "repeat": 1,
-                    "rest": false,
-                    "items": [
-                      {
-                        "id": "row",
-                        "name": "Row",
-                        "qty": {
-                          "mode": "none"
-                        },
-                        "perSide": false,
-                        "load": {
-                          "mode": "none"
-                        },
-                        "mods": {},
-                        "alternatives": [],
-                        "text": "row"
-                      }
-                    ]
-                  },
-                  {
-                    "n": 2,
                     "repeat": 1,
                     "rest": false,
                     "items": [
@@ -88,10 +71,10 @@
                         },
                         "mods": {},
                         "alternatives": [
-                          "sumo squat stretch",
-                          "down dog & seal"
+                          "handwalk + push up",
+                          "dynamic bridge"
                         ],
-                        "text": "instep stretch + rotation/sumo squat stretch/down dog & seal"
+                        "text": "instep stretch + rotation/handwalk + push up/dynamic bridge"
                       }
                     ]
                   }
@@ -105,7 +88,7 @@
           ],
           "scale": [],
           "notes": [],
-          "raw": "warm up (6min)\n3 sets\n45sec on/15sec off\nrow\ninstep stretch + rotation/sumo squat stretch/down dog & seal\nprehab (5min)"
+          "raw": "warm up (6min)\n3 sets\n45sec on/15sec off\ninstep stretch + rotation/handwalk + push up/dynamic bridge"
         },
         {
           "ordinal": 2,
@@ -147,18 +130,18 @@
                     "rest": false,
                     "items": [
                       {
-                        "id": "custom:rower pike up",
-                        "name": "Rower pike up",
+                        "id": "good-morning",
+                        "name": "Good morning",
                         "qty": {
                           "mode": "none"
                         },
                         "perSide": false,
                         "load": {
-                          "mode": "none"
+                          "mode": "implement"
                         },
                         "mods": {},
                         "alternatives": [],
-                        "text": "rower pike ups"
+                        "text": "barbell good mornings"
                       }
                     ]
                   },
@@ -168,8 +151,8 @@
                     "rest": false,
                     "items": [
                       {
-                        "id": "custom:db pass through",
-                        "name": "DB pass through",
+                        "id": "nose-to-wall-handstand-push-up",
+                        "name": "Nose to wall handstand push up",
                         "qty": {
                           "mode": "none"
                         },
@@ -179,7 +162,7 @@
                         },
                         "mods": {},
                         "alternatives": [],
-                        "text": "db pass through"
+                        "text": "nose to wall handstand push ups"
                       }
                     ]
                   }
@@ -193,7 +176,7 @@
           ],
           "scale": [],
           "notes": [],
-          "raw": "prehab (5min)\n3 sets\n30sec on/10sec off\nrower pike ups\ndb pass through\nstrength (18min)"
+          "raw": "prehab (5min)\n3 sets\n30sec on/10sec off\nbarbell good mornings\nnose to wall handstand push ups"
         },
         {
           "ordinal": 3,
@@ -203,13 +186,13 @@
             "strength"
           ],
           "label": "strength",
-          "focus": null,
+          "focus": "deadlift",
           "name": null,
           "benchmark": false,
-          "minutes": 18,
+          "minutes": 20,
           "series": {
             "n": 3,
-            "of": 4
+            "of": 6
           },
           "cycleNote": null,
           "partner": null,
@@ -217,63 +200,109 @@
           "bonus": false,
           "segments": [
             {
-              "role": "heavy",
+              "role": "warmup",
               "chain": null,
-              "title": null,
+              "title": "warm up",
               "intent": null,
               "clock": {
-                "type": "emom",
-                "everySec": 60,
-                "rounds": 10,
-                "alternate": false
+                "type": "sets",
+                "sets": 2,
+                "reps": 4,
+                "restSec": 120,
+                "restBetweenRepsSec": null,
+                "groups": []
               },
               "scheme": null,
               "work": {
                 "mode": "rows",
                 "rows": [
                   {
-                    "id": "squat-clean",
-                    "name": "Squat clean",
+                    "id": "deadlift",
+                    "name": "Deadlift",
                     "qty": {
                       "mode": "reps",
-                      "value": 1
+                      "value": 4
                     },
                     "perSide": false,
                     "load": {
-                      "mode": "none"
+                      "mode": "pct",
+                      "pct": 60,
+                      "pctOf": "1rm"
                     },
-                    "mods": {},
+                    "mods": {
+                      "tempo": "21X1"
+                    },
                     "alternatives": [],
-                    "text": "1 pause squat clean + 1 hang squat clean",
-                    "parts": [
-                      {
-                        "id": "squat-clean",
-                        "name": "Pause squat clean",
-                        "reps": 1
-                      },
-                      {
-                        "id": "squat-clean",
-                        "name": "Hang squat clean",
-                        "reps": 1
-                      }
-                    ]
+                    "text": "4 reps @60%"
                   }
                 ]
               },
               "riders": [
                 {
                   "kind": "note",
-                  "text": "*pause for 2sec below the knee"
+                  "text": "*tempo 21X1"
                 }
               ],
               "capSec": null,
               "restAfterSec": null,
-              "raw": "squat clean 3/4\nemom x 10"
+              "raw": "warm up\n2 sets\n4 reps @60%\n2min rest"
+            },
+            {
+              "role": "main",
+              "chain": "into",
+              "title": null,
+              "intent": null,
+              "clock": {
+                "type": "sets",
+                "sets": 5,
+                "reps": 5,
+                "restSec": 120,
+                "restBetweenRepsSec": null,
+                "groups": []
+              },
+              "scheme": null,
+              "work": {
+                "mode": "rows",
+                "rows": [
+                  {
+                    "id": "deadlift",
+                    "name": "Deadlift",
+                    "qty": {
+                      "mode": "reps",
+                      "value": 5
+                    },
+                    "perSide": false,
+                    "load": {
+                      "mode": "pct",
+                      "pct": null,
+                      "pctRange": [
+                        65,
+                        70
+                      ],
+                      "pctOf": "1rm"
+                    },
+                    "mods": {
+                      "tempo": "21X1"
+                    },
+                    "alternatives": [],
+                    "text": "5 reps @65-70%"
+                  }
+                ]
+              },
+              "riders": [
+                {
+                  "kind": "note",
+                  "text": "*tempo 21X1"
+                }
+              ],
+              "capSec": null,
+              "restAfterSec": null,
+              "raw": "into\n5 sets\n5 reps @65-70%\n2min rest"
             }
           ],
           "scale": [],
           "notes": [],
-          "raw": "squat clean 3/4\nemom x 10\n1 pause squat clean + 1 hang squat clean\n*pause for 2sec below the knee\nmetcon (18min)"
+          "raw": "strength (20min)\ndeadlift 3/6\nwarm up\n2 sets\n4 reps @60%\n2min rest\ninto\n5 sets\n5 reps @65-70%\n2min rest\n*tempo 21X1"
         },
         {
           "ordinal": 4,
@@ -286,7 +315,7 @@
           "focus": null,
           "name": null,
           "benchmark": false,
-          "minutes": 18,
+          "minutes": 20,
           "series": null,
           "cycleNote": null,
           "partner": null,
@@ -297,83 +326,129 @@
               "role": "main",
               "chain": null,
               "title": null,
-              "intent": "time",
+              "intent": null,
               "clock": {
-                "type": "forTime",
-                "rounds": null,
-                "capSec": null,
-                "roundRestSec": null,
-                "eachForTime": false
+                "type": "emom",
+                "everySec": 60,
+                "rounds": 20,
+                "alternate": false
               },
-              "scheme": {
-                "type": "descending",
-                "steps": [
-                  50,
-                  35,
-                  20
-                ],
-                "unit": "reps",
-                "by": null,
-                "appliesTo": "all",
-                "scaled": null,
-                "pcts": null
-              },
+              "scheme": null,
               "work": {
-                "mode": "rows",
-                "rows": [
+                "mode": "stations",
+                "stations": [
                   {
-                    "id": "row",
-                    "name": "Row",
-                    "qty": {
-                      "mode": "cal",
-                      "value": null
-                    },
-                    "perSide": false,
-                    "load": {
-                      "mode": "none"
-                    },
-                    "mods": {},
-                    "alternatives": [],
-                    "text": "row (cal)"
+                    "n": 1,
+                    "repeat": 1,
+                    "rest": false,
+                    "items": [
+                      {
+                        "id": "bike",
+                        "name": "Bike",
+                        "qty": {
+                          "mode": "cal",
+                          "value": 12,
+                          "f": 9
+                        },
+                        "perSide": false,
+                        "load": {
+                          "mode": "none"
+                        },
+                        "mods": {},
+                        "alternatives": [],
+                        "text": "1. 12/9cal bike"
+                      }
+                    ]
                   },
                   {
-                    "id": "db-hang-clean-and-jerk",
-                    "name": "Alt single arm DB hang clean & jerk",
-                    "qty": {
-                      "mode": "reps",
-                      "value": null
-                    },
-                    "perSide": false,
-                    "load": {
-                      "mode": "pair",
-                      "m": 22.5,
-                      "f": 15,
-                      "unit": "kg"
-                    },
-                    "mods": {},
-                    "alternatives": [],
-                    "text": "alt single arm db hang clean & jerks 22,5/15"
+                    "n": 2,
+                    "repeat": 1,
+                    "rest": false,
+                    "items": [
+                      {
+                        "id": "wall-ball",
+                        "name": "Wall ball",
+                        "qty": {
+                          "mode": "reps",
+                          "value": null,
+                          "range": [
+                            15,
+                            20
+                          ]
+                        },
+                        "perSide": false,
+                        "load": {
+                          "mode": "pair",
+                          "m": 9,
+                          "f": 6,
+                          "unit": "kg"
+                        },
+                        "mods": {},
+                        "alternatives": [],
+                        "text": "2. 15-20 wall balls 9/6"
+                      }
+                    ]
+                  },
+                  {
+                    "n": 3,
+                    "repeat": 1,
+                    "rest": false,
+                    "items": [
+                      {
+                        "id": "handstand-push-up",
+                        "name": "Handstand push up",
+                        "qty": {
+                          "mode": "reps",
+                          "value": null,
+                          "range": [
+                            10,
+                            15
+                          ]
+                        },
+                        "perSide": false,
+                        "load": {
+                          "mode": "none"
+                        },
+                        "mods": {},
+                        "alternatives": [],
+                        "text": "3. 10-15 handstand push ups"
+                      }
+                    ]
+                  },
+                  {
+                    "n": 4,
+                    "repeat": 1,
+                    "rest": true,
+                    "items": []
                   }
                 ]
               },
               "riders": [],
               "capSec": null,
               "restAfterSec": null,
-              "raw": "50-35-20 reps\nfor time"
+              "raw": "emom x 20\n1. 12/9cal bike\n2. 15-20 wall balls 9/6\n3. 10-15 handstand push ups\n4. rest"
             }
           ],
           "scale": [
             {
-              "target": "load",
+              "target": "wall-ball",
               "options": [
-                "scale 15/10"
+                "6/4"
+              ]
+            },
+            {
+              "target": "handstand-push-up",
+              "options": [
+                "elevated hspu",
+                "hand release push ups",
+                "kneeling push ups"
               ]
             }
           ],
           "notes": [
-            "scale 15/10"
+            "scale 6/4, elevated hspu, hand release push ups, kneeling push ups"
           ],
-          "raw": "50-35-20 reps\nfor time\nrow (cal)\nalt single arm db hang clean & jerks 22,5/15\nscale 15/10\n#skillskillskill\nrpe8"
+          "raw": "metcon (20min)\nemom x 20\n1. 12/9cal bike\n2. 15-20 wall balls 9/6\n3. 10-15 handstand push ups\n4. rest\nscale 6/4, elevated hspu, hand release push ups, kneeling push ups\n#owerbodypull\n#rpe7"
         }
       ]
     }
