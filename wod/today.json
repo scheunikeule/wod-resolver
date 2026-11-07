@@ -1,19 +1,18 @@
 {
-  "date": "2026-11-06",
+  "date": "2026-11-07",
   "source": "feed",
   "schema": 1,
   "resolver": {
     "by": "claude-nightly",
-    "at": "2026-11-06T07:40:02Z",
-    "confidence": 0.85,
+    "at": "2026-11-07T07:39:49Z",
+    "confidence": 0.9,
     "issues": [
-      "warm up: single station line with slash variants; rounds 3 = 3 sets x 1 station (slashes kept as alternatives)",
-      "scale 6/4 mapped to wall ball kg (bike 12/9 cal ambiguous)",
-      "hashtag '#owerbodypull' kept verbatim (probable typo)"
+      "unknown movements kept as custom ids (no catalog in repo): down ups, sumo squat stretch, db hollow hold, db pass through, db devils snuster, alt db frontrack lunge",
+      "scale 15/10 mapped to DB load (loads first); ring rows -> pull ups; elevated hspu/hand release push ups -> handstand push ups"
     ]
   },
-  "hashtag": "#owerbodypull",
-  "rpe": "7",
+  "hashtag": "#teamday",
+  "rpe": "8",
   "flags": [],
   "programs": [
     {
@@ -47,7 +46,7 @@
                 "type": "interval",
                 "workSec": 45,
                 "restSec": 15,
-                "rounds": 3,
+                "rounds": 6,
                 "stationMode": "rotate"
               },
               "scheme": null,
@@ -60,8 +59,29 @@
                     "rest": false,
                     "items": [
                       {
-                        "id": "custom:instep stretch + rotation",
-                        "name": "Instep stretch + rotation",
+                        "id": "custom:down ups",
+                        "name": "Down ups",
+                        "qty": {
+                          "mode": "none"
+                        },
+                        "perSide": false,
+                        "load": {
+                          "mode": "none"
+                        },
+                        "mods": {},
+                        "alternatives": [],
+                        "text": "down ups"
+                      }
+                    ]
+                  },
+                  {
+                    "n": 2,
+                    "repeat": 1,
+                    "rest": false,
+                    "items": [
+                      {
+                        "id": "custom:sumo squat stretch",
+                        "name": "Sumo squat stretch",
                         "qty": {
                           "mode": "none"
                         },
@@ -71,10 +91,10 @@
                         },
                         "mods": {},
                         "alternatives": [
-                          "handwalk + push up",
-                          "dynamic bridge"
+                          "down dog & seal",
+                          "handwalk + push up"
                         ],
-                        "text": "instep stretch + rotation/handwalk + push up/dynamic bridge"
+                        "text": "sumo squat stretch/down dog & seal/handwalk + push up"
                       }
                     ]
                   }
@@ -88,7 +108,7 @@
           ],
           "scale": [],
           "notes": [],
-          "raw": "warm up (6min)\n3 sets\n45sec on/15sec off\ninstep stretch + rotation/handwalk + push up/dynamic bridge"
+          "raw": "warm up (6min)\n3 sets\n45sec on/15sec off\ndown ups\nsumo squat stretch/down dog & seal/handwalk + push up\nprehab (5min)"
         },
         {
           "ordinal": 2,
@@ -130,18 +150,18 @@
                     "rest": false,
                     "items": [
                       {
-                        "id": "good-morning",
-                        "name": "Good morning",
+                        "id": "custom:db hollow hold",
+                        "name": "Db hollow hold",
                         "qty": {
                           "mode": "none"
                         },
                         "perSide": false,
                         "load": {
-                          "mode": "implement"
+                          "mode": "none"
                         },
                         "mods": {},
                         "alternatives": [],
-                        "text": "barbell good mornings"
+                        "text": "db hollow hold"
                       }
                     ]
                   },
@@ -151,8 +171,8 @@
                     "rest": false,
                     "items": [
                       {
-                        "id": "nose-to-wall-handstand-push-up",
-                        "name": "Nose to wall handstand push up",
+                        "id": "custom:db pass through",
+                        "name": "Db pass through",
                         "qty": {
                           "mode": "none"
                         },
@@ -162,7 +182,7 @@
                         },
                         "mods": {},
                         "alternatives": [],
-                        "text": "nose to wall handstand push ups"
+                        "text": "db pass through"
                       }
                     ]
                   }
@@ -176,136 +196,10 @@
           ],
           "scale": [],
           "notes": [],
-          "raw": "prehab (5min)\n3 sets\n30sec on/10sec off\nbarbell good mornings\nnose to wall handstand push ups"
+          "raw": "3 sets\n30sec on/10sec off\ndb hollow hold\ndb pass through"
         },
         {
           "ordinal": 3,
-          "letter": null,
-          "kind": "strength",
-          "tags": [
-            "strength"
-          ],
-          "label": "strength",
-          "focus": "deadlift",
-          "name": null,
-          "benchmark": false,
-          "minutes": 20,
-          "series": {
-            "n": 3,
-            "of": 6
-          },
-          "cycleNote": null,
-          "partner": null,
-          "optional": false,
-          "bonus": false,
-          "segments": [
-            {
-              "role": "warmup",
-              "chain": null,
-              "title": "warm up",
-              "intent": null,
-              "clock": {
-                "type": "sets",
-                "sets": 2,
-                "reps": 4,
-                "restSec": 120,
-                "restBetweenRepsSec": null,
-                "groups": []
-              },
-              "scheme": null,
-              "work": {
-                "mode": "rows",
-                "rows": [
-                  {
-                    "id": "deadlift",
-                    "name": "Deadlift",
-                    "qty": {
-                      "mode": "reps",
-                      "value": 4
-                    },
-                    "perSide": false,
-                    "load": {
-                      "mode": "pct",
-                      "pct": 60,
-                      "pctOf": "1rm"
-                    },
-                    "mods": {
-                      "tempo": "21X1"
-                    },
-                    "alternatives": [],
-                    "text": "4 reps @60%"
-                  }
-                ]
-              },
-              "riders": [
-                {
-                  "kind": "note",
-                  "text": "*tempo 21X1"
-                }
-              ],
-              "capSec": null,
-              "restAfterSec": null,
-              "raw": "warm up\n2 sets\n4 reps @60%\n2min rest"
-            },
-            {
-              "role": "main",
-              "chain": "into",
-              "title": null,
-              "intent": null,
-              "clock": {
-                "type": "sets",
-                "sets": 5,
-                "reps": 5,
-                "restSec": 120,
-                "restBetweenRepsSec": null,
-                "groups": []
-              },
-              "scheme": null,
-              "work": {
-                "mode": "rows",
-                "rows": [
-                  {
-                    "id": "deadlift",
-                    "name": "Deadlift",
-                    "qty": {
-                      "mode": "reps",
-                      "value": 5
-                    },
-                    "perSide": false,
-                    "load": {
-                      "mode": "pct",
-                      "pct": null,
-                      "pctRange": [
-                        65,
-                        70
-                      ],
-                      "pctOf": "1rm"
-                    },
-                    "mods": {
-                      "tempo": "21X1"
-                    },
-                    "alternatives": [],
-                    "text": "5 reps @65-70%"
-                  }
-                ]
-              },
-              "riders": [
-                {
-                  "kind": "note",
-                  "text": "*tempo 21X1"
-                }
-              ],
-              "capSec": null,
-              "restAfterSec": null,
-              "raw": "into\n5 sets\n5 reps @65-70%\n2min rest"
-            }
-          ],
-          "scale": [],
-          "notes": [],
-          "raw": "strength (20min)\ndeadlift 3/6\nwarm up\n2 sets\n4 reps @60%\n2min rest\ninto\n5 sets\n5 reps @65-70%\n2min rest\n*tempo 21X1"
-        },
-        {
-          "ordinal": 4,
           "letter": null,
           "kind": "metcon",
           "tags": [
@@ -315,10 +209,13 @@
           "focus": null,
           "name": null,
           "benchmark": false,
-          "minutes": 20,
+          "minutes": 40,
           "series": null,
           "cycleNote": null,
-          "partner": null,
+          "partner": {
+            "mode": "teams",
+            "note": "teams of two"
+          },
           "optional": false,
           "bonus": false,
           "segments": [
@@ -328,127 +225,216 @@
               "title": null,
               "intent": null,
               "clock": {
-                "type": "emom",
-                "everySec": 60,
-                "rounds": 20,
-                "alternate": false
+                "type": "forTime",
+                "rounds": 10,
+                "capSec": null,
+                "roundRestSec": null,
+                "eachForTime": false
               },
               "scheme": null,
               "work": {
-                "mode": "stations",
-                "stations": [
+                "mode": "rows",
+                "rows": [
                   {
-                    "n": 1,
-                    "repeat": 1,
-                    "rest": false,
-                    "items": [
-                      {
-                        "id": "bike",
-                        "name": "Bike",
-                        "qty": {
-                          "mode": "cal",
-                          "value": 12,
-                          "f": 9
-                        },
-                        "perSide": false,
-                        "load": {
-                          "mode": "none"
-                        },
-                        "mods": {},
-                        "alternatives": [],
-                        "text": "1. 12/9cal bike"
-                      }
-                    ]
+                    "id": "db-hang-power-snatch",
+                    "name": "Double DB hang power snatch",
+                    "qty": {
+                      "mode": "reps",
+                      "value": 3
+                    },
+                    "perSide": false,
+                    "load": {
+                      "mode": "pair",
+                      "m": 22.5,
+                      "f": 15,
+                      "unit": "kg"
+                    },
+                    "mods": {},
+                    "alternatives": [],
+                    "text": "3 double db hang power snatches 22,5/15"
                   },
                   {
-                    "n": 2,
-                    "repeat": 1,
-                    "rest": false,
-                    "items": [
-                      {
-                        "id": "wall-ball",
-                        "name": "Wall ball",
-                        "qty": {
-                          "mode": "reps",
-                          "value": null,
-                          "range": [
-                            15,
-                            20
-                          ]
-                        },
-                        "perSide": false,
-                        "load": {
-                          "mode": "pair",
-                          "m": 9,
-                          "f": 6,
-                          "unit": "kg"
-                        },
-                        "mods": {},
-                        "alternatives": [],
-                        "text": "2. 15-20 wall balls 9/6"
-                      }
-                    ]
+                    "id": "db-thruster",
+                    "name": "Double DB thruster",
+                    "qty": {
+                      "mode": "reps",
+                      "value": 6
+                    },
+                    "perSide": false,
+                    "load": {
+                      "mode": "pair",
+                      "m": 22.5,
+                      "f": 15,
+                      "unit": "kg"
+                    },
+                    "mods": {},
+                    "alternatives": [],
+                    "text": "6 double db thruster 22,5/15"
                   },
                   {
-                    "n": 3,
-                    "repeat": 1,
-                    "rest": false,
-                    "items": [
-                      {
-                        "id": "handstand-push-up",
-                        "name": "Handstand push up",
-                        "qty": {
-                          "mode": "reps",
-                          "value": null,
-                          "range": [
-                            10,
-                            15
-                          ]
-                        },
-                        "perSide": false,
-                        "load": {
-                          "mode": "none"
-                        },
-                        "mods": {},
-                        "alternatives": [],
-                        "text": "3. 10-15 handstand push ups"
-                      }
-                    ]
-                  },
-                  {
-                    "n": 4,
-                    "repeat": 1,
-                    "rest": true,
-                    "items": []
+                    "id": "pull-up",
+                    "name": "Pull up",
+                    "qty": {
+                      "mode": "reps",
+                      "value": 9
+                    },
+                    "perSide": false,
+                    "load": {
+                      "mode": "none"
+                    },
+                    "mods": {},
+                    "alternatives": [],
+                    "text": "9 pull ups"
                   }
                 ]
               },
               "riders": [],
               "capSec": null,
               "restAfterSec": null,
-              "raw": "emom x 20\n1. 12/9cal bike\n2. 15-20 wall balls 9/6\n3. 10-15 handstand push ups\n4. rest"
+              "raw": "for time\n10 rounds\n3 double db hang power snatches 22,5/15\n6 double db thruster 22,5/15\n9 pull ups"
+            },
+            {
+              "role": "main",
+              "chain": "into",
+              "title": null,
+              "intent": null,
+              "clock": {
+                "type": "forTime",
+                "rounds": null,
+                "capSec": null,
+                "roundRestSec": null,
+                "eachForTime": false
+              },
+              "scheme": null,
+              "work": {
+                "mode": "rows",
+                "rows": [
+                  {
+                    "id": "burpee-box-jump-over",
+                    "name": "Burpee box jump over",
+                    "qty": {
+                      "mode": "reps",
+                      "value": 100
+                    },
+                    "perSide": false,
+                    "load": {
+                      "mode": "pair",
+                      "m": 60,
+                      "f": 50,
+                      "unit": "cm"
+                    },
+                    "mods": {},
+                    "alternatives": [],
+                    "text": "100 burpee box jump overs 60/50"
+                  }
+                ]
+              },
+              "riders": [],
+              "capSec": null,
+              "restAfterSec": null,
+              "raw": "into\n100 burpee box jump overs 60/50"
+            },
+            {
+              "role": "main",
+              "chain": "into",
+              "title": null,
+              "intent": null,
+              "clock": {
+                "type": "forTime",
+                "rounds": 10,
+                "capSec": null,
+                "roundRestSec": null,
+                "eachForTime": false
+              },
+              "scheme": null,
+              "work": {
+                "mode": "rows",
+                "rows": [
+                  {
+                    "id": "custom:db devils snuster",
+                    "name": "Double DB devils snuster",
+                    "qty": {
+                      "mode": "reps",
+                      "value": 3
+                    },
+                    "perSide": false,
+                    "load": {
+                      "mode": "pair",
+                      "m": 22.5,
+                      "f": 15,
+                      "unit": "kg"
+                    },
+                    "mods": {},
+                    "alternatives": [],
+                    "text": "3 double db devils snuster 22,5/15"
+                  },
+                  {
+                    "id": "custom:alt db frontrack lunge",
+                    "name": "Alt double DB frontrack lunge",
+                    "qty": {
+                      "mode": "reps",
+                      "value": 6
+                    },
+                    "perSide": false,
+                    "load": {
+                      "mode": "pair",
+                      "m": 22.5,
+                      "f": 15,
+                      "unit": "kg"
+                    },
+                    "mods": {},
+                    "alternatives": [],
+                    "text": "6 alt double db frontrack lunges 22,5/15"
+                  },
+                  {
+                    "id": "handstand-push-up",
+                    "name": "Handstand push up",
+                    "qty": {
+                      "mode": "reps",
+                      "value": 9
+                    },
+                    "perSide": false,
+                    "load": {
+                      "mode": "none"
+                    },
+                    "mods": {},
+                    "alternatives": [],
+                    "text": "9 handstand push ups"
+                  }
+                ]
+              },
+              "riders": [],
+              "capSec": null,
+              "restAfterSec": null,
+              "raw": "into\n10 rounds\n3 double db devils snuster 22,5/15\n6 alt double db frontrack lunges 22,5/15\n9 handstand push ups"
             }
           ],
           "scale": [
             {
-              "target": "wall-ball",
+              "target": "db load",
               "options": [
-                "6/4"
+                "15/10"
+              ]
+            },
+            {
+              "target": "pull-up",
+              "options": [
+                "ring rows"
               ]
             },
             {
               "target": "handstand-push-up",
               "options": [
                 "elevated hspu",
-                "hand release push ups",
-                "kneeling push ups"
+                "hand release push ups"
               ]
             }
           ],
           "notes": [
-            "scale 6/4, elevated hspu, hand release push ups, kneeling push ups"
+            "teams of two",
+            "scale 15/10, ring rows, elevated hspu, hand release push ups"
           ],
-          "raw": "metcon (20min)\nemom x 20\n1. 12/9cal bike\n2. 15-20 wall balls 9/6\n3. 10-15 handstand push ups\n4. rest\nscale 6/4, elevated hspu, hand release push ups, kneeling push ups\n#owerbodypull\n#rpe7"
+          "raw": "metcon (40min)\nteams of two\nfor time\n10 rounds\n3 double db hang power snatches 22,5/15\n6 double db thruster 22,5/15\n9 pull ups\ninto\n100 burpee box jump overs 60/50\ninto\n10 rounds\n3 double db devils snuster 22,5/15\n6 alt double db frontrack lunges 22,5/15\n9 handstand push ups\nscale 15/10, ring rows, elevated hspu, hand release push ups"
         }
       ]
     }
