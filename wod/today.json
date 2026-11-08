@@ -1,18 +1,19 @@
 {
-  "date": "2026-11-07",
+  "date": "2026-11-08",
   "source": "feed",
   "schema": 1,
   "resolver": {
     "by": "claude-nightly",
-    "at": "2026-11-07T07:39:49Z",
-    "confidence": 0.9,
+    "at": "2026-11-08T07:39:19Z",
+    "confidence": 0.85,
     "issues": [
-      "unknown movements kept as custom ids (no catalog in repo): down ups, sumo squat stretch, db hollow hold, db pass through, db devils snuster, alt db frontrack lunge",
-      "scale 15/10 mapped to DB load (loads first); ring rows -> pull ups; elevated hspu/hand release push ups -> handstand push ups"
+      "no catalog in repo: ids guessed for row/ski/bike/kb-swing/box-jump-over; unknown kept as custom ids: sumo squat stretch, shuttle run, top/bottom of push up hold",
+      "warm-up slash lines modelled as per-set rotation (alternatives + mods.rotation=perSet)",
+      "no minutes stated in headers: minutes null; conditioning 6 rounds over 3 numbered stations (2 passes)"
     ]
   },
-  "hashtag": "#teamday",
-  "rpe": "8",
+  "hashtag": null,
+  "rpe": null,
   "flags": [],
   "programs": [
     {
@@ -30,7 +31,7 @@
           "focus": null,
           "name": null,
           "benchmark": false,
-          "minutes": 6,
+          "minutes": null,
           "series": null,
           "cycleNote": null,
           "partner": null,
@@ -59,8 +60,8 @@
                     "rest": false,
                     "items": [
                       {
-                        "id": "custom:down ups",
-                        "name": "Down ups",
+                        "id": "row",
+                        "name": "Row",
                         "qty": {
                           "mode": "none"
                         },
@@ -68,9 +69,14 @@
                         "load": {
                           "mode": "none"
                         },
-                        "mods": {},
-                        "alternatives": [],
-                        "text": "down ups"
+                        "mods": {
+                          "rotation": "perSet"
+                        },
+                        "alternatives": [
+                          "ski",
+                          "bike"
+                        ],
+                        "text": "row/ski/bike"
                       }
                     ]
                   },
@@ -89,12 +95,14 @@
                         "load": {
                           "mode": "none"
                         },
-                        "mods": {},
+                        "mods": {
+                          "rotation": "perSet"
+                        },
                         "alternatives": [
-                          "down dog & seal",
-                          "handwalk + push up"
+                          "handwalk+push up",
+                          "twisted cross"
                         ],
-                        "text": "sumo squat stretch/down dog & seal/handwalk + push up"
+                        "text": "sumo squat stretch/handwalk+push up/twisted cross"
                       }
                     ]
                   }
@@ -103,12 +111,12 @@
               "riders": [],
               "capSec": null,
               "restAfterSec": null,
-              "raw": "3 sets\n45sec on/15sec off"
+              "raw": "3sets\n45sec/15sec"
             }
           ],
           "scale": [],
           "notes": [],
-          "raw": "warm up (6min)\n3 sets\n45sec on/15sec off\ndown ups\nsumo squat stretch/down dog & seal/handwalk + push up\nprehab (5min)"
+          "raw": "warm up\n3sets\n45sec/15sec\nrow/ski/bike\nsumo squat stretch/handwalk+push up/twisted cross"
         },
         {
           "ordinal": 2,
@@ -121,7 +129,7 @@
           "focus": null,
           "name": null,
           "benchmark": false,
-          "minutes": 5,
+          "minutes": null,
           "series": null,
           "cycleNote": null,
           "partner": null,
@@ -137,7 +145,7 @@
                 "type": "interval",
                 "workSec": 30,
                 "restSec": 10,
-                "rounds": 6,
+                "rounds": 4,
                 "stationMode": "rotate"
               },
               "scheme": null,
@@ -150,8 +158,8 @@
                     "rest": false,
                     "items": [
                       {
-                        "id": "custom:db hollow hold",
-                        "name": "Db hollow hold",
+                        "id": "custom:top of push up hold",
+                        "name": "Top of push up hold",
                         "qty": {
                           "mode": "none"
                         },
@@ -161,7 +169,7 @@
                         },
                         "mods": {},
                         "alternatives": [],
-                        "text": "db hollow hold"
+                        "text": "top of push up hold"
                       }
                     ]
                   },
@@ -171,8 +179,8 @@
                     "rest": false,
                     "items": [
                       {
-                        "id": "custom:db pass through",
-                        "name": "Db pass through",
+                        "id": "custom:bottom of push up hold",
+                        "name": "Bottom of push up hold",
                         "qty": {
                           "mode": "none"
                         },
@@ -182,7 +190,7 @@
                         },
                         "mods": {},
                         "alternatives": [],
-                        "text": "db pass through"
+                        "text": "bottom of push up hold"
                       }
                     ]
                   }
@@ -191,31 +199,28 @@
               "riders": [],
               "capSec": null,
               "restAfterSec": null,
-              "raw": "3 sets\n30sec on/10sec off"
+              "raw": "2sets\n30sec on/10sec off"
             }
           ],
           "scale": [],
           "notes": [],
-          "raw": "3 sets\n30sec on/10sec off\ndb hollow hold\ndb pass through"
+          "raw": "prehab\n2sets\n30sec on/10sec off\ntop of push up hold\nbottom of push up hold"
         },
         {
           "ordinal": 3,
           "letter": null,
-          "kind": "metcon",
+          "kind": "conditioning",
           "tags": [
-            "metcon"
+            "conditioning"
           ],
-          "label": "metcon",
+          "label": "conditioning",
           "focus": null,
           "name": null,
           "benchmark": false,
-          "minutes": 40,
+          "minutes": null,
           "series": null,
           "cycleNote": null,
-          "partner": {
-            "mode": "teams",
-            "note": "teams of two"
-          },
+          "partner": null,
           "optional": false,
           "bonus": false,
           "segments": [
@@ -225,216 +230,146 @@
               "title": null,
               "intent": null,
               "clock": {
-                "type": "forTime",
-                "rounds": 10,
-                "capSec": null,
-                "roundRestSec": null,
-                "eachForTime": false
+                "type": "emom",
+                "everySec": 720,
+                "rounds": 6,
+                "alternate": false
               },
               "scheme": null,
               "work": {
-                "mode": "rows",
-                "rows": [
+                "mode": "stations",
+                "stations": [
                   {
-                    "id": "db-hang-power-snatch",
-                    "name": "Double DB hang power snatch",
-                    "qty": {
-                      "mode": "reps",
-                      "value": 3
-                    },
-                    "perSide": false,
-                    "load": {
-                      "mode": "pair",
-                      "m": 22.5,
-                      "f": 15,
-                      "unit": "kg"
-                    },
-                    "mods": {},
-                    "alternatives": [],
-                    "text": "3 double db hang power snatches 22,5/15"
+                    "n": 1,
+                    "repeat": 1,
+                    "rest": false,
+                    "items": [
+                      {
+                        "id": "custom:shuttle run",
+                        "name": "Shuttle run",
+                        "qty": {
+                          "mode": "reps",
+                          "value": 20
+                        },
+                        "perSide": false,
+                        "load": {
+                          "mode": "none"
+                        },
+                        "mods": {},
+                        "alternatives": [],
+                        "text": "20 shuttle runs (2x6m)"
+                      },
+                      {
+                        "id": "row",
+                        "name": "Row",
+                        "qty": {
+                          "mode": "m",
+                          "value": 2000,
+                          "f": 1600
+                        },
+                        "perSide": false,
+                        "load": {
+                          "mode": "none"
+                        },
+                        "mods": {},
+                        "alternatives": [],
+                        "text": "2000/1600m row"
+                      }
+                    ]
                   },
                   {
-                    "id": "db-thruster",
-                    "name": "Double DB thruster",
-                    "qty": {
-                      "mode": "reps",
-                      "value": 6
-                    },
-                    "perSide": false,
-                    "load": {
-                      "mode": "pair",
-                      "m": 22.5,
-                      "f": 15,
-                      "unit": "kg"
-                    },
-                    "mods": {},
-                    "alternatives": [],
-                    "text": "6 double db thruster 22,5/15"
+                    "n": 2,
+                    "repeat": 1,
+                    "rest": false,
+                    "items": [
+                      {
+                        "id": "kb-swing",
+                        "name": "KB swing",
+                        "qty": {
+                          "mode": "reps",
+                          "value": 40
+                        },
+                        "perSide": false,
+                        "load": {
+                          "mode": "pair",
+                          "m": 24,
+                          "f": 16,
+                          "unit": "kg"
+                        },
+                        "mods": {},
+                        "alternatives": [],
+                        "text": "40 kb swings 24/16"
+                      },
+                      {
+                        "id": "ski",
+                        "name": "Ski erg",
+                        "qty": {
+                          "mode": "m",
+                          "value": 2000,
+                          "f": 1600
+                        },
+                        "perSide": false,
+                        "load": {
+                          "mode": "none"
+                        },
+                        "mods": {},
+                        "alternatives": [],
+                        "text": "2000/1600m ski"
+                      }
+                    ]
                   },
                   {
-                    "id": "pull-up",
-                    "name": "Pull up",
-                    "qty": {
-                      "mode": "reps",
-                      "value": 9
-                    },
-                    "perSide": false,
-                    "load": {
-                      "mode": "none"
-                    },
-                    "mods": {},
-                    "alternatives": [],
-                    "text": "9 pull ups"
+                    "n": 3,
+                    "repeat": 1,
+                    "rest": false,
+                    "items": [
+                      {
+                        "id": "box-jump-over",
+                        "name": "Box jump over",
+                        "qty": {
+                          "mode": "reps",
+                          "value": 30
+                        },
+                        "perSide": false,
+                        "load": {
+                          "mode": "pair",
+                          "m": 60,
+                          "f": 50,
+                          "unit": "cm"
+                        },
+                        "mods": {},
+                        "alternatives": [],
+                        "text": "30 box jump over 60/50"
+                      },
+                      {
+                        "id": "bike",
+                        "name": "Bike",
+                        "qty": {
+                          "mode": "m",
+                          "value": 6000,
+                          "f": 4800
+                        },
+                        "perSide": false,
+                        "load": {
+                          "mode": "none"
+                        },
+                        "mods": {},
+                        "alternatives": [],
+                        "text": "6000/4800m bike"
+                      }
+                    ]
                   }
                 ]
               },
               "riders": [],
               "capSec": null,
               "restAfterSec": null,
-              "raw": "for time\n10 rounds\n3 double db hang power snatches 22,5/15\n6 double db thruster 22,5/15\n9 pull ups"
-            },
-            {
-              "role": "main",
-              "chain": "into",
-              "title": null,
-              "intent": null,
-              "clock": {
-                "type": "forTime",
-                "rounds": null,
-                "capSec": null,
-                "roundRestSec": null,
-                "eachForTime": false
-              },
-              "scheme": null,
-              "work": {
-                "mode": "rows",
-                "rows": [
-                  {
-                    "id": "burpee-box-jump-over",
-                    "name": "Burpee box jump over",
-                    "qty": {
-                      "mode": "reps",
-                      "value": 100
-                    },
-                    "perSide": false,
-                    "load": {
-                      "mode": "pair",
-                      "m": 60,
-                      "f": 50,
-                      "unit": "cm"
-                    },
-                    "mods": {},
-                    "alternatives": [],
-                    "text": "100 burpee box jump overs 60/50"
-                  }
-                ]
-              },
-              "riders": [],
-              "capSec": null,
-              "restAfterSec": null,
-              "raw": "into\n100 burpee box jump overs 60/50"
-            },
-            {
-              "role": "main",
-              "chain": "into",
-              "title": null,
-              "intent": null,
-              "clock": {
-                "type": "forTime",
-                "rounds": 10,
-                "capSec": null,
-                "roundRestSec": null,
-                "eachForTime": false
-              },
-              "scheme": null,
-              "work": {
-                "mode": "rows",
-                "rows": [
-                  {
-                    "id": "custom:db devils snuster",
-                    "name": "Double DB devils snuster",
-                    "qty": {
-                      "mode": "reps",
-                      "value": 3
-                    },
-                    "perSide": false,
-                    "load": {
-                      "mode": "pair",
-                      "m": 22.5,
-                      "f": 15,
-                      "unit": "kg"
-                    },
-                    "mods": {},
-                    "alternatives": [],
-                    "text": "3 double db devils snuster 22,5/15"
-                  },
-                  {
-                    "id": "custom:alt db frontrack lunge",
-                    "name": "Alt double DB frontrack lunge",
-                    "qty": {
-                      "mode": "reps",
-                      "value": 6
-                    },
-                    "perSide": false,
-                    "load": {
-                      "mode": "pair",
-                      "m": 22.5,
-                      "f": 15,
-                      "unit": "kg"
-                    },
-                    "mods": {},
-                    "alternatives": [],
-                    "text": "6 alt double db frontrack lunges 22,5/15"
-                  },
-                  {
-                    "id": "handstand-push-up",
-                    "name": "Handstand push up",
-                    "qty": {
-                      "mode": "reps",
-                      "value": 9
-                    },
-                    "perSide": false,
-                    "load": {
-                      "mode": "none"
-                    },
-                    "mods": {},
-                    "alternatives": [],
-                    "text": "9 handstand push ups"
-                  }
-                ]
-              },
-              "riders": [],
-              "capSec": null,
-              "restAfterSec": null,
-              "raw": "into\n10 rounds\n3 double db devils snuster 22,5/15\n6 alt double db frontrack lunges 22,5/15\n9 handstand push ups"
+              "raw": "every 12min x 6\n1.\n2.\n3."
             }
           ],
-          "scale": [
-            {
-              "target": "db load",
-              "options": [
-                "15/10"
-              ]
-            },
-            {
-              "target": "pull-up",
-              "options": [
-                "ring rows"
-              ]
-            },
-            {
-              "target": "handstand-push-up",
-              "options": [
-                "elevated hspu",
-                "hand release push ups"
-              ]
-            }
-          ],
-          "notes": [
-            "teams of two",
-            "scale 15/10, ring rows, elevated hspu, hand release push ups"
-          ],
-          "raw": "metcon (40min)\nteams of two\nfor time\n10 rounds\n3 double db hang power snatches 22,5/15\n6 double db thruster 22,5/15\n9 pull ups\ninto\n100 burpee box jump overs 60/50\ninto\n10 rounds\n3 double db devils snuster 22,5/15\n6 alt double db frontrack lunges 22,5/15\n9 handstand push ups\nscale 15/10, ring rows, elevated hspu, hand release push ups"
+          "scale": [],
+          "notes": [],
+          "raw": "conditioning\nevery 12min x 6\n1.\n20 shuttle runs (2x6m)\n2000/1600m row\n2.\n40 kb swings 24/16\n2000/1600m ski\n3.\n30 box jump over 60/50\n6000/4800m bike"
         }
       ]
     }
