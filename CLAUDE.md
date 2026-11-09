@@ -62,3 +62,10 @@ The full grammar: `docs/COACH-GRAMMAR-AND-IR.md` in the app repo (§1 cadence,
 Vocabulary: `docs/MOVEMENT-CATALOG.md`. Pipeline spec:
 `docs/WOD-RESOLVER-SERVICE.md`. When a day resolves wrong, the fix is a new
 reviewed fixture in `test/expected/`, not a new rule.
+
+**Before resolving a day, read the reviewed fixtures** — each
+`test/corpus/<date>.txt` + `test/expected/<date>.json` pair is a worked
+example of the grammar done right (e.g. 2026-11-05: a `1 x + 1 y` complex
+splits into `parts` with per-part reps; a `*` rider lives in `riders` only,
+never mirrored into block `notes`). The fixtures are the teaching channel:
+they outrank any instinct that disagrees with them.
