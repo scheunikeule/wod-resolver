@@ -1,21 +1,22 @@
 {
-  "date": "2026-11-09",
+  "date": "2026-11-10",
   "source": "feed",
   "schema": 1,
   "resolver": {
     "by": "claude-nightly",
-    "at": "2026-11-09T07:40:03Z",
-    "confidence": 0.75,
+    "at": "2026-11-10T07:39:51Z",
+    "confidence": 0.7,
     "issues": [
-      "no prompt/catalog.json in repo: movement ids guessed from earlier days (pull-up, shoulder-to-overhead, front-squat, tuck-sit-hang, plank-up, shuttle-run, burpee-box-jump-over); unknown kept custom: dynamic warm up, instep stretch + rotation",
-      "metcon: 'GTD mod Finale' kept as block name; single pass of 6 rows, rounds null (not stated)",
-      "scale '45/30' mapped to barbell load (deadlift/S2O/front squat 60/45); 'ring rows' mapped to pull ups",
-      "hyrox warm up: '3sets' has no work/rest seconds in text -> sets clock with null timing; slash lines kept as per-set rotation (mods.rotation=perSet, alternatives)",
-      "hyrox emom x 42 over 7 stations (6 passes); 12/9cal read as cal ♂/♀; 60/50 after burpee box jump over = box height cm"
+      "no prompt/catalog.json in repo: movement ids guessed from earlier days/catalog-style names; unknown kept custom: samson stretch, rower pike up, nose to wall handstand hold, down up",
+      "rounds derived: warm up/prehab interval rounds = sets x stations (class 3x2=6; hyrox 2x3=6 warm up, 3x2=6 prehab)",
+      "strength/gymnastic: 'every 2min x 6' = emom 120s x 6 (12min of 15min block); scale line mapped per movement (no loads)",
+      "metcon: 6 rounds for time with block minutes 20 (stated); 'defizit pushups on db' read as deficit push up; scale 15/10 mapped to DB load (db snatch), then push ups > kneeling push ups",
+      "warm up slash lines (row/ski, samson stretch/sumo squat stretch) kept as per-set rotation (mods.rotation=perSet, alternatives)",
+      "hyrox conditioning: amrap 40min; 750/600m read as m ♂/♀; 22,5/15 = db kg ♂/♀; 60/50 after burpee box step over = box height cm (no db load stated)"
     ]
   },
-  "hashtag": "#lowerbodypull",
-  "rpe": "8",
+  "hashtag": "#gymnasticvolume",
+  "rpe": "7",
   "flags": [],
   "programs": [
     {
@@ -46,37 +47,72 @@
               "title": null,
               "intent": null,
               "clock": {
-                "type": "none"
+                "type": "interval",
+                "workSec": 45,
+                "restSec": 15,
+                "rounds": 6,
+                "stationMode": "rotate"
               },
               "scheme": null,
               "work": {
-                "mode": "rows",
-                "rows": [
+                "mode": "stations",
+                "stations": [
                   {
-                    "id": "custom:dynamic warm up",
-                    "name": "Dynamic warm up",
-                    "qty": {
-                      "mode": "none"
-                    },
-                    "perSide": false,
-                    "load": {
-                      "mode": "none"
-                    },
-                    "mods": {},
-                    "alternatives": [],
-                    "text": "dynamic warm up"
+                    "n": 1,
+                    "repeat": 1,
+                    "rest": false,
+                    "items": [
+                      {
+                        "id": "row",
+                        "name": "Row",
+                        "qty": {
+                          "mode": "none"
+                        },
+                        "perSide": false,
+                        "load": {
+                          "mode": "none"
+                        },
+                        "mods": {},
+                        "alternatives": [],
+                        "text": "row"
+                      }
+                    ]
+                  },
+                  {
+                    "n": 2,
+                    "repeat": 1,
+                    "rest": false,
+                    "items": [
+                      {
+                        "id": "custom:samson stretch",
+                        "name": "Samson stretch",
+                        "qty": {
+                          "mode": "none"
+                        },
+                        "perSide": false,
+                        "load": {
+                          "mode": "none"
+                        },
+                        "mods": {},
+                        "alternatives": [
+                          "down dog & seal",
+                          "dynamic bridge"
+                        ],
+                        "text": "samson stretch/down dog & seal/dynamic bridge"
+                      }
+                    ]
                   }
                 ]
               },
               "riders": [],
               "capSec": null,
               "restAfterSec": null,
-              "raw": "dynamic warm up"
+              "raw": "3 sets\n45sec on/15sec off"
             }
           ],
           "scale": [],
           "notes": [],
-          "raw": "warm up (6min)\ndynamic warm up"
+          "raw": "warm up (6min)\n3 sets\n45sec on/15sec off\nrow\nsamson stretch/down dog & seal/dynamic bridge"
         },
         {
           "ordinal": 2,
@@ -118,8 +154,8 @@
                     "rest": false,
                     "items": [
                       {
-                        "id": "tuck-sit-hang",
-                        "name": "Tuck sit hang",
+                        "id": "custom:rower pike up",
+                        "name": "Rower pike up",
                         "qty": {
                           "mode": "none"
                         },
@@ -129,7 +165,7 @@
                         },
                         "mods": {},
                         "alternatives": [],
-                        "text": "tuck sit hang"
+                        "text": "rower pike ups"
                       }
                     ]
                   },
@@ -139,18 +175,18 @@
                     "rest": false,
                     "items": [
                       {
-                        "id": "good-morning",
-                        "name": "Good morning",
+                        "id": "custom:nose to wall handstand hold",
+                        "name": "Nose to wall handstand hold",
                         "qty": {
                           "mode": "none"
                         },
                         "perSide": false,
                         "load": {
-                          "mode": "implement"
+                          "mode": "none"
                         },
                         "mods": {},
                         "alternatives": [],
-                        "text": "barbell good mornings"
+                        "text": "nose to wall handstand hold"
                       }
                     ]
                   }
@@ -164,119 +200,99 @@
           ],
           "scale": [],
           "notes": [],
-          "raw": "prehab (5min)\n3 sets\n30sec on/10sec off\ntuck sit hang\nbarbell good mornings"
+          "raw": "prehab (5min)\n3 sets\n30sec on/10sec off\nrower pike ups\nnose to wall handstand hold"
         },
         {
           "ordinal": 3,
           "letter": null,
-          "kind": "strength",
+          "kind": "gymnastic",
           "tags": [
-            "strength"
+            "strength",
+            "gymnastic"
           ],
-          "label": "strength",
-          "focus": "deadlift",
+          "label": "strength/gymnastic",
+          "focus": null,
           "name": null,
           "benchmark": false,
-          "minutes": 20,
-          "series": {
-            "n": 4,
-            "of": 6
-          },
+          "minutes": 15,
+          "series": null,
           "cycleNote": null,
           "partner": null,
           "optional": false,
           "bonus": false,
           "segments": [
             {
-              "role": "warmup",
-              "chain": null,
-              "title": "warm up",
-              "intent": null,
-              "clock": {
-                "type": "sets",
-                "sets": 2,
-                "reps": 4,
-                "restSec": 120,
-                "restBetweenRepsSec": null,
-                "groups": []
-              },
-              "scheme": null,
-              "work": {
-                "mode": "rows",
-                "rows": [
-                  {
-                    "id": "deadlift",
-                    "name": "Deadlift",
-                    "qty": {
-                      "mode": "reps",
-                      "value": 4
-                    },
-                    "perSide": false,
-                    "load": {
-                      "mode": "pct",
-                      "pct": 65,
-                      "pctOf": "1rm"
-                    },
-                    "mods": {},
-                    "alternatives": [],
-                    "text": "4 reps @65%"
-                  }
-                ]
-              },
-              "riders": [],
-              "capSec": null,
-              "restAfterSec": null,
-              "raw": "warm up\n2 sets\n4 reps @65%\n2min rest"
-            },
-            {
               "role": "main",
-              "chain": "into",
+              "chain": null,
               "title": null,
               "intent": null,
               "clock": {
-                "type": "sets",
-                "sets": 4,
-                "reps": 4,
-                "restSec": 120,
-                "restBetweenRepsSec": null,
-                "groups": []
+                "type": "emom",
+                "everySec": 120,
+                "rounds": 6,
+                "alternate": false
               },
               "scheme": null,
               "work": {
                 "mode": "rows",
                 "rows": [
                   {
-                    "id": "deadlift",
-                    "name": "Deadlift",
+                    "id": "double-under",
+                    "name": "Double under",
                     "qty": {
                       "mode": "reps",
-                      "value": 4
+                      "value": 20
                     },
                     "perSide": false,
                     "load": {
-                      "mode": "pct",
-                      "pct": null,
-                      "pctRange": [
-                        75,
-                        80
-                      ],
-                      "pctOf": "1rm"
+                      "mode": "none"
                     },
                     "mods": {},
                     "alternatives": [],
-                    "text": "4 reps @75-80%"
+                    "text": "20 double unders"
+                  },
+                  {
+                    "id": "handstand-push-up",
+                    "name": "Handstand push up",
+                    "qty": {
+                      "mode": "reps",
+                      "value": 10
+                    },
+                    "perSide": false,
+                    "load": {
+                      "mode": "none"
+                    },
+                    "mods": {},
+                    "alternatives": [],
+                    "text": "10 handstand push ups"
                   }
                 ]
               },
               "riders": [],
               "capSec": null,
               "restAfterSec": null,
-              "raw": "into\n4 sets\n4 reps @75-80%\n2min rest"
+              "raw": "every 2min x 6"
             }
           ],
-          "scale": [],
-          "notes": [],
-          "raw": "strength (20min)\ndeadlift 4/6\nwarm up\n2 sets\n4 reps @65%\n2min rest\ninto\n4 sets\n4 reps @75-80%\n2min rest"
+          "scale": [
+            {
+              "target": "double-under",
+              "options": [
+                "double under practice"
+              ]
+            },
+            {
+              "target": "handstand-push-up",
+              "options": [
+                "elevated hspu",
+                "box supported hspu"
+              ]
+            }
+          ],
+          "notes": [
+            "scale double under practice, elevated hspu, box supported hspu"
+          ],
+          "raw": "strength/gymnastic (15min)\nevery 2min x 6\n20 double unders\n10 handstand push ups\nscale double under practice, elevated hspu, box supported hspu"
         },
         {
           "ordinal": 4,
@@ -287,9 +303,9 @@
           ],
           "label": "metcon",
           "focus": null,
-          "name": "GTD mod Finale",
+          "name": null,
           "benchmark": false,
-          "minutes": 15,
+          "minutes": 20,
           "series": null,
           "cycleNote": null,
           "partner": null,
@@ -303,7 +319,7 @@
               "intent": "time",
               "clock": {
                 "type": "forTime",
-                "rounds": null,
+                "rounds": 6,
                 "capSec": null,
                 "roundRestSec": null,
                 "eachForTime": false
@@ -313,11 +329,29 @@
                 "mode": "rows",
                 "rows": [
                   {
-                    "id": "pull-up",
-                    "name": "Pull up",
+                    "id": "db-snatch",
+                    "name": "Double DB snatch",
                     "qty": {
                       "mode": "reps",
-                      "value": 30
+                      "value": 9
+                    },
+                    "perSide": false,
+                    "load": {
+                      "mode": "pair",
+                      "m": 22.5,
+                      "f": 15,
+                      "unit": "kg"
+                    },
+                    "mods": {},
+                    "alternatives": [],
+                    "text": "9 double db snatches 22,5/15"
+                  },
+                  {
+                    "id": "deficit-push-up",
+                    "name": "Deficit push up on DB",
+                    "qty": {
+                      "mode": "reps",
+                      "value": 12
                     },
                     "perSide": false,
                     "load": {
@@ -325,50 +359,15 @@
                     },
                     "mods": {},
                     "alternatives": [],
-                    "text": "30 pull ups"
+                    "text": "12 defizit pushups on db"
                   },
                   {
-                    "id": "deadlift",
-                    "name": "Deadlift",
+                    "id": "row",
+                    "name": "Row",
                     "qty": {
-                      "mode": "reps",
-                      "value": 20
-                    },
-                    "perSide": false,
-                    "load": {
-                      "mode": "pair",
-                      "m": 60,
-                      "f": 45,
-                      "unit": "kg"
-                    },
-                    "mods": {},
-                    "alternatives": [],
-                    "text": "20 deadlifts 60/45"
-                  },
-                  {
-                    "id": "shoulder-to-overhead",
-                    "name": "Shoulder to overhead",
-                    "qty": {
-                      "mode": "reps",
-                      "value": 20
-                    },
-                    "perSide": false,
-                    "load": {
-                      "mode": "pair",
-                      "m": 60,
-                      "f": 45,
-                      "unit": "kg"
-                    },
-                    "mods": {},
-                    "alternatives": [],
-                    "text": "20 shoulder to overhead 60/45"
-                  },
-                  {
-                    "id": "pull-up",
-                    "name": "Pull up",
-                    "qty": {
-                      "mode": "reps",
-                      "value": 30
+                      "mode": "cal",
+                      "value": 15,
+                      "f": 12
                     },
                     "perSide": false,
                     "load": {
@@ -376,70 +375,50 @@
                     },
                     "mods": {},
                     "alternatives": [],
-                    "text": "30 pull ups"
+                    "text": "15/12cal row"
                   },
                   {
-                    "id": "front-squat",
-                    "name": "Front squat",
+                    "id": "sit-up",
+                    "name": "Sit up",
                     "qty": {
                       "mode": "reps",
-                      "value": 20
+                      "value": 18
                     },
                     "perSide": false,
                     "load": {
-                      "mode": "pair",
-                      "m": 60,
-                      "f": 45,
-                      "unit": "kg"
+                      "mode": "none"
                     },
                     "mods": {},
                     "alternatives": [],
-                    "text": "20 frontsquats 60/45"
-                  },
-                  {
-                    "id": "shoulder-to-overhead",
-                    "name": "Shoulder to overhead",
-                    "qty": {
-                      "mode": "reps",
-                      "value": 20
-                    },
-                    "perSide": false,
-                    "load": {
-                      "mode": "pair",
-                      "m": 60,
-                      "f": 45,
-                      "unit": "kg"
-                    },
-                    "mods": {},
-                    "alternatives": [],
-                    "text": "20 shoulder to overhead 60/45"
+                    "text": "18 sit ups"
                   }
                 ]
               },
               "riders": [],
               "capSec": null,
               "restAfterSec": null,
-              "raw": "for time"
+              "raw": "6 rounds\nfor time"
             }
           ],
           "scale": [
             {
               "target": "load",
               "options": [
-                "45/30"
+                "15/10"
               ]
             },
             {
-              "target": "pull-up",
+              "target": "deficit-push-up",
               "options": [
-                "ring rows"
+                "push ups",
+                "kneeling push ups"
               ]
             }
           ],
           "notes": [
-            "scale 45/30, ring rows"
+            "scale 15/10, push ups, kneeling push ups"
           ],
-          "raw": "metcon (15min)\nGTD mod Finale\nfor time\n30 pull ups\n20 deadlifts 60/45\n20 shoulder to overhead 60/45\n30 pull ups\n20 frontsquats 60/45\n20 shoulder to overhead 60/45\nscale 45/30, ring rows\n#lowerbodypull\nrpe8"
+          "raw": "metcon (20min)\n6 rounds\nfor time\n9 double db snatches 22,5/15\n12 defizit pushups on db\n15/12cal row\n18 sit ups\nscale 15/10, push ups, kneeling push ups\n#gymnasticvolume\nrpe7"
         }
       ]
     },
@@ -471,67 +450,98 @@
               "title": null,
               "intent": null,
               "clock": {
-                "type": "sets",
-                "sets": 3,
-                "reps": null,
-                "restSec": null,
-                "restBetweenRepsSec": null,
-                "groups": []
+                "type": "interval",
+                "workSec": 45,
+                "restSec": 15,
+                "rounds": 6,
+                "stationMode": "rotate"
               },
               "scheme": null,
               "work": {
-                "mode": "rows",
-                "rows": [
+                "mode": "stations",
+                "stations": [
                   {
-                    "id": "erg",
-                    "name": "Erg (per-set choice)",
-                    "qty": {
-                      "mode": "none"
-                    },
-                    "perSide": false,
-                    "load": {
-                      "mode": "none"
-                    },
-                    "mods": {
-                      "rotation": "perSet",
-                      "first": "ski"
-                    },
-                    "alternatives": [
-                      "row",
-                      "bike"
-                    ],
-                    "text": "ski/row/bike"
+                    "n": 1,
+                    "repeat": 1,
+                    "rest": false,
+                    "items": [
+                      {
+                        "id": "row",
+                        "name": "Row",
+                        "qty": {
+                          "mode": "none"
+                        },
+                        "perSide": false,
+                        "load": {
+                          "mode": "none"
+                        },
+                        "mods": {
+                          "rotation": "perSet"
+                        },
+                        "alternatives": [
+                          "ski"
+                        ],
+                        "text": "row/ski"
+                      }
+                    ]
                   },
                   {
-                    "id": "custom:instep stretch + rotation",
-                    "name": "Instep stretch + rotation",
-                    "qty": {
-                      "mode": "none"
-                    },
-                    "perSide": false,
-                    "load": {
-                      "mode": "none"
-                    },
-                    "mods": {
-                      "rotation": "perSet"
-                    },
-                    "alternatives": [
-                      "handwalk+push up",
-                      "sumo squat stretch"
-                    ],
-                    "text": "instep stretch+rotation/handwalk+push up/sumo squat stretch"
+                    "n": 2,
+                    "repeat": 1,
+                    "rest": false,
+                    "items": [
+                      {
+                        "id": "custom:down up",
+                        "name": "Down up",
+                        "qty": {
+                          "mode": "none"
+                        },
+                        "perSide": false,
+                        "load": {
+                          "mode": "none"
+                        },
+                        "mods": {},
+                        "alternatives": [],
+                        "text": "down ups"
+                      }
+                    ]
+                  },
+                  {
+                    "n": 3,
+                    "repeat": 1,
+                    "rest": false,
+                    "items": [
+                      {
+                        "id": "custom:samson stretch",
+                        "name": "Samson stretch",
+                        "qty": {
+                          "mode": "none"
+                        },
+                        "perSide": false,
+                        "load": {
+                          "mode": "none"
+                        },
+                        "mods": {
+                          "rotation": "perSet"
+                        },
+                        "alternatives": [
+                          "sumo squat stretch"
+                        ],
+                        "text": "samson stretch/sumo squat stretch"
+                      }
+                    ]
                   }
                 ]
               },
               "riders": [],
               "capSec": null,
               "restAfterSec": null,
-              "raw": "3sets"
+              "raw": "2 sets\n45sec on/15sec off"
             }
           ],
           "scale": [],
           "notes": [],
-          "raw": "warm up\n3sets\nski/row/bike\ninstep stretch+rotation/handwalk+push up/sumo squat stretch"
+          "raw": "warm up\n2 sets\n45sec on/15sec off\nrow/ski\ndown ups\nsamson stretch/sumo squat stretch"
         },
         {
           "ordinal": 2,
@@ -573,8 +583,8 @@
                     "rest": false,
                     "items": [
                       {
-                        "id": "plank-up",
-                        "name": "Plank up",
+                        "id": "custom:rower pike up",
+                        "name": "Rower pike up",
                         "qty": {
                           "mode": "none"
                         },
@@ -584,7 +594,7 @@
                         },
                         "mods": {},
                         "alternatives": [],
-                        "text": "plank ups"
+                        "text": "rower pike ups"
                       }
                     ]
                   },
@@ -594,8 +604,8 @@
                     "rest": false,
                     "items": [
                       {
-                        "id": "hollow-hold",
-                        "name": "Hollow hold",
+                        "id": "kb-twist",
+                        "name": "KB twist",
                         "qty": {
                           "mode": "none"
                         },
@@ -605,7 +615,7 @@
                         },
                         "mods": {},
                         "alternatives": [],
-                        "text": "hollow hold"
+                        "text": "kb twist"
                       }
                     ]
                   }
@@ -619,7 +629,7 @@
           ],
           "scale": [],
           "notes": [],
-          "raw": "prehab\n3sets\n30sec on/10sec off\nplank ups\nhollow hold"
+          "raw": "prehab\n3sets\n30sec on/10sec off\nrower pike ups\nkb twist"
         },
         {
           "ordinal": 3,
@@ -645,170 +655,111 @@
               "title": null,
               "intent": null,
               "clock": {
-                "type": "emom",
-                "everySec": 60,
-                "rounds": 42,
-                "alternate": false
+                "type": "amrap",
+                "sec": 2400,
+                "maxSec": null
               },
               "scheme": null,
               "work": {
-                "mode": "stations",
-                "stations": [
+                "mode": "rows",
+                "rows": [
                   {
-                    "n": 1,
-                    "repeat": 1,
-                    "rest": false,
-                    "items": [
-                      {
-                        "id": "burpee-box-jump-over",
-                        "name": "Burpee box jump over",
-                        "qty": {
-                          "mode": "reps",
-                          "value": 8
-                        },
-                        "perSide": false,
-                        "load": {
-                          "mode": "pair",
-                          "m": 60,
-                          "f": 50,
-                          "unit": "cm"
-                        },
-                        "mods": {},
-                        "alternatives": [],
-                        "text": "1. 8 burpee box jump over 60/50"
-                      }
-                    ]
+                    "id": "farmers-carry",
+                    "name": "Double DB farmers carry",
+                    "qty": {
+                      "mode": "m",
+                      "value": 60
+                    },
+                    "perSide": false,
+                    "load": {
+                      "mode": "pair",
+                      "m": 22.5,
+                      "f": 15,
+                      "unit": "kg"
+                    },
+                    "mods": {},
+                    "alternatives": [],
+                    "text": "60m double db farmers carry 22,5/15"
                   },
                   {
-                    "n": 2,
-                    "repeat": 1,
-                    "rest": false,
-                    "items": [
-                      {
-                        "id": "ski",
-                        "name": "Ski erg",
-                        "qty": {
-                          "mode": "cal",
-                          "value": 12,
-                          "f": 9
-                        },
-                        "perSide": false,
-                        "load": {
-                          "mode": "none"
-                        },
-                        "mods": {},
-                        "alternatives": [],
-                        "text": "2. 12/9cal ski"
-                      }
-                    ]
+                    "id": "row",
+                    "name": "Row",
+                    "qty": {
+                      "mode": "m",
+                      "value": 750,
+                      "f": 600
+                    },
+                    "perSide": false,
+                    "load": {
+                      "mode": "none"
+                    },
+                    "mods": {},
+                    "alternatives": [],
+                    "text": "750/600m row"
                   },
                   {
-                    "n": 3,
-                    "repeat": 1,
-                    "rest": false,
-                    "items": [
-                      {
-                        "id": "shuttle-run",
-                        "name": "Shuttle run",
-                        "qty": {
-                          "mode": "reps",
-                          "value": 5
-                        },
-                        "perSide": false,
-                        "load": {
-                          "mode": "none"
-                        },
-                        "mods": {},
-                        "alternatives": [],
-                        "text": "3. 5 shuttle runs (2x5m)"
-                      }
-                    ]
+                    "id": "db-front-rack-lunge",
+                    "name": "Double DB front rack lunge",
+                    "qty": {
+                      "mode": "m",
+                      "value": 40
+                    },
+                    "perSide": false,
+                    "load": {
+                      "mode": "pair",
+                      "m": 22.5,
+                      "f": 15,
+                      "unit": "kg"
+                    },
+                    "mods": {},
+                    "alternatives": [],
+                    "text": "40m double db frontrack lunges 22,5/15"
                   },
                   {
-                    "n": 4,
-                    "repeat": 1,
-                    "rest": false,
-                    "items": [
-                      {
-                        "id": "bike",
-                        "name": "Bike",
-                        "qty": {
-                          "mode": "cal",
-                          "value": 12,
-                          "f": 9
-                        },
-                        "perSide": false,
-                        "load": {
-                          "mode": "none"
-                        },
-                        "mods": {},
-                        "alternatives": [],
-                        "text": "4. 12/9cal bike"
-                      }
-                    ]
+                    "id": "ski",
+                    "name": "Ski erg",
+                    "qty": {
+                      "mode": "m",
+                      "value": 750,
+                      "f": 600
+                    },
+                    "perSide": false,
+                    "load": {
+                      "mode": "none"
+                    },
+                    "mods": {},
+                    "alternatives": [],
+                    "text": "750/600m ski"
                   },
                   {
-                    "n": 5,
-                    "repeat": 1,
-                    "rest": false,
-                    "items": [
-                      {
-                        "id": "air-squat",
-                        "name": "Air squat",
-                        "qty": {
-                          "mode": "reps",
-                          "value": 30
-                        },
-                        "perSide": false,
-                        "load": {
-                          "mode": "none"
-                        },
-                        "mods": {},
-                        "alternatives": [],
-                        "text": "5. 30 air squats"
-                      }
-                    ]
-                  },
-                  {
-                    "n": 6,
-                    "repeat": 1,
-                    "rest": false,
-                    "items": [
-                      {
-                        "id": "row",
-                        "name": "Row",
-                        "qty": {
-                          "mode": "cal",
-                          "value": 12,
-                          "f": 9
-                        },
-                        "perSide": false,
-                        "load": {
-                          "mode": "none"
-                        },
-                        "mods": {},
-                        "alternatives": [],
-                        "text": "6. 12/9cal row"
-                      }
-                    ]
-                  },
-                  {
-                    "n": 7,
-                    "repeat": 1,
-                    "rest": true,
-                    "items": []
+                    "id": "burpee-box-step-over",
+                    "name": "Double DB burpee box step over",
+                    "qty": {
+                      "mode": "reps",
+                      "value": 20
+                    },
+                    "perSide": false,
+                    "load": {
+                      "mode": "pair",
+                      "m": 60,
+                      "f": 50,
+                      "unit": "cm"
+                    },
+                    "mods": {},
+                    "alternatives": [],
+                    "text": "20 double db burpee box step over 60/50"
                   }
                 ]
               },
               "riders": [],
               "capSec": null,
               "restAfterSec": null,
-              "raw": "emom x 42\n7. rest"
+              "raw": "amrap 40min"
             }
           ],
           "scale": [],
           "notes": [],
-          "raw": "conditioning\nemom x 42\n1. 8 burpee box jump over 60/50\n2. 12/9cal ski\n3. 5 shuttle runs (2x5m)\n4. 12/9cal bike\n5. 30 air squats\n6. 12/9cal row\n7. rest"
+          "raw": "conditioning\namrap 40min\n60m double db farmers carry 22,5/15\n750/600m row\n40m double db frontrack lunges 22,5/15\n750/600m ski"
         }
       ]
     }
