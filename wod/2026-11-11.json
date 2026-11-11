@@ -1,0 +1,288 @@
+{
+  "date": "2026-11-11",
+  "source": "feed",
+  "schema": 1,
+  "resolver": {
+    "by": "nightly-claude",
+    "at": "2026-11-11T07:39:17Z",
+    "confidence": 0.65,
+    "issues": [
+      "rounds derived: warm up 4 = 2 sets x 2 stations (4 x 60s = 4min, matches header)",
+      "rounds derived: prehab tabata 8 = 4min / (20+10)s; hollow hold / arch hold rotate per interval",
+      "warm up slash line (samson stretch/down dog & seal) kept as per-set rotation (mods.rotation=perSet, alternatives)",
+      "unknown movement 'arch hold' -> custom:arch hold; 'samson stretch' -> custom:samson stretch",
+      "metcon 'weighted step ups 20/15' read as backpack load 20/15 kg ♂/♀ (rider '*with a backpack', 'scale @bodyweight'), NOT box height — overrides the step-up box-height rule; box height not stated",
+      "benchmark \"Chad\": for time, no cap stated; block minutes 60 as stated",
+      "movement ids unverified: prompt/catalog.json absent in repo"
+    ]
+  },
+  "hashtag": "#benchmark",
+  "rpe": "8",
+  "flags": [],
+  "programs": [
+    {
+      "name": "class",
+      "title": null,
+      "blocks": [
+        {
+          "ordinal": 1,
+          "letter": null,
+          "kind": "warmup",
+          "tags": [
+            "warmup"
+          ],
+          "label": "warm up",
+          "focus": null,
+          "name": null,
+          "benchmark": false,
+          "minutes": 4,
+          "series": null,
+          "cycleNote": null,
+          "partner": null,
+          "optional": false,
+          "bonus": false,
+          "segments": [
+            {
+              "role": "main",
+              "chain": null,
+              "title": null,
+              "intent": null,
+              "clock": {
+                "type": "interval",
+                "workSec": 45,
+                "restSec": 15,
+                "rounds": 4,
+                "stationMode": "rotate"
+              },
+              "scheme": null,
+              "work": {
+                "mode": "stations",
+                "stations": [
+                  {
+                    "n": 1,
+                    "repeat": 1,
+                    "rest": false,
+                    "items": [
+                      {
+                        "id": "step-up",
+                        "name": "Step up",
+                        "qty": {
+                          "mode": "none"
+                        },
+                        "perSide": false,
+                        "load": {
+                          "mode": "none"
+                        },
+                        "mods": {},
+                        "alternatives": [],
+                        "text": "step ups"
+                      }
+                    ]
+                  },
+                  {
+                    "n": 2,
+                    "repeat": 1,
+                    "rest": false,
+                    "items": [
+                      {
+                        "id": "custom:samson stretch",
+                        "name": "Samson stretch",
+                        "qty": {
+                          "mode": "none"
+                        },
+                        "perSide": false,
+                        "load": {
+                          "mode": "none"
+                        },
+                        "mods": {
+                          "rotation": "perSet"
+                        },
+                        "alternatives": [
+                          "down dog & seal"
+                        ],
+                        "text": "samson stretch/down dog & seal"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "riders": [],
+              "capSec": null,
+              "restAfterSec": null,
+              "raw": "2 sets\n45sec on/15sec off"
+            }
+          ],
+          "scale": [],
+          "notes": [],
+          "raw": "warm up (4min)\n2 sets\n45sec on/15sec off\nstep ups\nsamson stretch/down dog & seal"
+        },
+        {
+          "ordinal": 2,
+          "letter": null,
+          "kind": "prehab",
+          "tags": [
+            "prehab"
+          ],
+          "label": "prehab",
+          "focus": null,
+          "name": null,
+          "benchmark": false,
+          "minutes": 4,
+          "series": null,
+          "cycleNote": null,
+          "partner": null,
+          "optional": false,
+          "bonus": false,
+          "segments": [
+            {
+              "role": "main",
+              "chain": null,
+              "title": null,
+              "intent": null,
+              "clock": {
+                "type": "tabata",
+                "rounds": 8
+              },
+              "scheme": null,
+              "work": {
+                "mode": "stations",
+                "stations": [
+                  {
+                    "n": 1,
+                    "repeat": 1,
+                    "rest": false,
+                    "items": [
+                      {
+                        "id": "hollow-hold",
+                        "name": "Hollow hold",
+                        "qty": {
+                          "mode": "none"
+                        },
+                        "perSide": false,
+                        "load": {
+                          "mode": "none"
+                        },
+                        "mods": {},
+                        "alternatives": [],
+                        "text": "hollow hold"
+                      }
+                    ]
+                  },
+                  {
+                    "n": 2,
+                    "repeat": 1,
+                    "rest": false,
+                    "items": [
+                      {
+                        "id": "custom:arch hold",
+                        "name": "Arch hold",
+                        "qty": {
+                          "mode": "none"
+                        },
+                        "perSide": false,
+                        "load": {
+                          "mode": "none"
+                        },
+                        "mods": {},
+                        "alternatives": [],
+                        "text": "arch hold"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "riders": [],
+              "capSec": null,
+              "restAfterSec": null,
+              "raw": "tabata"
+            }
+          ],
+          "scale": [],
+          "notes": [],
+          "raw": "prehab (4min)\ntabata\nhollow hold\narch hold"
+        },
+        {
+          "ordinal": 3,
+          "letter": null,
+          "kind": "metcon",
+          "tags": [
+            "metcon"
+          ],
+          "label": "metcon",
+          "focus": null,
+          "name": "Chad",
+          "benchmark": true,
+          "minutes": 60,
+          "series": null,
+          "cycleNote": null,
+          "partner": null,
+          "optional": false,
+          "bonus": false,
+          "segments": [
+            {
+              "role": "main",
+              "chain": null,
+              "title": null,
+              "intent": "time",
+              "clock": {
+                "type": "forTime",
+                "rounds": null,
+                "capSec": null,
+                "roundRestSec": null,
+                "eachForTime": false
+              },
+              "scheme": null,
+              "work": {
+                "mode": "rows",
+                "rows": [
+                  {
+                    "id": "step-up",
+                    "name": "Weighted step up",
+                    "qty": {
+                      "mode": "reps",
+                      "value": 1000
+                    },
+                    "perSide": false,
+                    "load": {
+                      "mode": "pair",
+                      "m": 20,
+                      "f": 15,
+                      "unit": "kg"
+                    },
+                    "mods": {
+                      "weighted": true,
+                      "implement": "backpack"
+                    },
+                    "alternatives": [],
+                    "text": "1000 weighted step ups 20/15"
+                  }
+                ]
+              },
+              "riders": [
+                {
+                  "kind": "note",
+                  "text": "*with a backpack"
+                }
+              ],
+              "capSec": null,
+              "restAfterSec": null,
+              "raw": "benchmark\n\"Chad\"\nfor time"
+            }
+          ],
+          "scale": [
+            {
+              "target": "load",
+              "options": [
+                "@bodyweight"
+              ]
+            }
+          ],
+          "notes": [
+            "scale @bodyweight"
+          ],
+          "raw": "metcon (60min)\nbenchmark\n\"Chad\"\nfor time\n1000 weighted step ups 20/15\n*with a backpack\nscale @bodyweight\n#benchmark\nrpe8"
+        }
+      ]
+    }
+  ]
+}
