@@ -1,0 +1,432 @@
+{
+  "date": "2026-11-13",
+  "source": "feed",
+  "schema": 1,
+  "resolver": {
+    "by": "claude-nightly",
+    "at": "2026-11-13T07:43:03Z",
+    "confidence": 0.85,
+    "issues": [
+      "no prompt/catalog.json in repo: movement ids taken from earlier days (top-push-up-hold, down-dog-seal, shoulder-press, box-jump-over, shoulder-to-overhead for double db S2O); 'bottom of push up hold' kept custom",
+      "metcon: '2min rest' after the 2 for-time rounds read as rest between rounds (roundRestSec 120)",
+      "'40/30cal ski/bike' read as cal ♂/♀ with bike as athlete's alternative; 'scale 15/10' mapped to the double db S2O load (60/50 is box height cm)"
+    ]
+  },
+  "hashtag": "#upperbodypush",
+  "rpe": "8",
+  "flags": [],
+  "programs": [
+    {
+      "name": "class",
+      "title": null,
+      "blocks": [
+        {
+          "ordinal": 1,
+          "letter": null,
+          "kind": "warmup",
+          "tags": [
+            "warmup"
+          ],
+          "label": "warm up",
+          "focus": null,
+          "name": null,
+          "benchmark": false,
+          "minutes": 6,
+          "series": null,
+          "cycleNote": null,
+          "partner": null,
+          "optional": false,
+          "bonus": false,
+          "segments": [
+            {
+              "role": "main",
+              "chain": null,
+              "title": null,
+              "intent": null,
+              "clock": {
+                "type": "interval",
+                "workSec": 45,
+                "restSec": 15,
+                "rounds": 4,
+                "stationMode": "rotate"
+              },
+              "scheme": null,
+              "work": {
+                "mode": "stations",
+                "stations": [
+                  {
+                    "n": 1,
+                    "repeat": 1,
+                    "rest": false,
+                    "items": [
+                      {
+                        "id": "ski",
+                        "name": "Ski",
+                        "qty": {
+                          "mode": "none"
+                        },
+                        "perSide": false,
+                        "load": {
+                          "mode": "none"
+                        },
+                        "mods": {},
+                        "alternatives": [
+                          "bike"
+                        ],
+                        "text": "ski/bike"
+                      }
+                    ]
+                  },
+                  {
+                    "n": 2,
+                    "repeat": 1,
+                    "rest": false,
+                    "items": [
+                      {
+                        "id": "down-dog-seal",
+                        "name": "Down dog & seal",
+                        "qty": {
+                          "mode": "none"
+                        },
+                        "perSide": false,
+                        "load": {
+                          "mode": "none"
+                        },
+                        "mods": {},
+                        "alternatives": [
+                          "handwalk + push up"
+                        ],
+                        "text": "down dog & seal/handwalk + push up"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "riders": [],
+              "capSec": null,
+              "restAfterSec": null,
+              "raw": "2 sets\n45sec on/15sec off"
+            }
+          ],
+          "scale": [],
+          "notes": [],
+          "raw": "warm up (6min)\n2 sets\n45sec on/15sec off\nski/bike\ndown dog & seal/handwalk + push up"
+        },
+        {
+          "ordinal": 2,
+          "letter": null,
+          "kind": "prehab",
+          "tags": [
+            "prehab"
+          ],
+          "label": "prehab",
+          "focus": null,
+          "name": null,
+          "benchmark": false,
+          "minutes": 5,
+          "series": null,
+          "cycleNote": null,
+          "partner": null,
+          "optional": false,
+          "bonus": false,
+          "segments": [
+            {
+              "role": "main",
+              "chain": null,
+              "title": null,
+              "intent": null,
+              "clock": {
+                "type": "interval",
+                "workSec": 30,
+                "restSec": 10,
+                "rounds": 6,
+                "stationMode": "rotate"
+              },
+              "scheme": null,
+              "work": {
+                "mode": "stations",
+                "stations": [
+                  {
+                    "n": 1,
+                    "repeat": 1,
+                    "rest": false,
+                    "items": [
+                      {
+                        "id": "top-push-up-hold",
+                        "name": "Top of push up hold",
+                        "qty": {
+                          "mode": "none"
+                        },
+                        "perSide": false,
+                        "load": {
+                          "mode": "none"
+                        },
+                        "mods": {},
+                        "alternatives": [],
+                        "text": "top of push up hold"
+                      }
+                    ]
+                  },
+                  {
+                    "n": 2,
+                    "repeat": 1,
+                    "rest": false,
+                    "items": [
+                      {
+                        "id": "custom:bottom of push up hold",
+                        "name": "Bottom of push up hold",
+                        "qty": {
+                          "mode": "none"
+                        },
+                        "perSide": false,
+                        "load": {
+                          "mode": "none"
+                        },
+                        "mods": {},
+                        "alternatives": [],
+                        "text": "bottom of push up hold"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "riders": [],
+              "capSec": null,
+              "restAfterSec": null,
+              "raw": "3 sets\n30sec on/10sec off"
+            }
+          ],
+          "scale": [],
+          "notes": [],
+          "raw": "prehab (5min)\n3 sets\n30sec on/10sec off\ntop of push up hold\nbottom of push up hold"
+        },
+        {
+          "ordinal": 3,
+          "letter": null,
+          "kind": "strength",
+          "tags": [
+            "strength"
+          ],
+          "label": "strength",
+          "focus": "shoulder press",
+          "name": null,
+          "benchmark": false,
+          "minutes": 20,
+          "series": {
+            "n": 4,
+            "of": 6
+          },
+          "cycleNote": null,
+          "partner": null,
+          "optional": false,
+          "bonus": false,
+          "segments": [
+            {
+              "role": "warmup",
+              "chain": null,
+              "title": "warm up",
+              "intent": null,
+              "clock": {
+                "type": "sets",
+                "sets": 2,
+                "reps": 4,
+                "restSec": 90,
+                "restBetweenRepsSec": null,
+                "groups": []
+              },
+              "scheme": null,
+              "work": {
+                "mode": "rows",
+                "rows": [
+                  {
+                    "id": "shoulder-press",
+                    "name": "Shoulder press",
+                    "qty": {
+                      "mode": "reps",
+                      "value": 4
+                    },
+                    "perSide": false,
+                    "load": {
+                      "mode": "pct",
+                      "pct": 50,
+                      "pctOf": "1rm"
+                    },
+                    "mods": {},
+                    "alternatives": [],
+                    "text": "4 reps @50%"
+                  }
+                ]
+              },
+              "riders": [],
+              "capSec": null,
+              "restAfterSec": null,
+              "raw": "warm up\n2 sets\n4 reps @50%\n90sec rest"
+            },
+            {
+              "role": "main",
+              "chain": "into",
+              "title": null,
+              "intent": null,
+              "clock": {
+                "type": "sets",
+                "sets": 4,
+                "reps": 5,
+                "restSec": 120,
+                "restBetweenRepsSec": null,
+                "groups": []
+              },
+              "scheme": null,
+              "work": {
+                "mode": "rows",
+                "rows": [
+                  {
+                    "id": "shoulder-press",
+                    "name": "Shoulder press",
+                    "qty": {
+                      "mode": "reps",
+                      "value": 5
+                    },
+                    "perSide": false,
+                    "load": {
+                      "mode": "pct",
+                      "pct": null,
+                      "pctRange": [
+                        70,
+                        75
+                      ],
+                      "pctOf": "1rm"
+                    },
+                    "mods": {},
+                    "alternatives": [],
+                    "text": "5 reps @70-75%"
+                  }
+                ]
+              },
+              "riders": [],
+              "capSec": null,
+              "restAfterSec": null,
+              "raw": "into\n4 sets\n5 reps @70-75%\n2min rest"
+            }
+          ],
+          "scale": [],
+          "notes": [],
+          "raw": "strength (20min)\nshoulder press 4/6\nwarm up\n2 sets\n4 reps @50%\n90sec rest\ninto\n4 sets\n5 reps @70-75%\n2min rest"
+        },
+        {
+          "ordinal": 4,
+          "letter": null,
+          "kind": "metcon",
+          "tags": [
+            "metcon"
+          ],
+          "label": "metcon",
+          "focus": null,
+          "name": null,
+          "benchmark": false,
+          "minutes": 18,
+          "series": null,
+          "cycleNote": null,
+          "partner": null,
+          "optional": false,
+          "bonus": false,
+          "segments": [
+            {
+              "role": "main",
+              "chain": null,
+              "title": null,
+              "intent": "time",
+              "clock": {
+                "type": "forTime",
+                "rounds": 2,
+                "capSec": null,
+                "roundRestSec": 120,
+                "eachForTime": false
+              },
+              "scheme": null,
+              "work": {
+                "mode": "rows",
+                "rows": [
+                  {
+                    "id": "ski",
+                    "name": "Ski",
+                    "qty": {
+                      "mode": "cal",
+                      "value": 40,
+                      "f": 30
+                    },
+                    "perSide": false,
+                    "load": {
+                      "mode": "none"
+                    },
+                    "mods": {},
+                    "alternatives": [
+                      "bike"
+                    ],
+                    "text": "40/30cal ski/bike"
+                  },
+                  {
+                    "id": "box-jump-over",
+                    "name": "Box jump over",
+                    "qty": {
+                      "mode": "reps",
+                      "value": 30
+                    },
+                    "perSide": false,
+                    "load": {
+                      "mode": "pair",
+                      "m": 60,
+                      "f": 50,
+                      "unit": "cm"
+                    },
+                    "mods": {},
+                    "alternatives": [],
+                    "text": "30 box jump overs 60/50"
+                  },
+                  {
+                    "id": "shoulder-to-overhead",
+                    "name": "Double DB shoulder to overhead",
+                    "qty": {
+                      "mode": "reps",
+                      "value": 30
+                    },
+                    "perSide": false,
+                    "load": {
+                      "mode": "pair",
+                      "m": 22.5,
+                      "f": 15,
+                      "unit": "kg"
+                    },
+                    "mods": {},
+                    "alternatives": [],
+                    "text": "30 double db shoulder to overhead 22,5/15"
+                  }
+                ]
+              },
+              "riders": [
+                {
+                  "kind": "restBetweenRounds",
+                  "text": "2min rest"
+                }
+              ],
+              "capSec": null,
+              "restAfterSec": null,
+              "raw": "2 rounds\nfor time\n2min rest"
+            }
+          ],
+          "scale": [
+            {
+              "target": "shoulder-to-overhead",
+              "options": [
+                "15/10"
+              ]
+            }
+          ],
+          "notes": [
+            "scale 15/10"
+          ],
+          "raw": "metcon (18min)\n2 rounds\nfor time\n40/30cal ski/bike\n30 box jump overs 60/50\n30 double db shoulder to overhead 22,5/15\n2min rest\nscale 15/10\n#upperbodypush\nrpe8"
+        }
+      ]
+    }
+  ]
+}

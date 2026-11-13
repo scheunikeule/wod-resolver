@@ -1,16 +1,18 @@
 {
-  "date": "2026-11-12",
+  "date": "2026-11-13",
   "source": "feed",
   "schema": 1,
   "resolver": {
     "by": "claude-nightly",
-    "at": "2026-11-12T07:39:06Z",
-    "confidence": 0.95,
+    "at": "2026-11-13T07:43:03Z",
+    "confidence": 0.85,
     "issues": [
-      "no prompt/catalog.json in repo: movement ids taken from earlier days / catalog naming (hang-power-clean, burpee-pull-up not seen before — review)"
+      "no prompt/catalog.json in repo: movement ids taken from earlier days (top-push-up-hold, down-dog-seal, shoulder-press, box-jump-over, shoulder-to-overhead for double db S2O); 'bottom of push up hold' kept custom",
+      "metcon: '2min rest' after the 2 for-time rounds read as rest between rounds (roundRestSec 120)",
+      "'40/30cal ski/bike' read as cal ♂/♀ with bike as athlete's alternative; 'scale 15/10' mapped to the double db S2O load (60/50 is box height cm)"
     ]
   },
-  "hashtag": "#welovetolift",
+  "hashtag": "#upperbodypush",
   "rpe": "8",
   "flags": [],
   "programs": [
@@ -44,8 +46,8 @@
               "clock": {
                 "type": "interval",
                 "workSec": 45,
-                "restSec": 10,
-                "rounds": 6,
+                "restSec": 15,
+                "rounds": 4,
                 "stationMode": "rotate"
               },
               "scheme": null,
@@ -58,29 +60,8 @@
                     "rest": false,
                     "items": [
                       {
-                        "id": "down-up",
-                        "name": "Down up",
-                        "qty": {
-                          "mode": "none"
-                        },
-                        "perSide": false,
-                        "load": {
-                          "mode": "none"
-                        },
-                        "mods": {},
-                        "alternatives": [],
-                        "text": "down ups"
-                      }
-                    ]
-                  },
-                  {
-                    "n": 2,
-                    "repeat": 1,
-                    "rest": false,
-                    "items": [
-                      {
-                        "id": "custom:instep stretch + rotation",
-                        "name": "Instep stretch + rotation",
+                        "id": "ski",
+                        "name": "Ski",
                         "qty": {
                           "mode": "none"
                         },
@@ -90,10 +71,32 @@
                         },
                         "mods": {},
                         "alternatives": [
-                          "sumo squat stretch",
-                          "down dog & seal"
+                          "bike"
                         ],
-                        "text": "instep stretch + rotation/sumo squat stretch/down dog & seal"
+                        "text": "ski/bike"
+                      }
+                    ]
+                  },
+                  {
+                    "n": 2,
+                    "repeat": 1,
+                    "rest": false,
+                    "items": [
+                      {
+                        "id": "down-dog-seal",
+                        "name": "Down dog & seal",
+                        "qty": {
+                          "mode": "none"
+                        },
+                        "perSide": false,
+                        "load": {
+                          "mode": "none"
+                        },
+                        "mods": {},
+                        "alternatives": [
+                          "handwalk + push up"
+                        ],
+                        "text": "down dog & seal/handwalk + push up"
                       }
                     ]
                   }
@@ -102,12 +105,12 @@
               "riders": [],
               "capSec": null,
               "restAfterSec": null,
-              "raw": "3 sets\n45sec on/10sec off"
+              "raw": "2 sets\n45sec on/15sec off"
             }
           ],
           "scale": [],
           "notes": [],
-          "raw": "warm up (6min)\n3 sets\n45sec on/10sec off\ndown ups\ninstep stretch + rotation/sumo squat stretch/down dog & seal"
+          "raw": "warm up (6min)\n2 sets\n45sec on/15sec off\nski/bike\ndown dog & seal/handwalk + push up"
         },
         {
           "ordinal": 2,
@@ -149,8 +152,8 @@
                     "rest": false,
                     "items": [
                       {
-                        "id": "tuck-sit-hang",
-                        "name": "Tuck sit hang",
+                        "id": "top-push-up-hold",
+                        "name": "Top of push up hold",
                         "qty": {
                           "mode": "none"
                         },
@@ -160,7 +163,7 @@
                         },
                         "mods": {},
                         "alternatives": [],
-                        "text": "tuck sit hang"
+                        "text": "top of push up hold"
                       }
                     ]
                   },
@@ -170,8 +173,8 @@
                     "rest": false,
                     "items": [
                       {
-                        "id": "roll-out",
-                        "name": "Barbell roll out",
+                        "id": "custom:bottom of push up hold",
+                        "name": "Bottom of push up hold",
                         "qty": {
                           "mode": "none"
                         },
@@ -181,7 +184,7 @@
                         },
                         "mods": {},
                         "alternatives": [],
-                        "text": "barbell roll outs"
+                        "text": "bottom of push up hold"
                       }
                     ]
                   }
@@ -195,7 +198,7 @@
           ],
           "scale": [],
           "notes": [],
-          "raw": "prehab (5min)\n3 sets\n30sec on/10sec off\ntuck sit hang\nbarbell roll outs"
+          "raw": "prehab (5min)\n3 sets\n30sec on/10sec off\ntop of push up hold\nbottom of push up hold"
         },
         {
           "ordinal": 3,
@@ -205,13 +208,13 @@
             "strength"
           ],
           "label": "strength",
-          "focus": null,
+          "focus": "shoulder press",
           "name": null,
           "benchmark": false,
           "minutes": 20,
           "series": {
             "n": 4,
-            "of": 4
+            "of": 6
           },
           "cycleNote": null,
           "partner": null,
@@ -219,48 +222,95 @@
           "bonus": false,
           "segments": [
             {
-              "role": "heavy",
+              "role": "warmup",
               "chain": null,
-              "title": null,
+              "title": "warm up",
               "intent": null,
               "clock": {
-                "type": "emom",
-                "everySec": 75,
-                "rounds": 10,
-                "alternate": false
+                "type": "sets",
+                "sets": 2,
+                "reps": 4,
+                "restSec": 90,
+                "restBetweenRepsSec": null,
+                "groups": []
               },
               "scheme": null,
               "work": {
                 "mode": "rows",
                 "rows": [
                   {
-                    "id": "squat-clean",
-                    "name": "Squat clean",
+                    "id": "shoulder-press",
+                    "name": "Shoulder press",
                     "qty": {
                       "mode": "reps",
-                      "value": 1
+                      "value": 4
                     },
                     "perSide": false,
                     "load": {
                       "mode": "pct",
-                      "pct": 82,
+                      "pct": 50,
                       "pctOf": "1rm"
                     },
                     "mods": {},
                     "alternatives": [],
-                    "text": "1 squat clean @82%"
+                    "text": "4 reps @50%"
                   }
                 ]
               },
               "riders": [],
               "capSec": null,
               "restAfterSec": null,
-              "raw": "squat clean 4/4\nevery 75sec x 10"
+              "raw": "warm up\n2 sets\n4 reps @50%\n90sec rest"
+            },
+            {
+              "role": "main",
+              "chain": "into",
+              "title": null,
+              "intent": null,
+              "clock": {
+                "type": "sets",
+                "sets": 4,
+                "reps": 5,
+                "restSec": 120,
+                "restBetweenRepsSec": null,
+                "groups": []
+              },
+              "scheme": null,
+              "work": {
+                "mode": "rows",
+                "rows": [
+                  {
+                    "id": "shoulder-press",
+                    "name": "Shoulder press",
+                    "qty": {
+                      "mode": "reps",
+                      "value": 5
+                    },
+                    "perSide": false,
+                    "load": {
+                      "mode": "pct",
+                      "pct": null,
+                      "pctRange": [
+                        70,
+                        75
+                      ],
+                      "pctOf": "1rm"
+                    },
+                    "mods": {},
+                    "alternatives": [],
+                    "text": "5 reps @70-75%"
+                  }
+                ]
+              },
+              "riders": [],
+              "capSec": null,
+              "restAfterSec": null,
+              "raw": "into\n4 sets\n5 reps @70-75%\n2min rest"
             }
           ],
           "scale": [],
           "notes": [],
-          "raw": "strength (20min)\nsquat clean 4/4\nevery 75sec x 10\n1 squat clean @82%"
+          "raw": "strength (20min)\nshoulder press 4/6\nwarm up\n2 sets\n4 reps @50%\n90sec rest\ninto\n4 sets\n5 reps @70-75%\n2min rest"
         },
         {
           "ordinal": 4,
@@ -273,7 +323,7 @@
           "focus": null,
           "name": null,
           "benchmark": false,
-          "minutes": 12,
+          "minutes": 18,
           "series": null,
           "cycleNote": null,
           "partner": null,
@@ -284,96 +334,97 @@
               "role": "main",
               "chain": null,
               "title": null,
-              "intent": null,
+              "intent": "time",
               "clock": {
-                "type": "amrap",
-                "sec": 720,
-                "maxSec": null
+                "type": "forTime",
+                "rounds": 2,
+                "capSec": null,
+                "roundRestSec": 120,
+                "eachForTime": false
               },
               "scheme": null,
               "work": {
                 "mode": "rows",
                 "rows": [
                   {
-                    "id": "hang-power-clean",
-                    "name": "Hang power clean",
+                    "id": "ski",
+                    "name": "Ski",
+                    "qty": {
+                      "mode": "cal",
+                      "value": 40,
+                      "f": 30
+                    },
+                    "perSide": false,
+                    "load": {
+                      "mode": "none"
+                    },
+                    "mods": {},
+                    "alternatives": [
+                      "bike"
+                    ],
+                    "text": "40/30cal ski/bike"
+                  },
+                  {
+                    "id": "box-jump-over",
+                    "name": "Box jump over",
                     "qty": {
                       "mode": "reps",
-                      "value": 12
+                      "value": 30
                     },
                     "perSide": false,
                     "load": {
                       "mode": "pair",
-                      "m": 50,
-                      "f": 35,
+                      "m": 60,
+                      "f": 50,
+                      "unit": "cm"
+                    },
+                    "mods": {},
+                    "alternatives": [],
+                    "text": "30 box jump overs 60/50"
+                  },
+                  {
+                    "id": "shoulder-to-overhead",
+                    "name": "Double DB shoulder to overhead",
+                    "qty": {
+                      "mode": "reps",
+                      "value": 30
+                    },
+                    "perSide": false,
+                    "load": {
+                      "mode": "pair",
+                      "m": 22.5,
+                      "f": 15,
                       "unit": "kg"
                     },
                     "mods": {},
                     "alternatives": [],
-                    "text": "12 hang power cleans 50/35"
-                  },
-                  {
-                    "id": "burpee-pull-up",
-                    "name": "Burpee pull up",
-                    "qty": {
-                      "mode": "reps",
-                      "value": 8
-                    },
-                    "perSide": false,
-                    "load": {
-                      "mode": "none"
-                    },
-                    "mods": {},
-                    "alternatives": [],
-                    "text": "8 burpee pull ups"
-                  },
-                  {
-                    "id": "toes-to-bar",
-                    "name": "Toes to bar",
-                    "qty": {
-                      "mode": "reps",
-                      "value": 10
-                    },
-                    "perSide": false,
-                    "load": {
-                      "mode": "none"
-                    },
-                    "mods": {},
-                    "alternatives": [],
-                    "text": "10 toes to bar"
+                    "text": "30 double db shoulder to overhead 22,5/15"
                   }
                 ]
               },
-              "riders": [],
+              "riders": [
+                {
+                  "kind": "restBetweenRounds",
+                  "text": "2min rest"
+                }
+              ],
               "capSec": null,
               "restAfterSec": null,
-              "raw": "amrap 12min"
+              "raw": "2 rounds\nfor time\n2min rest"
             }
           ],
           "scale": [
             {
-              "target": "hang-power-clean",
+              "target": "shoulder-to-overhead",
               "options": [
-                "35/25"
-              ]
-            },
-            {
-              "target": "burpee-pull-up",
-              "options": [
-                "burpee to target"
-              ]
-            },
-            {
-              "target": "toes-to-bar",
-              "options": [
-                "knee raises"
+                "15/10"
               ]
             }
           ],
           "notes": [
-            "scale 35/25, burpee to target, knee raises"
+            "scale 15/10"
           ],
-          "raw": "metcon (12min)\namrap 12min\n12 hang power cleans 50/35\n8 burpee pull ups\n10 toes to bar\nscale 35/25, burpee to target, knee raises"
+          "raw": "metcon (18min)\n2 rounds\nfor time\n40/30cal ski/bike\n30 box jump overs 60/50\n30 double db shoulder to overhead 22,5/15\n2min rest\nscale 15/10\n#upperbodypush\nrpe8"
         }
       ]
     }
