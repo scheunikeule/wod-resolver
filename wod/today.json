@@ -1,19 +1,22 @@
 {
-  "date": "2026-11-14",
+  "date": "2026-11-15",
   "source": "feed",
   "schema": 1,
   "resolver": {
     "by": "claude-nightly",
-    "at": "2026-11-14T07:39:09Z",
-    "confidence": 0.85,
+    "at": "2026-11-15T07:39:17Z",
+    "confidence": 0.7,
     "issues": [
-      "no prompt/catalog.json in repo: unknown movement kept as custom id (alt backrack lunge); power-clean id not seen before — review",
-      "metcon has no minutes in header: minutes null, no cap",
-      "scale mapped loads first (35/25 -> barbell 50/35 rows), then knee raises -> toes-to-bar, kneeling push ups -> push-up, ring rows -> pull-up"
+      "rounds derived: warm up 6 = 3 sets x 2 stations",
+      "rounds derived: prehab 6 = 3 sets x 2 stations",
+      "rounds derived: conditioning 36 = 3 rounds x 3 numbered stations x 4 (per 2026-10-27 fixture: rounds = passes x station slots); ambiguous — could mean 12 (one pass of 3 stations x 4) if '3 rounds' counts the station rotation",
+      "no minutes stated in headers: minutes null for all blocks",
+      "movement ids unverified: prompt/catalog.json absent in repo; custom ids: instep stretch + rotation, plank up",
+      "warm-up slash lines modelled as per-set rotation (alternatives + mods.rotation=perSet)"
     ]
   },
-  "hashtag": "#teamday",
-  "rpe": "8",
+  "hashtag": null,
+  "rpe": null,
   "flags": [],
   "programs": [
     {
@@ -31,7 +34,7 @@
           "focus": null,
           "name": null,
           "benchmark": false,
-          "minutes": 6,
+          "minutes": null,
           "series": null,
           "cycleNote": null,
           "partner": null,
@@ -60,8 +63,8 @@
                     "rest": false,
                     "items": [
                       {
-                        "id": "down-up",
-                        "name": "Down up",
+                        "id": "row",
+                        "name": "Row",
                         "qty": {
                           "mode": "none"
                         },
@@ -69,9 +72,14 @@
                         "load": {
                           "mode": "none"
                         },
-                        "mods": {},
-                        "alternatives": [],
-                        "text": "down ups"
+                        "mods": {
+                          "rotation": "perSet"
+                        },
+                        "alternatives": [
+                          "ski",
+                          "bike"
+                        ],
+                        "text": "row/ski/bike"
                       }
                     ]
                   },
@@ -81,8 +89,8 @@
                     "rest": false,
                     "items": [
                       {
-                        "id": "samson-stretch",
-                        "name": "Samson stretch",
+                        "id": "custom:instep stretch + rotation",
+                        "name": "Instep stretch + rotation",
                         "qty": {
                           "mode": "none"
                         },
@@ -90,12 +98,14 @@
                         "load": {
                           "mode": "none"
                         },
-                        "mods": {},
+                        "mods": {
+                          "rotation": "perSet"
+                        },
                         "alternatives": [
-                          "instep stretch + rotation",
-                          "down dog & seal"
+                          "handwalk+push up",
+                          "twisted cross"
                         ],
-                        "text": "samson stretch/instep stretch + rotation/down dog & seal"
+                        "text": "instep stretch+rotation/handwalk+push up/twisted cross"
                       }
                     ]
                   }
@@ -109,7 +119,7 @@
           ],
           "scale": [],
           "notes": [],
-          "raw": "warm up (6min)\n3 sets\n45sec on/15sec off\ndown ups\nsamson stretch/instep stretch + rotation/down dog & seal"
+          "raw": "warm up\n3 sets\n45sec on/15sec off\nrow/ski/bike\ninstep stretch+rotation/handwalk+push up/twisted cross"
         },
         {
           "ordinal": 2,
@@ -122,7 +132,7 @@
           "focus": null,
           "name": null,
           "benchmark": false,
-          "minutes": 5,
+          "minutes": null,
           "series": null,
           "cycleNote": null,
           "partner": null,
@@ -151,8 +161,8 @@
                     "rest": false,
                     "items": [
                       {
-                        "id": "roll-out",
-                        "name": "Barbell roll out",
+                        "id": "hollow-hold",
+                        "name": "Hollow hold",
                         "qty": {
                           "mode": "none"
                         },
@@ -162,7 +172,7 @@
                         },
                         "mods": {},
                         "alternatives": [],
-                        "text": "barbell roll outs"
+                        "text": "hollow hold"
                       }
                     ]
                   },
@@ -172,8 +182,8 @@
                     "rest": false,
                     "items": [
                       {
-                        "id": "tuck-sit-hang",
-                        "name": "Tuck sit hang",
+                        "id": "custom:plank up",
+                        "name": "Plank up",
                         "qty": {
                           "mode": "none"
                         },
@@ -183,7 +193,7 @@
                         },
                         "mods": {},
                         "alternatives": [],
-                        "text": "tuck sit hang"
+                        "text": "plank ups"
                       }
                     ]
                   }
@@ -192,31 +202,28 @@
               "riders": [],
               "capSec": null,
               "restAfterSec": null,
-              "raw": "3 sets\n30sec on/10sec off"
+              "raw": "3sets\n30sec on/10sec off"
             }
           ],
           "scale": [],
           "notes": [],
-          "raw": "prehab (5min)\n3 sets\n30sec on/10sec off\nbarbell roll outs\ntuck sit hang"
+          "raw": "prehab\n3sets\n30sec on/10sec off\nhollow hold\nplank ups"
         },
         {
           "ordinal": 3,
           "letter": null,
-          "kind": "metcon",
+          "kind": "conditioning",
           "tags": [
-            "metcon"
+            "conditioning"
           ],
-          "label": "metcon",
+          "label": "conditioning",
           "focus": null,
           "name": null,
           "benchmark": false,
           "minutes": null,
           "series": null,
           "cycleNote": null,
-          "partner": {
-            "mode": "teams",
-            "note": "teams of two"
-          },
+          "partner": null,
           "optional": false,
           "bonus": false,
           "segments": [
@@ -224,288 +231,98 @@
               "role": "main",
               "chain": null,
               "title": null,
-              "intent": "time",
+              "intent": null,
               "clock": {
-                "type": "forTime",
-                "rounds": null,
-                "capSec": null,
-                "roundRestSec": null,
-                "eachForTime": false
-              },
-              "scheme": {
-                "type": "descending",
-                "steps": [
-                  40,
-                  30,
-                  20,
-                  10
-                ],
-                "unit": "reps",
-                "by": null,
-                "appliesTo": "all",
-                "scaled": null,
-                "pcts": null
-              },
-              "work": {
-                "mode": "rows",
-                "rows": [
-                  {
-                    "id": "wall-ball",
-                    "name": "Partner wall ball",
-                    "qty": {
-                      "mode": "reps",
-                      "value": null
-                    },
-                    "perSide": false,
-                    "load": {
-                      "mode": "pair",
-                      "m": 9,
-                      "f": 6,
-                      "unit": "kg"
-                    },
-                    "mods": {
-                      "partner": true
-                    },
-                    "alternatives": [],
-                    "text": "partner wall balls 9/6"
-                  },
-                  {
-                    "id": "toes-to-bar",
-                    "name": "Toes to bar",
-                    "qty": {
-                      "mode": "reps",
-                      "value": null
-                    },
-                    "perSide": false,
-                    "load": {
-                      "mode": "none"
-                    },
-                    "mods": {},
-                    "alternatives": [],
-                    "text": "toes to bar"
-                  },
-                  {
-                    "id": "push-up",
-                    "name": "Push up",
-                    "qty": {
-                      "mode": "reps",
-                      "value": null
-                    },
-                    "perSide": false,
-                    "load": {
-                      "mode": "none"
-                    },
-                    "mods": {},
-                    "alternatives": [],
-                    "text": "push ups"
-                  }
-                ]
-              },
-              "riders": [],
-              "capSec": null,
-              "restAfterSec": null,
-              "raw": "for time\n40-30-20-10reps\npartner wall balls 9/6\ntoes to bar\npush ups"
-            },
-            {
-              "role": "main",
-              "chain": "into",
-              "title": null,
-              "intent": "time",
-              "clock": {
-                "type": "forTime",
-                "rounds": null,
-                "capSec": null,
-                "roundRestSec": null,
-                "eachForTime": false
+                "type": "interval",
+                "workSec": 60,
+                "restSec": 60,
+                "rounds": 36,
+                "stationMode": "rotate"
               },
               "scheme": null,
               "work": {
-                "mode": "rows",
-                "rows": [
+                "mode": "stations",
+                "stations": [
                   {
-                    "id": "power-clean",
-                    "name": "Power clean",
-                    "qty": {
-                      "mode": "reps",
-                      "value": 100
-                    },
-                    "perSide": false,
-                    "load": {
-                      "mode": "pair",
-                      "m": 50,
-                      "f": 35,
-                      "unit": "kg"
-                    },
-                    "mods": {},
-                    "alternatives": [],
-                    "text": "100 power cleans 50/35"
+                    "n": 1,
+                    "repeat": 4,
+                    "rest": false,
+                    "items": [
+                      {
+                        "id": "row",
+                        "name": "Row",
+                        "qty": {
+                          "mode": "max",
+                          "maxUnit": "m"
+                        },
+                        "perSide": false,
+                        "load": {
+                          "mode": "rpe",
+                          "rpe": "9"
+                        },
+                        "mods": {},
+                        "alternatives": [],
+                        "text": "1. max m row rpe 9"
+                      }
+                    ]
                   },
                   {
-                    "id": "custom:alt backrack lunge",
-                    "name": "Alt back rack lunge",
-                    "qty": {
-                      "mode": "reps",
-                      "value": 100
-                    },
-                    "perSide": false,
-                    "load": {
-                      "mode": "pair",
-                      "m": 50,
-                      "f": 35,
-                      "unit": "kg"
-                    },
-                    "mods": {},
-                    "alternatives": [],
-                    "text": "100 alt backrack lunges 50/35"
+                    "n": 2,
+                    "repeat": 4,
+                    "rest": false,
+                    "items": [
+                      {
+                        "id": "ski",
+                        "name": "Ski",
+                        "qty": {
+                          "mode": "max",
+                          "maxUnit": "m"
+                        },
+                        "perSide": false,
+                        "load": {
+                          "mode": "rpe",
+                          "rpe": "9"
+                        },
+                        "mods": {},
+                        "alternatives": [],
+                        "text": "2. max m ski rpe 9"
+                      }
+                    ]
                   },
                   {
-                    "id": "shoulder-to-overhead",
-                    "name": "Shoulder to overhead",
-                    "qty": {
-                      "mode": "reps",
-                      "value": 100
-                    },
-                    "perSide": false,
-                    "load": {
-                      "mode": "pair",
-                      "m": 50,
-                      "f": 35,
-                      "unit": "kg"
-                    },
-                    "mods": {},
-                    "alternatives": [],
-                    "text": "100 stoh 50/35"
-                  }
-                ]
-              },
-              "riders": [
-                {
-                  "kind": "note",
-                  "text": "*divide as needed"
-                }
-              ],
-              "capSec": null,
-              "restAfterSec": null,
-              "raw": "into\n100 power cleans 50/35\n100 alt backrack lunges 50/35\n100 stoh 50/35\n*divide as needed"
-            },
-            {
-              "role": "main",
-              "chain": "into",
-              "title": null,
-              "intent": "time",
-              "clock": {
-                "type": "forTime",
-                "rounds": null,
-                "capSec": null,
-                "roundRestSec": null,
-                "eachForTime": false
-              },
-              "scheme": {
-                "type": "descending",
-                "steps": [
-                  40,
-                  30,
-                  20,
-                  10
-                ],
-                "unit": "reps",
-                "by": null,
-                "appliesTo": "all",
-                "scaled": null,
-                "pcts": null
-              },
-              "work": {
-                "mode": "rows",
-                "rows": [
-                  {
-                    "id": "wall-ball",
-                    "name": "Partner wall ball",
-                    "qty": {
-                      "mode": "reps",
-                      "value": null
-                    },
-                    "perSide": false,
-                    "load": {
-                      "mode": "pair",
-                      "m": 9,
-                      "f": 6,
-                      "unit": "kg"
-                    },
-                    "mods": {
-                      "partner": true
-                    },
-                    "alternatives": [],
-                    "text": "partner wall balls 9/6"
-                  },
-                  {
-                    "id": "pull-up",
-                    "name": "Pull up",
-                    "qty": {
-                      "mode": "reps",
-                      "value": null
-                    },
-                    "perSide": false,
-                    "load": {
-                      "mode": "none"
-                    },
-                    "mods": {},
-                    "alternatives": [],
-                    "text": "pull ups"
-                  },
-                  {
-                    "id": "push-up",
-                    "name": "Push up",
-                    "qty": {
-                      "mode": "reps",
-                      "value": null
-                    },
-                    "perSide": false,
-                    "load": {
-                      "mode": "none"
-                    },
-                    "mods": {},
-                    "alternatives": [],
-                    "text": "push ups"
+                    "n": 3,
+                    "repeat": 4,
+                    "rest": false,
+                    "items": [
+                      {
+                        "id": "bike",
+                        "name": "Bike",
+                        "qty": {
+                          "mode": "max",
+                          "maxUnit": "m"
+                        },
+                        "perSide": false,
+                        "load": {
+                          "mode": "rpe",
+                          "rpe": "9"
+                        },
+                        "mods": {},
+                        "alternatives": [],
+                        "text": "3. max m bike rpe 9"
+                      }
+                    ]
                   }
                 ]
               },
               "riders": [],
               "capSec": null,
               "restAfterSec": null,
-              "raw": "into\n40-30-20-10 reps\npartner wall balls 9/6\npull ups\npush ups"
+              "raw": "3 rounds\n4x\n1min on/1min off\n1. max m row rpe 9\n4x\n1min on/1min off\n2. max m ski rpe 9\n4x\n1min on/1min off\n3. max m bike rpe 9"
             }
           ],
-          "scale": [
-            {
-              "target": "barbell load",
-              "options": [
-                "35/25"
-              ]
-            },
-            {
-              "target": "toes-to-bar",
-              "options": [
-                "knee raises"
-              ]
-            },
-            {
-              "target": "push-up",
-              "options": [
-                "kneeling push ups"
-              ]
-            },
-            {
-              "target": "pull-up",
-              "options": [
-                "ring rows"
-              ]
-            }
-          ],
-          "notes": [
-            "teams of two",
-            "scale knee raises, kneeling push ups, 35/25, ring rows"
-          ],
-          "raw": "metcon\nteams of two\nfor time\n40-30-20-10reps\npartner wall balls 9/6\ntoes to bar\npush ups\ninto\n100 power cleans 50/35\n100 alt backrack lunges 50/35\n100 stoh 50/35\n*divide as needed\ninto\n40-30-20-10 reps\npartner wall balls 9/6\npull ups\npush ups\nscale knee raises, kneeling push ups, 35/25, ring rows\n#teamday\nrpe8"
+          "scale": [],
+          "notes": [],
+          "raw": "conditioning\n3 rounds\n4x\n1min on/1min off\n1. max m row rpe 9\n4x\n1min on/1min off\n2. max m ski rpe 9\n4x\n1min on/1min off\n3. max m bike rpe 9"
         }
       ]
     }

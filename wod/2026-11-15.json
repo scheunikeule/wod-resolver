@@ -1,0 +1,330 @@
+{
+  "date": "2026-11-15",
+  "source": "feed",
+  "schema": 1,
+  "resolver": {
+    "by": "claude-nightly",
+    "at": "2026-11-15T07:39:17Z",
+    "confidence": 0.7,
+    "issues": [
+      "rounds derived: warm up 6 = 3 sets x 2 stations",
+      "rounds derived: prehab 6 = 3 sets x 2 stations",
+      "rounds derived: conditioning 36 = 3 rounds x 3 numbered stations x 4 (per 2026-10-27 fixture: rounds = passes x station slots); ambiguous — could mean 12 (one pass of 3 stations x 4) if '3 rounds' counts the station rotation",
+      "no minutes stated in headers: minutes null for all blocks",
+      "movement ids unverified: prompt/catalog.json absent in repo; custom ids: instep stretch + rotation, plank up",
+      "warm-up slash lines modelled as per-set rotation (alternatives + mods.rotation=perSet)"
+    ]
+  },
+  "hashtag": null,
+  "rpe": null,
+  "flags": [],
+  "programs": [
+    {
+      "name": "class",
+      "title": null,
+      "blocks": [
+        {
+          "ordinal": 1,
+          "letter": null,
+          "kind": "warmup",
+          "tags": [
+            "warmup"
+          ],
+          "label": "warm up",
+          "focus": null,
+          "name": null,
+          "benchmark": false,
+          "minutes": null,
+          "series": null,
+          "cycleNote": null,
+          "partner": null,
+          "optional": false,
+          "bonus": false,
+          "segments": [
+            {
+              "role": "main",
+              "chain": null,
+              "title": null,
+              "intent": null,
+              "clock": {
+                "type": "interval",
+                "workSec": 45,
+                "restSec": 15,
+                "rounds": 6,
+                "stationMode": "rotate"
+              },
+              "scheme": null,
+              "work": {
+                "mode": "stations",
+                "stations": [
+                  {
+                    "n": 1,
+                    "repeat": 1,
+                    "rest": false,
+                    "items": [
+                      {
+                        "id": "row",
+                        "name": "Row",
+                        "qty": {
+                          "mode": "none"
+                        },
+                        "perSide": false,
+                        "load": {
+                          "mode": "none"
+                        },
+                        "mods": {
+                          "rotation": "perSet"
+                        },
+                        "alternatives": [
+                          "ski",
+                          "bike"
+                        ],
+                        "text": "row/ski/bike"
+                      }
+                    ]
+                  },
+                  {
+                    "n": 2,
+                    "repeat": 1,
+                    "rest": false,
+                    "items": [
+                      {
+                        "id": "custom:instep stretch + rotation",
+                        "name": "Instep stretch + rotation",
+                        "qty": {
+                          "mode": "none"
+                        },
+                        "perSide": false,
+                        "load": {
+                          "mode": "none"
+                        },
+                        "mods": {
+                          "rotation": "perSet"
+                        },
+                        "alternatives": [
+                          "handwalk+push up",
+                          "twisted cross"
+                        ],
+                        "text": "instep stretch+rotation/handwalk+push up/twisted cross"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "riders": [],
+              "capSec": null,
+              "restAfterSec": null,
+              "raw": "3 sets\n45sec on/15sec off"
+            }
+          ],
+          "scale": [],
+          "notes": [],
+          "raw": "warm up\n3 sets\n45sec on/15sec off\nrow/ski/bike\ninstep stretch+rotation/handwalk+push up/twisted cross"
+        },
+        {
+          "ordinal": 2,
+          "letter": null,
+          "kind": "prehab",
+          "tags": [
+            "prehab"
+          ],
+          "label": "prehab",
+          "focus": null,
+          "name": null,
+          "benchmark": false,
+          "minutes": null,
+          "series": null,
+          "cycleNote": null,
+          "partner": null,
+          "optional": false,
+          "bonus": false,
+          "segments": [
+            {
+              "role": "main",
+              "chain": null,
+              "title": null,
+              "intent": null,
+              "clock": {
+                "type": "interval",
+                "workSec": 30,
+                "restSec": 10,
+                "rounds": 6,
+                "stationMode": "rotate"
+              },
+              "scheme": null,
+              "work": {
+                "mode": "stations",
+                "stations": [
+                  {
+                    "n": 1,
+                    "repeat": 1,
+                    "rest": false,
+                    "items": [
+                      {
+                        "id": "hollow-hold",
+                        "name": "Hollow hold",
+                        "qty": {
+                          "mode": "none"
+                        },
+                        "perSide": false,
+                        "load": {
+                          "mode": "none"
+                        },
+                        "mods": {},
+                        "alternatives": [],
+                        "text": "hollow hold"
+                      }
+                    ]
+                  },
+                  {
+                    "n": 2,
+                    "repeat": 1,
+                    "rest": false,
+                    "items": [
+                      {
+                        "id": "custom:plank up",
+                        "name": "Plank up",
+                        "qty": {
+                          "mode": "none"
+                        },
+                        "perSide": false,
+                        "load": {
+                          "mode": "none"
+                        },
+                        "mods": {},
+                        "alternatives": [],
+                        "text": "plank ups"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "riders": [],
+              "capSec": null,
+              "restAfterSec": null,
+              "raw": "3sets\n30sec on/10sec off"
+            }
+          ],
+          "scale": [],
+          "notes": [],
+          "raw": "prehab\n3sets\n30sec on/10sec off\nhollow hold\nplank ups"
+        },
+        {
+          "ordinal": 3,
+          "letter": null,
+          "kind": "conditioning",
+          "tags": [
+            "conditioning"
+          ],
+          "label": "conditioning",
+          "focus": null,
+          "name": null,
+          "benchmark": false,
+          "minutes": null,
+          "series": null,
+          "cycleNote": null,
+          "partner": null,
+          "optional": false,
+          "bonus": false,
+          "segments": [
+            {
+              "role": "main",
+              "chain": null,
+              "title": null,
+              "intent": null,
+              "clock": {
+                "type": "interval",
+                "workSec": 60,
+                "restSec": 60,
+                "rounds": 36,
+                "stationMode": "rotate"
+              },
+              "scheme": null,
+              "work": {
+                "mode": "stations",
+                "stations": [
+                  {
+                    "n": 1,
+                    "repeat": 4,
+                    "rest": false,
+                    "items": [
+                      {
+                        "id": "row",
+                        "name": "Row",
+                        "qty": {
+                          "mode": "max",
+                          "maxUnit": "m"
+                        },
+                        "perSide": false,
+                        "load": {
+                          "mode": "rpe",
+                          "rpe": "9"
+                        },
+                        "mods": {},
+                        "alternatives": [],
+                        "text": "1. max m row rpe 9"
+                      }
+                    ]
+                  },
+                  {
+                    "n": 2,
+                    "repeat": 4,
+                    "rest": false,
+                    "items": [
+                      {
+                        "id": "ski",
+                        "name": "Ski",
+                        "qty": {
+                          "mode": "max",
+                          "maxUnit": "m"
+                        },
+                        "perSide": false,
+                        "load": {
+                          "mode": "rpe",
+                          "rpe": "9"
+                        },
+                        "mods": {},
+                        "alternatives": [],
+                        "text": "2. max m ski rpe 9"
+                      }
+                    ]
+                  },
+                  {
+                    "n": 3,
+                    "repeat": 4,
+                    "rest": false,
+                    "items": [
+                      {
+                        "id": "bike",
+                        "name": "Bike",
+                        "qty": {
+                          "mode": "max",
+                          "maxUnit": "m"
+                        },
+                        "perSide": false,
+                        "load": {
+                          "mode": "rpe",
+                          "rpe": "9"
+                        },
+                        "mods": {},
+                        "alternatives": [],
+                        "text": "3. max m bike rpe 9"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "riders": [],
+              "capSec": null,
+              "restAfterSec": null,
+              "raw": "3 rounds\n4x\n1min on/1min off\n1. max m row rpe 9\n4x\n1min on/1min off\n2. max m ski rpe 9\n4x\n1min on/1min off\n3. max m bike rpe 9"
+            }
+          ],
+          "scale": [],
+          "notes": [],
+          "raw": "conditioning\n3 rounds\n4x\n1min on/1min off\n1. max m row rpe 9\n4x\n1min on/1min off\n2. max m ski rpe 9\n4x\n1min on/1min off\n3. max m bike rpe 9"
+        }
+      ]
+    }
+  ]
+}
