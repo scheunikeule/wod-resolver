@@ -4,17 +4,13 @@
   "schema": 1,
   "resolver": {
     "by": "claude-nightly",
-    "at": "2026-11-16T07:39:56Z",
-    "confidence": 0.75,
+    "at": "2026-11-17T07:39:26Z",
+    "confidence": 0.95,
     "issues": [
-      "rounds derived: warm up interval rounds 6 = 3 sets x 2 stations (6 x 60s = 6min, matches header)",
-      "warm up slash line (samson stretch/down dog & seal/handwalk + push up) kept as per-set rotation (alternatives + mods.rotation=perSet)",
-      "prehab: '3 sets' with no on/off timing stated — clock sets x3, no interval invented; rows kept as circuit",
-      "movement ids unverified: prompt/catalog.json absent in repo; custom ids: samson stretch, tuck sit hang",
-      "metcon benchmark 'TK': 75/60 after box jumps read as box height cm; scale mapped loads first (60/50 -> box jump cm, 24/16 -> kb swing kg), then banded / floor assisted pull ups -> strict pull-up"
+      "strength focus 'dealdift 5/6' read as deadlift (typo not corrected by normalize.py); series 5/6"
     ]
   },
-  "hashtag": "#benchmarktk",
+  "hashtag": "#lowerbodypull",
   "rpe": "8",
   "flags": [],
   "programs": [
@@ -62,8 +58,8 @@
                     "rest": false,
                     "items": [
                       {
-                        "id": "step-up",
-                        "name": "Step up",
+                        "id": "single-under",
+                        "name": "Single under",
                         "qty": {
                           "mode": "none"
                         },
@@ -73,7 +69,7 @@
                         },
                         "mods": {},
                         "alternatives": [],
-                        "text": "step ups"
+                        "text": "rope jumps"
                       }
                     ]
                   },
@@ -83,8 +79,8 @@
                     "rest": false,
                     "items": [
                       {
-                        "id": "custom:samson stretch",
-                        "name": "Samson stretch",
+                        "id": "instep-stretch-rotation",
+                        "name": "Instep stretch + rotation",
                         "qty": {
                           "mode": "none"
                         },
@@ -92,14 +88,12 @@
                         "load": {
                           "mode": "none"
                         },
-                        "mods": {
-                          "rotation": "perSet"
-                        },
+                        "mods": {},
                         "alternatives": [
-                          "down dog & seal",
-                          "handwalk + push up"
+                          "sumo squat stretch",
+                          "down dog & seal"
                         ],
-                        "text": "samson stretch/down dog & seal/handwalk + push up"
+                        "text": "instep stretch + rotation/sumo squat stretch/down dog & seal"
                       }
                     ]
                   }
@@ -113,7 +107,7 @@
           ],
           "scale": [],
           "notes": [],
-          "raw": "warm up (6min)\n3 sets\n45sec on/15sec off\nstep ups\nsamson stretch/down dog & seal/handwalk + push up"
+          "raw": "warm up (6min)\n3 sets\n45sec on/15sec off\nrope jumps\ninstep stretch + rotation/sumo squat stretch/down dog & seal"
         },
         {
           "ordinal": 2,
@@ -139,56 +133,69 @@
               "title": null,
               "intent": null,
               "clock": {
-                "type": "sets",
-                "sets": 3,
-                "reps": null,
-                "restSec": null,
-                "restBetweenRepsSec": null,
-                "groups": []
+                "type": "interval",
+                "workSec": 30,
+                "restSec": 10,
+                "rounds": 6,
+                "stationMode": "rotate"
               },
               "scheme": null,
               "work": {
-                "mode": "rows",
-                "rows": [
+                "mode": "stations",
+                "stations": [
                   {
-                    "id": "custom:tuck sit hang",
-                    "name": "Tuck sit hang",
-                    "qty": {
-                      "mode": "none"
-                    },
-                    "perSide": false,
-                    "load": {
-                      "mode": "none"
-                    },
-                    "mods": {},
-                    "alternatives": [],
-                    "text": "tuck sit hang"
+                    "n": 1,
+                    "repeat": 1,
+                    "rest": false,
+                    "items": [
+                      {
+                        "id": "good-morning",
+                        "name": "Good morning",
+                        "qty": {
+                          "mode": "none"
+                        },
+                        "perSide": false,
+                        "load": {
+                          "mode": "implement"
+                        },
+                        "mods": {},
+                        "alternatives": [],
+                        "text": "barbell good mornings"
+                      }
+                    ]
                   },
                   {
-                    "id": "kb-twist",
-                    "name": "KB twist",
-                    "qty": {
-                      "mode": "none"
-                    },
-                    "perSide": false,
-                    "load": {
-                      "mode": "none"
-                    },
-                    "mods": {},
-                    "alternatives": [],
-                    "text": "kb twist"
+                    "n": 2,
+                    "repeat": 1,
+                    "rest": false,
+                    "items": [
+                      {
+                        "id": "roll-out",
+                        "name": "Roll out",
+                        "qty": {
+                          "mode": "none"
+                        },
+                        "perSide": false,
+                        "load": {
+                          "mode": "none"
+                        },
+                        "mods": {},
+                        "alternatives": [],
+                        "text": "barbell roll outs"
+                      }
+                    ]
                   }
                 ]
               },
               "riders": [],
               "capSec": null,
               "restAfterSec": null,
-              "raw": "3 sets"
+              "raw": "3 sets\n30sec on/10sec off"
             }
           ],
           "scale": [],
           "notes": [],
-          "raw": "prehab (5min)\n3 sets\ntuck sit hang\nkb twist"
+          "raw": "prehab (5min)\n3 sets\n30sec on/10sec off\nbarbell good mornings\nbarbell roll outs"
         },
         {
           "ordinal": 3,
@@ -198,7 +205,7 @@
             "strength"
           ],
           "label": "strength",
-          "focus": "shoulder press",
+          "focus": "deadlift",
           "name": null,
           "benchmark": false,
           "minutes": 20,
@@ -220,47 +227,6 @@
                 "type": "sets",
                 "sets": 2,
                 "reps": 4,
-                "restSec": 90,
-                "restBetweenRepsSec": null,
-                "groups": []
-              },
-              "scheme": null,
-              "work": {
-                "mode": "rows",
-                "rows": [
-                  {
-                    "id": "shoulder-press",
-                    "name": "Shoulder press",
-                    "qty": {
-                      "mode": "reps",
-                      "value": 4
-                    },
-                    "perSide": false,
-                    "load": {
-                      "mode": "pct",
-                      "pct": 55,
-                      "pctOf": "1rm"
-                    },
-                    "mods": {},
-                    "alternatives": [],
-                    "text": "4 reps @55%"
-                  }
-                ]
-              },
-              "riders": [],
-              "capSec": null,
-              "restAfterSec": null,
-              "raw": "warm up\n2 sets\n4 reps @55%\n90sec rest"
-            },
-            {
-              "role": "main",
-              "chain": "into",
-              "title": null,
-              "intent": null,
-              "clock": {
-                "type": "sets",
-                "sets": 3,
-                "reps": 10,
                 "restSec": 120,
                 "restBetweenRepsSec": null,
                 "groups": []
@@ -270,37 +236,78 @@
                 "mode": "rows",
                 "rows": [
                   {
-                    "id": "shoulder-press",
-                    "name": "Shoulder press",
+                    "id": "deadlift",
+                    "name": "Deadlift",
                     "qty": {
                       "mode": "reps",
-                      "value": 10
+                      "value": 4
                     },
                     "perSide": false,
                     "load": {
                       "mode": "pct",
-                      "pct": null,
-                      "pctRange": [
-                        60,
-                        65
-                      ],
+                      "pct": 60,
                       "pctOf": "1rm"
                     },
                     "mods": {},
                     "alternatives": [],
-                    "text": "10 reps @60-65%"
+                    "text": "4 reps @60%"
                   }
                 ]
               },
               "riders": [],
               "capSec": null,
               "restAfterSec": null,
-              "raw": "into\n3 sets\n10 reps @60-65%\n2min rest"
+              "raw": "warm up\n2 sets\n4 reps @60%\n2min rest"
+            },
+            {
+              "role": "main",
+              "chain": "into",
+              "title": null,
+              "intent": null,
+              "clock": {
+                "type": "sets",
+                "sets": 3,
+                "reps": 8,
+                "restSec": 120,
+                "restBetweenRepsSec": null,
+                "groups": []
+              },
+              "scheme": null,
+              "work": {
+                "mode": "rows",
+                "rows": [
+                  {
+                    "id": "deadlift",
+                    "name": "Deadlift",
+                    "qty": {
+                      "mode": "reps",
+                      "value": 8
+                    },
+                    "perSide": false,
+                    "load": {
+                      "mode": "pct",
+                      "pct": null,
+                      "pctRange": [
+                        65,
+                        70
+                      ],
+                      "pctOf": "1rm"
+                    },
+                    "mods": {},
+                    "alternatives": [],
+                    "text": "8 reps @65-70%"
+                  }
+                ]
+              },
+              "riders": [],
+              "capSec": null,
+              "restAfterSec": null,
+              "raw": "into\n3 sets\n8 reps @65-70%\n2min rest"
             }
           ],
           "scale": [],
           "notes": [],
-          "raw": "strength (20min)\nshoulder press 5/6\nwarm up\n2 sets\n4 reps @55%\n90sec rest\ninto\n3 sets\n10 reps @60-65%\n2min rest"
+          "raw": "strength (20min)\ndealdift 5/6\nwarm up\n2 sets\n4 reps @60%\n2min rest\ninto\n3 sets\n8 reps @65-70%\n2min rest"
         },
         {
           "ordinal": 4,
@@ -311,9 +318,9 @@
           ],
           "label": "metcon",
           "focus": null,
-          "name": "TK",
-          "benchmark": true,
-          "minutes": 20,
+          "name": null,
+          "benchmark": false,
+          "minutes": 15,
           "series": null,
           "cycleNote": null,
           "partner": null,
@@ -326,50 +333,18 @@
               "title": null,
               "intent": null,
               "clock": {
-                "type": "amrap",
-                "sec": 1200,
-                "maxSec": null
+                "type": "rounds",
+                "rounds": 6,
+                "restSec": null,
+                "quality": false
               },
               "scheme": null,
               "work": {
                 "mode": "rows",
                 "rows": [
                   {
-                    "id": "strict-pull-up",
-                    "name": "Strict pull up",
-                    "qty": {
-                      "mode": "reps",
-                      "value": 8
-                    },
-                    "perSide": false,
-                    "load": {
-                      "mode": "none"
-                    },
-                    "mods": {},
-                    "alternatives": [],
-                    "text": "8 strict pull ups"
-                  },
-                  {
-                    "id": "box-jump",
-                    "name": "Box jump",
-                    "qty": {
-                      "mode": "reps",
-                      "value": 8
-                    },
-                    "perSide": false,
-                    "load": {
-                      "mode": "pair",
-                      "m": 75,
-                      "f": 60,
-                      "unit": "cm"
-                    },
-                    "mods": {},
-                    "alternatives": [],
-                    "text": "8 box jumps 75/60"
-                  },
-                  {
-                    "id": "kb-swing",
-                    "name": "KB Swing",
+                    "id": "overhead-squat",
+                    "name": "Overhead squat",
                     "qty": {
                       "mode": "reps",
                       "value": 12
@@ -377,47 +352,71 @@
                     "perSide": false,
                     "load": {
                       "mode": "pair",
-                      "m": 32,
-                      "f": 24,
+                      "m": 40,
+                      "f": 30,
                       "unit": "kg"
                     },
                     "mods": {},
                     "alternatives": [],
-                    "text": "12 swings 32/24"
+                    "text": "12 overheadsquats 40/30"
+                  },
+                  {
+                    "id": "sit-up",
+                    "name": "Sit up",
+                    "qty": {
+                      "mode": "reps",
+                      "value": 18
+                    },
+                    "perSide": false,
+                    "load": {
+                      "mode": "none"
+                    },
+                    "mods": {},
+                    "alternatives": [],
+                    "text": "18 sit ups"
+                  },
+                  {
+                    "id": "double-under",
+                    "name": "Double Under",
+                    "qty": {
+                      "mode": "reps",
+                      "value": 24
+                    },
+                    "perSide": false,
+                    "load": {
+                      "mode": "none"
+                    },
+                    "mods": {},
+                    "alternatives": [],
+                    "text": "24 double unders"
                   }
                 ]
               },
               "riders": [],
               "capSec": null,
               "restAfterSec": null,
-              "raw": "amrap 20min"
+              "raw": "6 rounds"
             }
           ],
           "scale": [
             {
-              "target": "box-jump",
+              "target": "overhead-squat",
               "options": [
-                "60/50"
+                "30/20",
+                "frontsquats"
               ]
             },
             {
-              "target": "kb-swing",
+              "target": "double-under",
               "options": [
-                "24/16"
-              ]
-            },
-            {
-              "target": "strict-pull-up",
-              "options": [
-                "banded pull ups",
-                "floor assistant pull ups"
+                "single unders (x2)"
               ]
             }
           ],
           "notes": [
-            "scale banded pull ups, floor assistant pull ups, 60/50, 24/16"
+            "scale 30/20, frontsquats, single unders (x2)"
           ],
-          "raw": "metcon (20min)\nbenchmark\n\"TK\"\namrap 20min\n8 strict pull ups\n8 box jumps 75/60\n12 swings 32/24\nscale banded pull ups, floor assistant pull ups, 60/50, 24/16\n#benchmarktk\nrpe8"
+          "raw": "metcon (15min)\n6 rounds\n12 overheadsquats 40/30\n18 sit ups\n24 double unders\nscale 30/20, frontsquats, single unders (x2)\n#lowerbodypull\nrpe8"
         }
       ]
     }
