@@ -1,16 +1,20 @@
 {
-  "date": "2026-11-16",
+  "date": "2026-11-17",
   "source": "feed",
   "schema": 1,
   "resolver": {
     "by": "claude-nightly",
-    "at": "2026-11-17T07:39:26Z",
-    "confidence": 0.95,
+    "at": "2026-11-18T07:39:42Z",
+    "confidence": 0.75,
     "issues": [
-      "strength focus 'dealdift 5/6' read as deadlift (typo not corrected by normalize.py); series 5/6"
+      "unknown movement: 'burpees over db' -> custom:burpee over db (no prompt/catalog.json in repo; other ids reused from earlier days)",
+      "rounds derived: warm up interval rounds = 2 sets x 3 stations = 6; prehab = 3 sets x 2 stations = 6",
+      "strength/gymnastic: '4 rounds / 3min on/90sec off' = interval 180s+90s x 4 (18min of 20min block), unnumbered list = circuit inside each on-window; 'max handstand push ups' = max reps in remaining time",
+      "metcon: 'rx+ 30/20' kept as verbatim note (heavier DB option), not a scale mapping",
+      "in-block hashtag '#volume' kept as block note + tag 'volume'; day hashtag is #buildingvolume"
     ]
   },
-  "hashtag": "#lowerbodypull",
+  "hashtag": "#buildingvolume",
   "rpe": "8",
   "flags": [],
   "programs": [
@@ -58,8 +62,8 @@
                     "rest": false,
                     "items": [
                       {
-                        "id": "single-under",
-                        "name": "Single under",
+                        "id": "down-up",
+                        "name": "Down up",
                         "qty": {
                           "mode": "none"
                         },
@@ -69,7 +73,7 @@
                         },
                         "mods": {},
                         "alternatives": [],
-                        "text": "rope jumps"
+                        "text": "down ups"
                       }
                     ]
                   },
@@ -79,8 +83,8 @@
                     "rest": false,
                     "items": [
                       {
-                        "id": "instep-stretch-rotation",
-                        "name": "Instep stretch + rotation",
+                        "id": "bike",
+                        "name": "Bike",
                         "qty": {
                           "mode": "none"
                         },
@@ -89,11 +93,33 @@
                           "mode": "none"
                         },
                         "mods": {},
+                        "alternatives": [],
+                        "text": "bike"
+                      }
+                    ]
+                  },
+                  {
+                    "n": 3,
+                    "repeat": 1,
+                    "rest": false,
+                    "items": [
+                      {
+                        "id": "down-dog-seal",
+                        "name": "Down dog & seal",
+                        "qty": {
+                          "mode": "none"
+                        },
+                        "perSide": false,
+                        "load": {
+                          "mode": "none"
+                        },
+                        "mods": {
+                          "rotation": "perSet"
+                        },
                         "alternatives": [
-                          "sumo squat stretch",
-                          "down dog & seal"
+                          "dynamic bridge"
                         ],
-                        "text": "instep stretch + rotation/sumo squat stretch/down dog & seal"
+                        "text": "down dog & seal/dynamic bridge"
                       }
                     ]
                   }
@@ -102,12 +128,12 @@
               "riders": [],
               "capSec": null,
               "restAfterSec": null,
-              "raw": "3 sets\n45sec on/15sec off"
+              "raw": "2 sets\n45sec on/15sec off"
             }
           ],
           "scale": [],
           "notes": [],
-          "raw": "warm up (6min)\n3 sets\n45sec on/15sec off\nrope jumps\ninstep stretch + rotation/sumo squat stretch/down dog & seal"
+          "raw": "warm up (6min)\n2 sets\n45sec on/15sec off\ndown ups\nbike\ndown dog & seal/dynamic bridge"
         },
         {
           "ordinal": 2,
@@ -149,18 +175,18 @@
                     "rest": false,
                     "items": [
                       {
-                        "id": "good-morning",
-                        "name": "Good morning",
+                        "id": "tuck-sit-hang",
+                        "name": "Tuck sit hang",
                         "qty": {
                           "mode": "none"
                         },
                         "perSide": false,
                         "load": {
-                          "mode": "implement"
+                          "mode": "none"
                         },
                         "mods": {},
                         "alternatives": [],
-                        "text": "barbell good mornings"
+                        "text": "tuck sit hang"
                       }
                     ]
                   },
@@ -170,8 +196,8 @@
                     "rest": false,
                     "items": [
                       {
-                        "id": "roll-out",
-                        "name": "Roll out",
+                        "id": "custom:db pass through",
+                        "name": "DB pass through",
                         "qty": {
                           "mode": "none"
                         },
@@ -181,7 +207,7 @@
                         },
                         "mods": {},
                         "alternatives": [],
-                        "text": "barbell roll outs"
+                        "text": "db pass through"
                       }
                     ]
                   }
@@ -195,119 +221,141 @@
           ],
           "scale": [],
           "notes": [],
-          "raw": "prehab (5min)\n3 sets\n30sec on/10sec off\nbarbell good mornings\nbarbell roll outs"
+          "raw": "prehab (5min)\n3 sets\n30sec on/10sec off\ntuck sit hang\ndb pass through"
         },
         {
           "ordinal": 3,
           "letter": null,
-          "kind": "strength",
+          "kind": "gymnastic",
           "tags": [
-            "strength"
+            "strength",
+            "gymnastic",
+            "volume"
           ],
-          "label": "strength",
-          "focus": "deadlift",
+          "label": "strength/gymnastic",
+          "focus": null,
           "name": null,
           "benchmark": false,
           "minutes": 20,
-          "series": {
-            "n": 5,
-            "of": 6
-          },
+          "series": null,
           "cycleNote": null,
           "partner": null,
           "optional": false,
           "bonus": false,
           "segments": [
             {
-              "role": "warmup",
+              "role": "main",
               "chain": null,
-              "title": "warm up",
-              "intent": null,
+              "title": null,
+              "intent": "reps",
               "clock": {
-                "type": "sets",
-                "sets": 2,
-                "reps": 4,
-                "restSec": 120,
-                "restBetweenRepsSec": null,
-                "groups": []
+                "type": "interval",
+                "workSec": 180,
+                "restSec": 90,
+                "rounds": 4,
+                "stationMode": "circuit"
               },
               "scheme": null,
               "work": {
                 "mode": "rows",
                 "rows": [
                   {
-                    "id": "deadlift",
-                    "name": "Deadlift",
+                    "id": "bike",
+                    "name": "Bike",
                     "qty": {
-                      "mode": "reps",
-                      "value": 4
+                      "mode": "cal",
+                      "value": 15,
+                      "f": 11
                     },
                     "perSide": false,
                     "load": {
-                      "mode": "pct",
-                      "pct": 60,
-                      "pctOf": "1rm"
+                      "mode": "none"
                     },
                     "mods": {},
                     "alternatives": [],
-                    "text": "4 reps @60%"
-                  }
-                ]
-              },
-              "riders": [],
-              "capSec": null,
-              "restAfterSec": null,
-              "raw": "warm up\n2 sets\n4 reps @60%\n2min rest"
-            },
-            {
-              "role": "main",
-              "chain": "into",
-              "title": null,
-              "intent": null,
-              "clock": {
-                "type": "sets",
-                "sets": 3,
-                "reps": 8,
-                "restSec": 120,
-                "restBetweenRepsSec": null,
-                "groups": []
-              },
-              "scheme": null,
-              "work": {
-                "mode": "rows",
-                "rows": [
+                    "text": "15/11cal bike"
+                  },
                   {
-                    "id": "deadlift",
-                    "name": "Deadlift",
+                    "id": "toes-to-bar",
+                    "name": "Toes to bar",
+                    "qty": {
+                      "mode": "reps",
+                      "value": 12
+                    },
+                    "perSide": false,
+                    "load": {
+                      "mode": "none"
+                    },
+                    "mods": {},
+                    "alternatives": [],
+                    "text": "12 toes to bar"
+                  },
+                  {
+                    "id": "push-up",
+                    "name": "Push up",
                     "qty": {
                       "mode": "reps",
                       "value": 8
                     },
                     "perSide": false,
                     "load": {
-                      "mode": "pct",
-                      "pct": null,
-                      "pctRange": [
-                        65,
-                        70
-                      ],
-                      "pctOf": "1rm"
+                      "mode": "none"
                     },
                     "mods": {},
                     "alternatives": [],
-                    "text": "8 reps @65-70%"
+                    "text": "8 push ups"
+                  },
+                  {
+                    "id": "handstand-push-up",
+                    "name": "Handstand push up",
+                    "qty": {
+                      "mode": "max",
+                      "remaining": true,
+                      "maxUnit": "reps"
+                    },
+                    "perSide": false,
+                    "load": {
+                      "mode": "none"
+                    },
+                    "mods": {},
+                    "alternatives": [],
+                    "text": "max handstand push ups"
                   }
                 ]
               },
               "riders": [],
               "capSec": null,
               "restAfterSec": null,
-              "raw": "into\n3 sets\n8 reps @65-70%\n2min rest"
+              "raw": "4 rounds\n3min on/90sec off"
             }
           ],
-          "scale": [],
-          "notes": [],
-          "raw": "strength (20min)\ndealdift 5/6\nwarm up\n2 sets\n4 reps @60%\n2min rest\ninto\n3 sets\n8 reps @65-70%\n2min rest"
+          "scale": [
+            {
+              "target": "toes-to-bar",
+              "options": [
+                "straight leg raises",
+                "alt single leg toes to bar",
+                "knee raises"
+              ]
+            },
+            {
+              "target": "push-up",
+              "options": [
+                "kneeling push ups"
+              ]
+            },
+            {
+              "target": "handstand-push-up",
+              "options": [
+                "box supported hspu"
+              ]
+            }
+          ],
+          "notes": [
+            "#volume",
+            "scale straight leg raises, alt single leg toes to bar, knee raises, kneeling push ups, box supported hspu"
+          ],
+          "raw": "strength/gymnastic (20min)\n#volume\n4 rounds\n3min on/90sec off\n15/11cal bike\n12 toes to bar\n8 push ups\nmax handstand push ups\nscale straight leg raises, alt single leg toes to bar, knee raises, kneeling push ups, box supported hspu"
         },
         {
           "ordinal": 4,
@@ -320,7 +368,7 @@
           "focus": null,
           "name": null,
           "benchmark": false,
-          "minutes": 15,
+          "minutes": 10,
           "series": null,
           "cycleNote": null,
           "partner": null,
@@ -331,41 +379,40 @@
               "role": "main",
               "chain": null,
               "title": null,
-              "intent": null,
+              "intent": "reps",
               "clock": {
-                "type": "rounds",
-                "rounds": 6,
-                "restSec": null,
-                "quality": false
+                "type": "amrap",
+                "sec": 600,
+                "maxSec": null
               },
               "scheme": null,
               "work": {
                 "mode": "rows",
                 "rows": [
                   {
-                    "id": "overhead-squat",
-                    "name": "Overhead squat",
+                    "id": "db-hang-clean-and-jerk",
+                    "name": "Alt single arm DB hang clean & jerk",
                     "qty": {
                       "mode": "reps",
-                      "value": 12
+                      "value": 20
                     },
                     "perSide": false,
                     "load": {
                       "mode": "pair",
-                      "m": 40,
-                      "f": 30,
+                      "m": 22.5,
+                      "f": 15,
                       "unit": "kg"
                     },
                     "mods": {},
                     "alternatives": [],
-                    "text": "12 overheadsquats 40/30"
+                    "text": "20 alt single arm db hang clean & jerks 22,5/15"
                   },
                   {
-                    "id": "sit-up",
-                    "name": "Sit up",
+                    "id": "custom:burpee over db",
+                    "name": "Burpee over DB",
                     "qty": {
                       "mode": "reps",
-                      "value": 18
+                      "value": 10
                     },
                     "perSide": false,
                     "load": {
@@ -373,50 +420,29 @@
                     },
                     "mods": {},
                     "alternatives": [],
-                    "text": "18 sit ups"
-                  },
-                  {
-                    "id": "double-under",
-                    "name": "Double Under",
-                    "qty": {
-                      "mode": "reps",
-                      "value": 24
-                    },
-                    "perSide": false,
-                    "load": {
-                      "mode": "none"
-                    },
-                    "mods": {},
-                    "alternatives": [],
-                    "text": "24 double unders"
+                    "text": "10 burpees over db"
                   }
                 ]
               },
               "riders": [],
               "capSec": null,
               "restAfterSec": null,
-              "raw": "6 rounds"
+              "raw": "amrap 10min"
             }
           ],
           "scale": [
             {
-              "target": "overhead-squat",
+              "target": "load",
               "options": [
-                "30/20",
-                "frontsquats"
-              ]
-            },
-            {
-              "target": "double-under",
-              "options": [
-                "single unders (x2)"
+                "scale 15/10"
               ]
             }
           ],
           "notes": [
-            "scale 30/20, frontsquats, single unders (x2)"
+            "scale 15/10",
+            "rx+ 30/20"
           ],
-          "raw": "metcon (15min)\n6 rounds\n12 overheadsquats 40/30\n18 sit ups\n24 double unders\nscale 30/20, frontsquats, single unders (x2)\n#lowerbodypull\nrpe8"
+          "raw": "metcon (10min)\namrap 10min\n20 alt single arm db hang clean & jerks 22,5/15\n10 burpees over db\nscale 15/10\nrx+ 30/20\n#buildingvolume\nrpe8"
         }
       ]
     }

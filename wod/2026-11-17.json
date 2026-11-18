@@ -1,0 +1,450 @@
+{
+  "date": "2026-11-17",
+  "source": "feed",
+  "schema": 1,
+  "resolver": {
+    "by": "claude-nightly",
+    "at": "2026-11-18T07:39:42Z",
+    "confidence": 0.75,
+    "issues": [
+      "unknown movement: 'burpees over db' -> custom:burpee over db (no prompt/catalog.json in repo; other ids reused from earlier days)",
+      "rounds derived: warm up interval rounds = 2 sets x 3 stations = 6; prehab = 3 sets x 2 stations = 6",
+      "strength/gymnastic: '4 rounds / 3min on/90sec off' = interval 180s+90s x 4 (18min of 20min block), unnumbered list = circuit inside each on-window; 'max handstand push ups' = max reps in remaining time",
+      "metcon: 'rx+ 30/20' kept as verbatim note (heavier DB option), not a scale mapping",
+      "in-block hashtag '#volume' kept as block note + tag 'volume'; day hashtag is #buildingvolume"
+    ]
+  },
+  "hashtag": "#buildingvolume",
+  "rpe": "8",
+  "flags": [],
+  "programs": [
+    {
+      "name": "class",
+      "title": null,
+      "blocks": [
+        {
+          "ordinal": 1,
+          "letter": null,
+          "kind": "warmup",
+          "tags": [
+            "warmup"
+          ],
+          "label": "warm up",
+          "focus": null,
+          "name": null,
+          "benchmark": false,
+          "minutes": 6,
+          "series": null,
+          "cycleNote": null,
+          "partner": null,
+          "optional": false,
+          "bonus": false,
+          "segments": [
+            {
+              "role": "main",
+              "chain": null,
+              "title": null,
+              "intent": null,
+              "clock": {
+                "type": "interval",
+                "workSec": 45,
+                "restSec": 15,
+                "rounds": 6,
+                "stationMode": "rotate"
+              },
+              "scheme": null,
+              "work": {
+                "mode": "stations",
+                "stations": [
+                  {
+                    "n": 1,
+                    "repeat": 1,
+                    "rest": false,
+                    "items": [
+                      {
+                        "id": "down-up",
+                        "name": "Down up",
+                        "qty": {
+                          "mode": "none"
+                        },
+                        "perSide": false,
+                        "load": {
+                          "mode": "none"
+                        },
+                        "mods": {},
+                        "alternatives": [],
+                        "text": "down ups"
+                      }
+                    ]
+                  },
+                  {
+                    "n": 2,
+                    "repeat": 1,
+                    "rest": false,
+                    "items": [
+                      {
+                        "id": "bike",
+                        "name": "Bike",
+                        "qty": {
+                          "mode": "none"
+                        },
+                        "perSide": false,
+                        "load": {
+                          "mode": "none"
+                        },
+                        "mods": {},
+                        "alternatives": [],
+                        "text": "bike"
+                      }
+                    ]
+                  },
+                  {
+                    "n": 3,
+                    "repeat": 1,
+                    "rest": false,
+                    "items": [
+                      {
+                        "id": "down-dog-seal",
+                        "name": "Down dog & seal",
+                        "qty": {
+                          "mode": "none"
+                        },
+                        "perSide": false,
+                        "load": {
+                          "mode": "none"
+                        },
+                        "mods": {
+                          "rotation": "perSet"
+                        },
+                        "alternatives": [
+                          "dynamic bridge"
+                        ],
+                        "text": "down dog & seal/dynamic bridge"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "riders": [],
+              "capSec": null,
+              "restAfterSec": null,
+              "raw": "2 sets\n45sec on/15sec off"
+            }
+          ],
+          "scale": [],
+          "notes": [],
+          "raw": "warm up (6min)\n2 sets\n45sec on/15sec off\ndown ups\nbike\ndown dog & seal/dynamic bridge"
+        },
+        {
+          "ordinal": 2,
+          "letter": null,
+          "kind": "prehab",
+          "tags": [
+            "prehab"
+          ],
+          "label": "prehab",
+          "focus": null,
+          "name": null,
+          "benchmark": false,
+          "minutes": 5,
+          "series": null,
+          "cycleNote": null,
+          "partner": null,
+          "optional": false,
+          "bonus": false,
+          "segments": [
+            {
+              "role": "main",
+              "chain": null,
+              "title": null,
+              "intent": null,
+              "clock": {
+                "type": "interval",
+                "workSec": 30,
+                "restSec": 10,
+                "rounds": 6,
+                "stationMode": "rotate"
+              },
+              "scheme": null,
+              "work": {
+                "mode": "stations",
+                "stations": [
+                  {
+                    "n": 1,
+                    "repeat": 1,
+                    "rest": false,
+                    "items": [
+                      {
+                        "id": "tuck-sit-hang",
+                        "name": "Tuck sit hang",
+                        "qty": {
+                          "mode": "none"
+                        },
+                        "perSide": false,
+                        "load": {
+                          "mode": "none"
+                        },
+                        "mods": {},
+                        "alternatives": [],
+                        "text": "tuck sit hang"
+                      }
+                    ]
+                  },
+                  {
+                    "n": 2,
+                    "repeat": 1,
+                    "rest": false,
+                    "items": [
+                      {
+                        "id": "custom:db pass through",
+                        "name": "DB pass through",
+                        "qty": {
+                          "mode": "none"
+                        },
+                        "perSide": false,
+                        "load": {
+                          "mode": "none"
+                        },
+                        "mods": {},
+                        "alternatives": [],
+                        "text": "db pass through"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "riders": [],
+              "capSec": null,
+              "restAfterSec": null,
+              "raw": "3 sets\n30sec on/10sec off"
+            }
+          ],
+          "scale": [],
+          "notes": [],
+          "raw": "prehab (5min)\n3 sets\n30sec on/10sec off\ntuck sit hang\ndb pass through"
+        },
+        {
+          "ordinal": 3,
+          "letter": null,
+          "kind": "gymnastic",
+          "tags": [
+            "strength",
+            "gymnastic",
+            "volume"
+          ],
+          "label": "strength/gymnastic",
+          "focus": null,
+          "name": null,
+          "benchmark": false,
+          "minutes": 20,
+          "series": null,
+          "cycleNote": null,
+          "partner": null,
+          "optional": false,
+          "bonus": false,
+          "segments": [
+            {
+              "role": "main",
+              "chain": null,
+              "title": null,
+              "intent": "reps",
+              "clock": {
+                "type": "interval",
+                "workSec": 180,
+                "restSec": 90,
+                "rounds": 4,
+                "stationMode": "circuit"
+              },
+              "scheme": null,
+              "work": {
+                "mode": "rows",
+                "rows": [
+                  {
+                    "id": "bike",
+                    "name": "Bike",
+                    "qty": {
+                      "mode": "cal",
+                      "value": 15,
+                      "f": 11
+                    },
+                    "perSide": false,
+                    "load": {
+                      "mode": "none"
+                    },
+                    "mods": {},
+                    "alternatives": [],
+                    "text": "15/11cal bike"
+                  },
+                  {
+                    "id": "toes-to-bar",
+                    "name": "Toes to bar",
+                    "qty": {
+                      "mode": "reps",
+                      "value": 12
+                    },
+                    "perSide": false,
+                    "load": {
+                      "mode": "none"
+                    },
+                    "mods": {},
+                    "alternatives": [],
+                    "text": "12 toes to bar"
+                  },
+                  {
+                    "id": "push-up",
+                    "name": "Push up",
+                    "qty": {
+                      "mode": "reps",
+                      "value": 8
+                    },
+                    "perSide": false,
+                    "load": {
+                      "mode": "none"
+                    },
+                    "mods": {},
+                    "alternatives": [],
+                    "text": "8 push ups"
+                  },
+                  {
+                    "id": "handstand-push-up",
+                    "name": "Handstand push up",
+                    "qty": {
+                      "mode": "max",
+                      "remaining": true,
+                      "maxUnit": "reps"
+                    },
+                    "perSide": false,
+                    "load": {
+                      "mode": "none"
+                    },
+                    "mods": {},
+                    "alternatives": [],
+                    "text": "max handstand push ups"
+                  }
+                ]
+              },
+              "riders": [],
+              "capSec": null,
+              "restAfterSec": null,
+              "raw": "4 rounds\n3min on/90sec off"
+            }
+          ],
+          "scale": [
+            {
+              "target": "toes-to-bar",
+              "options": [
+                "straight leg raises",
+                "alt single leg toes to bar",
+                "knee raises"
+              ]
+            },
+            {
+              "target": "push-up",
+              "options": [
+                "kneeling push ups"
+              ]
+            },
+            {
+              "target": "handstand-push-up",
+              "options": [
+                "box supported hspu"
+              ]
+            }
+          ],
+          "notes": [
+            "#volume",
+            "scale straight leg raises, alt single leg toes to bar, knee raises, kneeling push ups, box supported hspu"
+          ],
+          "raw": "strength/gymnastic (20min)\n#volume\n4 rounds\n3min on/90sec off\n15/11cal bike\n12 toes to bar\n8 push ups\nmax handstand push ups\nscale straight leg raises, alt single leg toes to bar, knee raises, kneeling push ups, box supported hspu"
+        },
+        {
+          "ordinal": 4,
+          "letter": null,
+          "kind": "metcon",
+          "tags": [
+            "metcon"
+          ],
+          "label": "metcon",
+          "focus": null,
+          "name": null,
+          "benchmark": false,
+          "minutes": 10,
+          "series": null,
+          "cycleNote": null,
+          "partner": null,
+          "optional": false,
+          "bonus": false,
+          "segments": [
+            {
+              "role": "main",
+              "chain": null,
+              "title": null,
+              "intent": "reps",
+              "clock": {
+                "type": "amrap",
+                "sec": 600,
+                "maxSec": null
+              },
+              "scheme": null,
+              "work": {
+                "mode": "rows",
+                "rows": [
+                  {
+                    "id": "db-hang-clean-and-jerk",
+                    "name": "Alt single arm DB hang clean & jerk",
+                    "qty": {
+                      "mode": "reps",
+                      "value": 20
+                    },
+                    "perSide": false,
+                    "load": {
+                      "mode": "pair",
+                      "m": 22.5,
+                      "f": 15,
+                      "unit": "kg"
+                    },
+                    "mods": {},
+                    "alternatives": [],
+                    "text": "20 alt single arm db hang clean & jerks 22,5/15"
+                  },
+                  {
+                    "id": "custom:burpee over db",
+                    "name": "Burpee over DB",
+                    "qty": {
+                      "mode": "reps",
+                      "value": 10
+                    },
+                    "perSide": false,
+                    "load": {
+                      "mode": "none"
+                    },
+                    "mods": {},
+                    "alternatives": [],
+                    "text": "10 burpees over db"
+                  }
+                ]
+              },
+              "riders": [],
+              "capSec": null,
+              "restAfterSec": null,
+              "raw": "amrap 10min"
+            }
+          ],
+          "scale": [
+            {
+              "target": "load",
+              "options": [
+                "scale 15/10"
+              ]
+            }
+          ],
+          "notes": [
+            "scale 15/10",
+            "rx+ 30/20"
+          ],
+          "raw": "metcon (10min)\namrap 10min\n20 alt single arm db hang clean & jerks 22,5/15\n10 burpees over db\nscale 15/10\nrx+ 30/20\n#buildingvolume\nrpe8"
+        }
+      ]
+    }
+  ]
+}
