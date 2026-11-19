@@ -1,20 +1,19 @@
 {
-  "date": "2026-11-17",
+  "date": "2026-11-19",
   "source": "feed",
   "schema": 1,
   "resolver": {
     "by": "claude-nightly",
-    "at": "2026-11-18T07:39:42Z",
-    "confidence": 0.75,
+    "at": "2026-11-19T07:39:20Z",
+    "confidence": 0.8,
     "issues": [
-      "unknown movement: 'burpees over db' -> custom:burpee over db (no prompt/catalog.json in repo; other ids reused from earlier days)",
-      "rounds derived: warm up interval rounds = 2 sets x 3 stations = 6; prehab = 3 sets x 2 stations = 6",
-      "strength/gymnastic: '4 rounds / 3min on/90sec off' = interval 180s+90s x 4 (18min of 20min block), unnumbered list = circuit inside each on-window; 'max handstand push ups' = max reps in remaining time",
-      "metcon: 'rx+ 30/20' kept as verbatim note (heavier DB option), not a scale mapping",
-      "in-block hashtag '#volume' kept as block note + tag 'volume'; day hashtag is #buildingvolume"
+      "rounds derived: warm up interval rounds = 3 sets x 2 stations = 6; prehab = 3 sets x 2 stations = 6",
+      "unknown movement: 'pinguin jumps' -> custom:pinguin jump",
+      "unknown movement: 'marching plank' -> custom:marching plank",
+      "skill: 'single unders' / 'pinguin jumps' read as untimed drills (no clock in text) chained into emom x 10"
     ]
   },
-  "hashtag": "#buildingvolume",
+  "hashtag": "#practicepractice",
   "rpe": "8",
   "flags": [],
   "programs": [
@@ -62,8 +61,8 @@
                     "rest": false,
                     "items": [
                       {
-                        "id": "down-up",
-                        "name": "Down up",
+                        "id": "row",
+                        "name": "Row",
                         "qty": {
                           "mode": "none"
                         },
@@ -73,7 +72,7 @@
                         },
                         "mods": {},
                         "alternatives": [],
-                        "text": "down ups"
+                        "text": "row"
                       }
                     ]
                   },
@@ -83,8 +82,8 @@
                     "rest": false,
                     "items": [
                       {
-                        "id": "bike",
-                        "name": "Bike",
+                        "id": "instep-stretch-rotation",
+                        "name": "Instep stretch + rotation",
                         "qty": {
                           "mode": "none"
                         },
@@ -93,33 +92,11 @@
                           "mode": "none"
                         },
                         "mods": {},
-                        "alternatives": [],
-                        "text": "bike"
-                      }
-                    ]
-                  },
-                  {
-                    "n": 3,
-                    "repeat": 1,
-                    "rest": false,
-                    "items": [
-                      {
-                        "id": "down-dog-seal",
-                        "name": "Down dog & seal",
-                        "qty": {
-                          "mode": "none"
-                        },
-                        "perSide": false,
-                        "load": {
-                          "mode": "none"
-                        },
-                        "mods": {
-                          "rotation": "perSet"
-                        },
                         "alternatives": [
-                          "dynamic bridge"
+                          "down dog & seal",
+                          "twisted cross"
                         ],
-                        "text": "down dog & seal/dynamic bridge"
+                        "text": "instep stretch + rotation/down dog & seal/twisted cross"
                       }
                     ]
                   }
@@ -128,12 +105,12 @@
               "riders": [],
               "capSec": null,
               "restAfterSec": null,
-              "raw": "2 sets\n45sec on/15sec off"
+              "raw": "3 sets\n45sec on/15sec off"
             }
           ],
           "scale": [],
           "notes": [],
-          "raw": "warm up (6min)\n2 sets\n45sec on/15sec off\ndown ups\nbike\ndown dog & seal/dynamic bridge"
+          "raw": "warm up (6min)\n3 sets\n45sec on/15sec off\nrow\ninstep stretch + rotation/down dog & seal/twisted cross"
         },
         {
           "ordinal": 2,
@@ -175,8 +152,8 @@
                     "rest": false,
                     "items": [
                       {
-                        "id": "tuck-sit-hang",
-                        "name": "Tuck sit hang",
+                        "id": "rower-pike-up",
+                        "name": "Rower pike up",
                         "qty": {
                           "mode": "none"
                         },
@@ -186,7 +163,7 @@
                         },
                         "mods": {},
                         "alternatives": [],
-                        "text": "tuck sit hang"
+                        "text": "rower pike ups"
                       }
                     ]
                   },
@@ -196,8 +173,8 @@
                     "rest": false,
                     "items": [
                       {
-                        "id": "custom:db pass through",
-                        "name": "DB pass through",
+                        "id": "custom:marching plank",
+                        "name": "Marching plank",
                         "qty": {
                           "mode": "none"
                         },
@@ -207,7 +184,7 @@
                         },
                         "mods": {},
                         "alternatives": [],
-                        "text": "db pass through"
+                        "text": "marching plank"
                       }
                     ]
                   }
@@ -221,51 +198,46 @@
           ],
           "scale": [],
           "notes": [],
-          "raw": "prehab (5min)\n3 sets\n30sec on/10sec off\ntuck sit hang\ndb pass through"
+          "raw": "prehab (5min)\n3 sets\n30sec on/10sec off\nrower pike ups\nmarching plank"
         },
         {
           "ordinal": 3,
           "letter": null,
-          "kind": "gymnastic",
+          "kind": "skill",
           "tags": [
-            "strength",
-            "gymnastic",
-            "volume"
+            "skill"
           ],
-          "label": "strength/gymnastic",
-          "focus": null,
+          "label": "skill",
+          "focus": "double unders 1/4",
           "name": null,
           "benchmark": false,
-          "minutes": 20,
-          "series": null,
+          "minutes": 15,
+          "series": {
+            "n": 1,
+            "of": 4
+          },
           "cycleNote": null,
           "partner": null,
           "optional": false,
           "bonus": false,
           "segments": [
             {
-              "role": "main",
+              "role": "drills",
               "chain": null,
               "title": null,
-              "intent": "reps",
+              "intent": null,
               "clock": {
-                "type": "interval",
-                "workSec": 180,
-                "restSec": 90,
-                "rounds": 4,
-                "stationMode": "circuit"
+                "type": "none"
               },
               "scheme": null,
               "work": {
                 "mode": "rows",
                 "rows": [
                   {
-                    "id": "bike",
-                    "name": "Bike",
+                    "id": "single-under",
+                    "name": "Single under",
                     "qty": {
-                      "mode": "cal",
-                      "value": 15,
-                      "f": 11
+                      "mode": "none"
                     },
                     "perSide": false,
                     "load": {
@@ -273,14 +245,13 @@
                     },
                     "mods": {},
                     "alternatives": [],
-                    "text": "15/11cal bike"
+                    "text": "single unders"
                   },
                   {
-                    "id": "toes-to-bar",
-                    "name": "Toes to bar",
+                    "id": "custom:pinguin jump",
+                    "name": "Pinguin jump",
                     "qty": {
-                      "mode": "reps",
-                      "value": 12
+                      "mode": "none"
                     },
                     "perSide": false,
                     "load": {
@@ -288,74 +259,86 @@
                     },
                     "mods": {},
                     "alternatives": [],
-                    "text": "12 toes to bar"
-                  },
-                  {
-                    "id": "push-up",
-                    "name": "Push up",
-                    "qty": {
-                      "mode": "reps",
-                      "value": 8
-                    },
-                    "perSide": false,
-                    "load": {
-                      "mode": "none"
-                    },
-                    "mods": {},
-                    "alternatives": [],
-                    "text": "8 push ups"
-                  },
-                  {
-                    "id": "handstand-push-up",
-                    "name": "Handstand push up",
-                    "qty": {
-                      "mode": "max",
-                      "remaining": true,
-                      "maxUnit": "reps"
-                    },
-                    "perSide": false,
-                    "load": {
-                      "mode": "none"
-                    },
-                    "mods": {},
-                    "alternatives": [],
-                    "text": "max handstand push ups"
+                    "text": "pinguin jumps"
                   }
                 ]
               },
               "riders": [],
               "capSec": null,
               "restAfterSec": null,
-              "raw": "4 rounds\n3min on/90sec off"
-            }
-          ],
-          "scale": [
-            {
-              "target": "toes-to-bar",
-              "options": [
-                "straight leg raises",
-                "alt single leg toes to bar",
-                "knee raises"
-              ]
+              "raw": "single unders\npinguin jumps"
             },
             {
-              "target": "push-up",
-              "options": [
-                "kneeling push ups"
-              ]
-            },
-            {
-              "target": "handstand-push-up",
-              "options": [
-                "box supported hspu"
-              ]
+              "role": "main",
+              "chain": "into",
+              "title": null,
+              "intent": null,
+              "clock": {
+                "type": "emom",
+                "everySec": 60,
+                "rounds": 10,
+                "alternate": false,
+                "ranges": []
+              },
+              "scheme": null,
+              "work": {
+                "mode": "stations",
+                "stations": [
+                  {
+                    "n": 1,
+                    "repeat": 1,
+                    "rest": false,
+                    "items": [
+                      {
+                        "id": "single-under",
+                        "name": "Single under",
+                        "qty": {
+                          "mode": "sec",
+                          "value": 40
+                        },
+                        "perSide": false,
+                        "load": {
+                          "mode": "none"
+                        },
+                        "mods": {},
+                        "alternatives": [],
+                        "text": "1. 40sec single unders"
+                      }
+                    ]
+                  },
+                  {
+                    "n": 2,
+                    "repeat": 1,
+                    "rest": false,
+                    "items": [
+                      {
+                        "id": "double-under",
+                        "name": "Double under",
+                        "qty": {
+                          "mode": "sec",
+                          "value": 40
+                        },
+                        "perSide": false,
+                        "load": {
+                          "mode": "none"
+                        },
+                        "mods": {},
+                        "alternatives": [],
+                        "text": "2. 40sec double unders"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "riders": [],
+              "capSec": null,
+              "restAfterSec": null,
+              "raw": "emom x 10\n1. 40sec single unders\n2. 40sec double unders"
             }
           ],
-          "notes": [
-            "#volume",
-            "scale straight leg raises, alt single leg toes to bar, knee raises, kneeling push ups, box supported hspu"
-          ],
-          "raw": "strength/gymnastic (20min)\n#volume\n4 rounds\n3min on/90sec off\n15/11cal bike\n12 toes to bar\n8 push ups\nmax handstand push ups\nscale straight leg raises, alt single leg toes to bar, knee raises, kneeling push ups, box supported hspu"
+          "scale": [],
+          "notes": [],
+          "raw": "skill (15min)\ndouble unders 1/4\nsingle unders\npinguin jumps\nemom x 10\n1. 40sec single unders\n2. 40sec double unders"
         },
         {
           "ordinal": 4,
@@ -368,7 +351,7 @@
           "focus": null,
           "name": null,
           "benchmark": false,
-          "minutes": 10,
+          "minutes": 18,
           "series": null,
           "cycleNote": null,
           "partner": null,
@@ -379,40 +362,42 @@
               "role": "main",
               "chain": null,
               "title": null,
-              "intent": "reps",
+              "intent": "time",
               "clock": {
-                "type": "amrap",
-                "sec": 600,
-                "maxSec": null
+                "type": "forTime",
+                "rounds": null,
+                "capSec": null,
+                "roundRestSec": null,
+                "eachForTime": false
               },
               "scheme": null,
               "work": {
                 "mode": "rows",
                 "rows": [
                   {
-                    "id": "db-hang-clean-and-jerk",
-                    "name": "Alt single arm DB hang clean & jerk",
+                    "id": "thruster",
+                    "name": "Thruster",
                     "qty": {
                       "mode": "reps",
-                      "value": 20
+                      "value": 60
                     },
                     "perSide": false,
                     "load": {
                       "mode": "pair",
-                      "m": 22.5,
-                      "f": 15,
+                      "m": 40,
+                      "f": 30,
                       "unit": "kg"
                     },
                     "mods": {},
                     "alternatives": [],
-                    "text": "20 alt single arm db hang clean & jerks 22,5/15"
+                    "text": "60 thruster 40/30"
                   },
                   {
-                    "id": "custom:burpee over db",
-                    "name": "Burpee over DB",
+                    "id": "pull-up",
+                    "name": "Pull up",
                     "qty": {
                       "mode": "reps",
-                      "value": 10
+                      "value": 40
                     },
                     "perSide": false,
                     "load": {
@@ -420,29 +405,100 @@
                     },
                     "mods": {},
                     "alternatives": [],
-                    "text": "10 burpees over db"
+                    "text": "40 pull ups"
+                  },
+                  {
+                    "id": "row",
+                    "name": "Row",
+                    "qty": {
+                      "mode": "cal",
+                      "value": 20,
+                      "f": 15
+                    },
+                    "perSide": false,
+                    "load": {
+                      "mode": "none"
+                    },
+                    "mods": {},
+                    "alternatives": [],
+                    "text": "20/15cal row"
+                  },
+                  {
+                    "id": "thruster",
+                    "name": "Thruster",
+                    "qty": {
+                      "mode": "reps",
+                      "value": 20
+                    },
+                    "perSide": false,
+                    "load": {
+                      "mode": "pair",
+                      "m": 40,
+                      "f": 30,
+                      "unit": "kg"
+                    },
+                    "mods": {},
+                    "alternatives": [],
+                    "text": "20 thruster 40/30"
+                  },
+                  {
+                    "id": "pull-up",
+                    "name": "Pull up",
+                    "qty": {
+                      "mode": "reps",
+                      "value": 40
+                    },
+                    "perSide": false,
+                    "load": {
+                      "mode": "none"
+                    },
+                    "mods": {},
+                    "alternatives": [],
+                    "text": "40 pull ups"
+                  },
+                  {
+                    "id": "row",
+                    "name": "Row",
+                    "qty": {
+                      "mode": "cal",
+                      "value": 60,
+                      "f": 45
+                    },
+                    "perSide": false,
+                    "load": {
+                      "mode": "none"
+                    },
+                    "mods": {},
+                    "alternatives": [],
+                    "text": "60/45cal row"
                   }
                 ]
               },
               "riders": [],
               "capSec": null,
               "restAfterSec": null,
-              "raw": "amrap 10min"
+              "raw": "for time"
             }
           ],
           "scale": [
             {
-              "target": "load",
+              "target": "thruster",
               "options": [
-                "scale 15/10"
+                "30/20"
+              ]
+            },
+            {
+              "target": "pull-up",
+              "options": [
+                "ring rows",
+                "jumping pull ups"
               ]
             }
           ],
           "notes": [
-            "scale 15/10",
-            "rx+ 30/20"
+            "scale ring rows, jumping pull ups, 30/20"
           ],
-          "raw": "metcon (10min)\namrap 10min\n20 alt single arm db hang clean & jerks 22,5/15\n10 burpees over db\nscale 15/10\nrx+ 30/20\n#buildingvolume\nrpe8"
+          "raw": "metcon (18min)\nfor time\n60 thruster 40/30\n40 pull ups\n20/15cal row\n20 thruster 40/30\n40 pull ups\n60/45cal row\nscale ring rows, jumping pull ups, 30/20\n#practicepractice\nrpe8"
         }
       ]
     }
