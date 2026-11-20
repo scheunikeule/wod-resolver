@@ -1,0 +1,421 @@
+{
+  "date": "2026-11-20",
+  "source": "feed",
+  "schema": 1,
+  "resolver": {
+    "by": "claude-nightly",
+    "at": "2026-11-20T07:39:38Z",
+    "confidence": 0.7,
+    "issues": [
+      "rounds derived: warm up interval rounds = 3 sets x 2 stations = 6; prehab = 3 sets x 2 stations = 6",
+      "prehab clock '30sec on/10sec' lacks 'off': read as 30s work / 10s rest",
+      "unknown movement: 'double db side bends' -> custom:double db side bend",
+      "unknown movement: 'box squats' -> custom:box squat",
+      "unknown movement: 'double db burpees' -> custom:double db burpee",
+      "pair '22,5/15' after double db step ups read as DB kg (comma decimal, 'double db'), not box height in cm"
+    ]
+  },
+  "hashtag": "#weloveemoms",
+  "rpe": "7",
+  "flags": [],
+  "programs": [
+    {
+      "name": "class",
+      "title": null,
+      "blocks": [
+        {
+          "ordinal": 1,
+          "letter": null,
+          "kind": "warmup",
+          "tags": [
+            "warmup"
+          ],
+          "label": "warm up",
+          "focus": null,
+          "name": null,
+          "benchmark": false,
+          "minutes": 6,
+          "series": null,
+          "cycleNote": null,
+          "partner": null,
+          "optional": false,
+          "bonus": false,
+          "segments": [
+            {
+              "role": "main",
+              "chain": null,
+              "title": null,
+              "intent": null,
+              "clock": {
+                "type": "interval",
+                "workSec": 45,
+                "restSec": 15,
+                "rounds": 6,
+                "stationMode": "rotate"
+              },
+              "scheme": null,
+              "work": {
+                "mode": "stations",
+                "stations": [
+                  {
+                    "n": 1,
+                    "repeat": 1,
+                    "rest": false,
+                    "items": [
+                      {
+                        "id": "shuttle-run",
+                        "name": "Shuttle run",
+                        "qty": {
+                          "mode": "none"
+                        },
+                        "perSide": false,
+                        "load": {
+                          "mode": "none"
+                        },
+                        "mods": {},
+                        "alternatives": [],
+                        "text": "shuttle runs"
+                      }
+                    ]
+                  },
+                  {
+                    "n": 2,
+                    "repeat": 1,
+                    "rest": false,
+                    "items": [
+                      {
+                        "id": "samson-stretch",
+                        "name": "Samson stretch",
+                        "qty": {
+                          "mode": "none"
+                        },
+                        "perSide": false,
+                        "load": {
+                          "mode": "none"
+                        },
+                        "mods": {},
+                        "alternatives": [
+                          "sumo squat stretch",
+                          "down dog & seal"
+                        ],
+                        "text": "samson stretch/sumo squat stretch/down dog & seal"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "riders": [],
+              "capSec": null,
+              "restAfterSec": null,
+              "raw": "3 sets\n45sec on/15sec off"
+            }
+          ],
+          "scale": [],
+          "notes": [],
+          "raw": "warm up (6min)\n3 sets\n45sec on/15sec off\nshuttle runs\nsamson stretch/sumo squat stretch/down dog & seal"
+        },
+        {
+          "ordinal": 2,
+          "letter": null,
+          "kind": "prehab",
+          "tags": [
+            "prehab"
+          ],
+          "label": "prehab",
+          "focus": null,
+          "name": null,
+          "benchmark": false,
+          "minutes": 5,
+          "series": null,
+          "cycleNote": null,
+          "partner": null,
+          "optional": false,
+          "bonus": false,
+          "segments": [
+            {
+              "role": "main",
+              "chain": null,
+              "title": null,
+              "intent": null,
+              "clock": {
+                "type": "interval",
+                "workSec": 30,
+                "restSec": 10,
+                "rounds": 6,
+                "stationMode": "rotate"
+              },
+              "scheme": null,
+              "work": {
+                "mode": "stations",
+                "stations": [
+                  {
+                    "n": 1,
+                    "repeat": 1,
+                    "rest": false,
+                    "items": [
+                      {
+                        "id": "top-push-up-hold",
+                        "name": "Double DB top-of-push-up hold",
+                        "qty": {
+                          "mode": "none"
+                        },
+                        "perSide": false,
+                        "load": {
+                          "mode": "implement"
+                        },
+                        "mods": {
+                          "implement": "double db"
+                        },
+                        "alternatives": [],
+                        "text": "double db top of push up hold"
+                      }
+                    ]
+                  },
+                  {
+                    "n": 2,
+                    "repeat": 1,
+                    "rest": false,
+                    "items": [
+                      {
+                        "id": "custom:double db side bend",
+                        "name": "Double DB side bend",
+                        "qty": {
+                          "mode": "none"
+                        },
+                        "perSide": false,
+                        "load": {
+                          "mode": "implement"
+                        },
+                        "mods": {
+                          "implement": "double db"
+                        },
+                        "alternatives": [],
+                        "text": "double db side bends"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "riders": [],
+              "capSec": null,
+              "restAfterSec": null,
+              "raw": "3 sets\n30sec on/10sec"
+            }
+          ],
+          "scale": [],
+          "notes": [],
+          "raw": "prehab (5min)\n3 sets\n30sec on/10sec\ndouble db top of push up hold\ndouble db side bends"
+        },
+        {
+          "ordinal": 3,
+          "letter": null,
+          "kind": "strength",
+          "tags": [
+            "strength"
+          ],
+          "label": "strength",
+          "focus": "box squats",
+          "name": null,
+          "benchmark": false,
+          "minutes": 20,
+          "series": null,
+          "cycleNote": null,
+          "partner": null,
+          "optional": false,
+          "bonus": false,
+          "segments": [
+            {
+              "role": "main",
+              "chain": null,
+              "title": null,
+              "intent": null,
+              "clock": {
+                "type": "emom",
+                "everySec": 120,
+                "rounds": 6,
+                "alternate": false,
+                "ranges": []
+              },
+              "scheme": null,
+              "work": {
+                "mode": "rows",
+                "rows": [
+                  {
+                    "id": "custom:box squat",
+                    "name": "Box squat",
+                    "qty": {
+                      "mode": "reps",
+                      "value": 4
+                    },
+                    "perSide": false,
+                    "load": {
+                      "mode": "pct",
+                      "pct": 75,
+                      "pctOf": "1rm"
+                    },
+                    "mods": {},
+                    "alternatives": [],
+                    "text": "4 reps @75%"
+                  }
+                ]
+              },
+              "riders": [],
+              "capSec": null,
+              "restAfterSec": null,
+              "raw": "box squats\nevery 2min x 6"
+            }
+          ],
+          "scale": [],
+          "notes": [],
+          "raw": "strength (20min)\nbox squats\nevery 2min x 6\n4 reps @75%"
+        },
+        {
+          "ordinal": 4,
+          "letter": null,
+          "kind": "metcon",
+          "tags": [
+            "metcon"
+          ],
+          "label": "metcon",
+          "focus": null,
+          "name": null,
+          "benchmark": false,
+          "minutes": 16,
+          "series": null,
+          "cycleNote": null,
+          "partner": null,
+          "optional": false,
+          "bonus": false,
+          "segments": [
+            {
+              "role": "main",
+              "chain": null,
+              "title": null,
+              "intent": null,
+              "clock": {
+                "type": "emom",
+                "everySec": 120,
+                "rounds": 8,
+                "alternate": false,
+                "ranges": []
+              },
+              "scheme": null,
+              "work": {
+                "mode": "stations",
+                "stations": [
+                  {
+                    "n": 1,
+                    "repeat": 1,
+                    "rest": false,
+                    "items": [
+                      {
+                        "id": "step-up",
+                        "name": "Double DB step up",
+                        "qty": {
+                          "mode": "reps",
+                          "value": 8
+                        },
+                        "perSide": false,
+                        "load": {
+                          "mode": "pair",
+                          "m": 22.5,
+                          "f": 15,
+                          "unit": "kg"
+                        },
+                        "mods": {
+                          "implement": "double db"
+                        },
+                        "alternatives": [],
+                        "text": "8 double db step ups 22,5/15"
+                      },
+                      {
+                        "id": "custom:double db burpee",
+                        "name": "Double DB burpee",
+                        "qty": {
+                          "mode": "reps",
+                          "value": 8
+                        },
+                        "perSide": false,
+                        "load": {
+                          "mode": "pair",
+                          "m": 22.5,
+                          "f": 15,
+                          "unit": "kg"
+                        },
+                        "mods": {
+                          "implement": "double db"
+                        },
+                        "alternatives": [],
+                        "text": "8 double db burpees 22,5/15"
+                      }
+                    ]
+                  },
+                  {
+                    "n": 2,
+                    "repeat": 1,
+                    "rest": false,
+                    "items": [
+                      {
+                        "id": "shuttle-run",
+                        "name": "Shuttle run",
+                        "qty": {
+                          "mode": "reps",
+                          "value": 6
+                        },
+                        "perSide": false,
+                        "load": {
+                          "mode": "none"
+                        },
+                        "mods": {
+                          "distance": "2x5m"
+                        },
+                        "alternatives": [],
+                        "text": "6 shuttle runs (2x5m)"
+                      },
+                      {
+                        "id": "db-hang-power-snatch",
+                        "name": "Double DB hang power snatch",
+                        "qty": {
+                          "mode": "reps",
+                          "value": 6
+                        },
+                        "perSide": false,
+                        "load": {
+                          "mode": "pair",
+                          "m": 22.5,
+                          "f": 15,
+                          "unit": "kg"
+                        },
+                        "mods": {
+                          "implement": "double db"
+                        },
+                        "alternatives": [],
+                        "text": "6 double db hang power snatches 22,5/15"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "riders": [],
+              "capSec": null,
+              "restAfterSec": null,
+              "raw": "e2mom x 8\n1. 8 double db step ups 22,5/15 + 8 double db burpees 22,5/15\n2. 6 shuttle runs (2x5m) + 6 double db hang power snatches 22,5/15"
+            }
+          ],
+          "scale": [
+            {
+              "target": "load",
+              "options": [
+                "scale 15/10"
+              ]
+            }
+          ],
+          "notes": [
+            "scale 15/10"
+          ],
+          "raw": "metcon (16min)\ne2mom x 8\n1. 8 double db step ups 22,5/15 + 8 double db burpees 22,5/15\n2. 6 shuttle runs (2x5m) + 6 double db hang power snatches 22,5/15\nscale 15/10\n#weloveemoms\nrpe7"
+        }
+      ]
+    }
+  ]
+}

@@ -1,20 +1,22 @@
 {
-  "date": "2026-11-19",
+  "date": "2026-11-20",
   "source": "feed",
   "schema": 1,
   "resolver": {
     "by": "claude-nightly",
-    "at": "2026-11-19T07:39:20Z",
-    "confidence": 0.8,
+    "at": "2026-11-20T07:39:38Z",
+    "confidence": 0.7,
     "issues": [
       "rounds derived: warm up interval rounds = 3 sets x 2 stations = 6; prehab = 3 sets x 2 stations = 6",
-      "unknown movement: 'pinguin jumps' -> custom:pinguin jump",
-      "unknown movement: 'marching plank' -> custom:marching plank",
-      "skill: 'single unders' / 'pinguin jumps' read as untimed drills (no clock in text) chained into emom x 10"
+      "prehab clock '30sec on/10sec' lacks 'off': read as 30s work / 10s rest",
+      "unknown movement: 'double db side bends' -> custom:double db side bend",
+      "unknown movement: 'box squats' -> custom:box squat",
+      "unknown movement: 'double db burpees' -> custom:double db burpee",
+      "pair '22,5/15' after double db step ups read as DB kg (comma decimal, 'double db'), not box height in cm"
     ]
   },
-  "hashtag": "#practicepractice",
-  "rpe": "8",
+  "hashtag": "#weloveemoms",
+  "rpe": "7",
   "flags": [],
   "programs": [
     {
@@ -61,8 +63,8 @@
                     "rest": false,
                     "items": [
                       {
-                        "id": "row",
-                        "name": "Row",
+                        "id": "shuttle-run",
+                        "name": "Shuttle run",
                         "qty": {
                           "mode": "none"
                         },
@@ -72,7 +74,7 @@
                         },
                         "mods": {},
                         "alternatives": [],
-                        "text": "row"
+                        "text": "shuttle runs"
                       }
                     ]
                   },
@@ -82,8 +84,8 @@
                     "rest": false,
                     "items": [
                       {
-                        "id": "instep-stretch-rotation",
-                        "name": "Instep stretch + rotation",
+                        "id": "samson-stretch",
+                        "name": "Samson stretch",
                         "qty": {
                           "mode": "none"
                         },
@@ -93,10 +95,10 @@
                         },
                         "mods": {},
                         "alternatives": [
-                          "down dog & seal",
-                          "twisted cross"
+                          "sumo squat stretch",
+                          "down dog & seal"
                         ],
-                        "text": "instep stretch + rotation/down dog & seal/twisted cross"
+                        "text": "samson stretch/sumo squat stretch/down dog & seal"
                       }
                     ]
                   }
@@ -110,7 +112,7 @@
           ],
           "scale": [],
           "notes": [],
-          "raw": "warm up (6min)\n3 sets\n45sec on/15sec off\nrow\ninstep stretch + rotation/down dog & seal/twisted cross"
+          "raw": "warm up (6min)\n3 sets\n45sec on/15sec off\nshuttle runs\nsamson stretch/sumo squat stretch/down dog & seal"
         },
         {
           "ordinal": 2,
@@ -152,18 +154,20 @@
                     "rest": false,
                     "items": [
                       {
-                        "id": "rower-pike-up",
-                        "name": "Rower pike up",
+                        "id": "top-push-up-hold",
+                        "name": "Double DB top-of-push-up hold",
                         "qty": {
                           "mode": "none"
                         },
                         "perSide": false,
                         "load": {
-                          "mode": "none"
+                          "mode": "implement"
                         },
-                        "mods": {},
+                        "mods": {
+                          "implement": "double db"
+                        },
                         "alternatives": [],
-                        "text": "rower pike ups"
+                        "text": "double db top of push up hold"
                       }
                     ]
                   },
@@ -173,18 +177,20 @@
                     "rest": false,
                     "items": [
                       {
-                        "id": "custom:marching plank",
-                        "name": "Marching plank",
+                        "id": "custom:double db side bend",
+                        "name": "Double DB side bend",
                         "qty": {
                           "mode": "none"
                         },
                         "perSide": false,
                         "load": {
-                          "mode": "none"
+                          "mode": "implement"
                         },
-                        "mods": {},
+                        "mods": {
+                          "implement": "double db"
+                        },
                         "alternatives": [],
-                        "text": "marching plank"
+                        "text": "double db side bends"
                       }
                     ]
                   }
@@ -193,90 +199,103 @@
               "riders": [],
               "capSec": null,
               "restAfterSec": null,
-              "raw": "3 sets\n30sec on/10sec off"
+              "raw": "3 sets\n30sec on/10sec"
             }
           ],
           "scale": [],
           "notes": [],
-          "raw": "prehab (5min)\n3 sets\n30sec on/10sec off\nrower pike ups\nmarching plank"
+          "raw": "prehab (5min)\n3 sets\n30sec on/10sec\ndouble db top of push up hold\ndouble db side bends"
         },
         {
           "ordinal": 3,
           "letter": null,
-          "kind": "skill",
+          "kind": "strength",
           "tags": [
-            "skill"
+            "strength"
           ],
-          "label": "skill",
-          "focus": "double unders 1/4",
+          "label": "strength",
+          "focus": "box squats",
           "name": null,
           "benchmark": false,
-          "minutes": 15,
-          "series": {
-            "n": 1,
-            "of": 4
-          },
+          "minutes": 20,
+          "series": null,
           "cycleNote": null,
           "partner": null,
           "optional": false,
           "bonus": false,
           "segments": [
             {
-              "role": "drills",
+              "role": "main",
               "chain": null,
               "title": null,
               "intent": null,
               "clock": {
-                "type": "none"
+                "type": "emom",
+                "everySec": 120,
+                "rounds": 6,
+                "alternate": false,
+                "ranges": []
               },
               "scheme": null,
               "work": {
                 "mode": "rows",
                 "rows": [
                   {
-                    "id": "single-under",
-                    "name": "Single under",
+                    "id": "custom:box squat",
+                    "name": "Box squat",
                     "qty": {
-                      "mode": "none"
+                      "mode": "reps",
+                      "value": 4
                     },
                     "perSide": false,
                     "load": {
-                      "mode": "none"
+                      "mode": "pct",
+                      "pct": 75,
+                      "pctOf": "1rm"
                     },
                     "mods": {},
                     "alternatives": [],
-                    "text": "single unders"
-                  },
-                  {
-                    "id": "custom:pinguin jump",
-                    "name": "Pinguin jump",
-                    "qty": {
-                      "mode": "none"
-                    },
-                    "perSide": false,
-                    "load": {
-                      "mode": "none"
-                    },
-                    "mods": {},
-                    "alternatives": [],
-                    "text": "pinguin jumps"
+                    "text": "4 reps @75%"
                   }
                 ]
               },
               "riders": [],
               "capSec": null,
               "restAfterSec": null,
-              "raw": "single unders\npinguin jumps"
-            },
+              "raw": "box squats\nevery 2min x 6"
+            }
+          ],
+          "scale": [],
+          "notes": [],
+          "raw": "strength (20min)\nbox squats\nevery 2min x 6\n4 reps @75%"
+        },
+        {
+          "ordinal": 4,
+          "letter": null,
+          "kind": "metcon",
+          "tags": [
+            "metcon"
+          ],
+          "label": "metcon",
+          "focus": null,
+          "name": null,
+          "benchmark": false,
+          "minutes": 16,
+          "series": null,
+          "cycleNote": null,
+          "partner": null,
+          "optional": false,
+          "bonus": false,
+          "segments": [
             {
               "role": "main",
-              "chain": "into",
+              "chain": null,
               "title": null,
               "intent": null,
               "clock": {
                 "type": "emom",
-                "everySec": 60,
-                "rounds": 10,
+                "everySec": 120,
+                "rounds": 8,
                 "alternate": false,
                 "ranges": []
               },
@@ -290,19 +309,44 @@
                     "rest": false,
                     "items": [
                       {
-                        "id": "single-under",
-                        "name": "Single under",
+                        "id": "step-up",
+                        "name": "Double DB step up",
                         "qty": {
-                          "mode": "sec",
-                          "value": 40
+                          "mode": "reps",
+                          "value": 8
                         },
                         "perSide": false,
                         "load": {
-                          "mode": "none"
+                          "mode": "pair",
+                          "m": 22.5,
+                          "f": 15,
+                          "unit": "kg"
                         },
-                        "mods": {},
+                        "mods": {
+                          "implement": "double db"
+                        },
                         "alternatives": [],
-                        "text": "1. 40sec single unders"
+                        "text": "8 double db step ups 22,5/15"
+                      },
+                      {
+                        "id": "custom:double db burpee",
+                        "name": "Double DB burpee",
+                        "qty": {
+                          "mode": "reps",
+                          "value": 8
+                        },
+                        "perSide": false,
+                        "load": {
+                          "mode": "pair",
+                          "m": 22.5,
+                          "f": 15,
+                          "unit": "kg"
+                        },
+                        "mods": {
+                          "implement": "double db"
+                        },
+                        "alternatives": [],
+                        "text": "8 double db burpees 22,5/15"
                       }
                     ]
                   },
@@ -312,19 +356,41 @@
                     "rest": false,
                     "items": [
                       {
-                        "id": "double-under",
-                        "name": "Double under",
+                        "id": "shuttle-run",
+                        "name": "Shuttle run",
                         "qty": {
-                          "mode": "sec",
-                          "value": 40
+                          "mode": "reps",
+                          "value": 6
                         },
                         "perSide": false,
                         "load": {
                           "mode": "none"
                         },
-                        "mods": {},
+                        "mods": {
+                          "distance": "2x5m"
+                        },
                         "alternatives": [],
-                        "text": "2. 40sec double unders"
+                        "text": "6 shuttle runs (2x5m)"
+                      },
+                      {
+                        "id": "db-hang-power-snatch",
+                        "name": "Double DB hang power snatch",
+                        "qty": {
+                          "mode": "reps",
+                          "value": 6
+                        },
+                        "perSide": false,
+                        "load": {
+                          "mode": "pair",
+                          "m": 22.5,
+                          "f": 15,
+                          "unit": "kg"
+                        },
+                        "mods": {
+                          "implement": "double db"
+                        },
+                        "alternatives": [],
+                        "text": "6 double db hang power snatches 22,5/15"
                       }
                     ]
                   }
@@ -333,172 +399,21 @@
               "riders": [],
               "capSec": null,
               "restAfterSec": null,
-              "raw": "emom x 10\n1. 40sec single unders\n2. 40sec double unders"
-            }
-          ],
-          "scale": [],
-          "notes": [],
-          "raw": "skill (15min)\ndouble unders 1/4\nsingle unders\npinguin jumps\nemom x 10\n1. 40sec single unders\n2. 40sec double unders"
-        },
-        {
-          "ordinal": 4,
-          "letter": null,
-          "kind": "metcon",
-          "tags": [
-            "metcon"
-          ],
-          "label": "metcon",
-          "focus": null,
-          "name": null,
-          "benchmark": false,
-          "minutes": 18,
-          "series": null,
-          "cycleNote": null,
-          "partner": null,
-          "optional": false,
-          "bonus": false,
-          "segments": [
-            {
-              "role": "main",
-              "chain": null,
-              "title": null,
-              "intent": "time",
-              "clock": {
-                "type": "forTime",
-                "rounds": null,
-                "capSec": null,
-                "roundRestSec": null,
-                "eachForTime": false
-              },
-              "scheme": null,
-              "work": {
-                "mode": "rows",
-                "rows": [
-                  {
-                    "id": "thruster",
-                    "name": "Thruster",
-                    "qty": {
-                      "mode": "reps",
-                      "value": 60
-                    },
-                    "perSide": false,
-                    "load": {
-                      "mode": "pair",
-                      "m": 40,
-                      "f": 30,
-                      "unit": "kg"
-                    },
-                    "mods": {},
-                    "alternatives": [],
-                    "text": "60 thruster 40/30"
-                  },
-                  {
-                    "id": "pull-up",
-                    "name": "Pull up",
-                    "qty": {
-                      "mode": "reps",
-                      "value": 40
-                    },
-                    "perSide": false,
-                    "load": {
-                      "mode": "none"
-                    },
-                    "mods": {},
-                    "alternatives": [],
-                    "text": "40 pull ups"
-                  },
-                  {
-                    "id": "row",
-                    "name": "Row",
-                    "qty": {
-                      "mode": "cal",
-                      "value": 20,
-                      "f": 15
-                    },
-                    "perSide": false,
-                    "load": {
-                      "mode": "none"
-                    },
-                    "mods": {},
-                    "alternatives": [],
-                    "text": "20/15cal row"
-                  },
-                  {
-                    "id": "thruster",
-                    "name": "Thruster",
-                    "qty": {
-                      "mode": "reps",
-                      "value": 20
-                    },
-                    "perSide": false,
-                    "load": {
-                      "mode": "pair",
-                      "m": 40,
-                      "f": 30,
-                      "unit": "kg"
-                    },
-                    "mods": {},
-                    "alternatives": [],
-                    "text": "20 thruster 40/30"
-                  },
-                  {
-                    "id": "pull-up",
-                    "name": "Pull up",
-                    "qty": {
-                      "mode": "reps",
-                      "value": 40
-                    },
-                    "perSide": false,
-                    "load": {
-                      "mode": "none"
-                    },
-                    "mods": {},
-                    "alternatives": [],
-                    "text": "40 pull ups"
-                  },
-                  {
-                    "id": "row",
-                    "name": "Row",
-                    "qty": {
-                      "mode": "cal",
-                      "value": 60,
-                      "f": 45
-                    },
-                    "perSide": false,
-                    "load": {
-                      "mode": "none"
-                    },
-                    "mods": {},
-                    "alternatives": [],
-                    "text": "60/45cal row"
-                  }
-                ]
-              },
-              "riders": [],
-              "capSec": null,
-              "restAfterSec": null,
-              "raw": "for time"
+              "raw": "e2mom x 8\n1. 8 double db step ups 22,5/15 + 8 double db burpees 22,5/15\n2. 6 shuttle runs (2x5m) + 6 double db hang power snatches 22,5/15"
             }
           ],
           "scale": [
             {
-              "target": "thruster",
+              "target": "load",
               "options": [
-                "30/20"
-              ]
-            },
-            {
-              "target": "pull-up",
-              "options": [
-                "ring rows",
-                "jumping pull ups"
+                "scale 15/10"
               ]
             }
           ],
           "notes": [
-            "scale ring rows, jumping pull ups, 30/20"
+            "scale 15/10"
           ],
-          "raw": "metcon (18min)\nfor time\n60 thruster 40/30\n40 pull ups\n20/15cal row\n20 thruster 40/30\n40 pull ups\n60/45cal row\nscale ring rows, jumping pull ups, 30/20\n#practicepractice\nrpe8"
+          "raw": "metcon (16min)\ne2mom x 8\n1. 8 double db step ups 22,5/15 + 8 double db burpees 22,5/15\n2. 6 shuttle runs (2x5m) + 6 double db hang power snatches 22,5/15\nscale 15/10\n#weloveemoms\nrpe7"
         }
       ]
     }
