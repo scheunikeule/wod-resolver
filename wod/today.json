@@ -1,22 +1,20 @@
 {
-  "date": "2026-11-20",
+  "date": "2026-11-21",
   "source": "feed",
   "schema": 1,
   "resolver": {
     "by": "claude-nightly",
-    "at": "2026-11-20T07:39:38Z",
-    "confidence": 0.7,
+    "at": "2026-11-21T07:39:18Z",
+    "confidence": 0.8,
     "issues": [
-      "rounds derived: warm up interval rounds = 3 sets x 2 stations = 6; prehab = 3 sets x 2 stations = 6",
-      "prehab clock '30sec on/10sec' lacks 'off': read as 30s work / 10s rest",
-      "unknown movement: 'double db side bends' -> custom:double db side bend",
-      "unknown movement: 'box squats' -> custom:box squat",
-      "unknown movement: 'double db burpees' -> custom:double db burpee",
-      "pair '22,5/15' after double db step ups read as DB kg (comma decimal, 'double db'), not box height in cm"
+      "unknown movement: 'burpees over bench' -> custom:burpee over bench",
+      "unknown movement: 'single arm db benchpress' -> custom:single arm db bench press",
+      "metcon (45min) is the block window, not a stated cap: capSec null",
+      "scale mapped loads first in order (35/25 -> barbell 50/35 power snatch + thruster; 15/10 -> db 25/20 benchpress + devils press), then ring rows -> pull-up"
     ]
   },
-  "hashtag": "#weloveemoms",
-  "rpe": "7",
+  "hashtag": "#teamday",
+  "rpe": "8",
   "flags": [],
   "programs": [
     {
@@ -63,8 +61,8 @@
                     "rest": false,
                     "items": [
                       {
-                        "id": "shuttle-run",
-                        "name": "Shuttle run",
+                        "id": "down-up",
+                        "name": "Down up",
                         "qty": {
                           "mode": "none"
                         },
@@ -74,7 +72,7 @@
                         },
                         "mods": {},
                         "alternatives": [],
-                        "text": "shuttle runs"
+                        "text": "down ups"
                       }
                     ]
                   },
@@ -112,7 +110,7 @@
           ],
           "scale": [],
           "notes": [],
-          "raw": "warm up (6min)\n3 sets\n45sec on/15sec off\nshuttle runs\nsamson stretch/sumo squat stretch/down dog & seal"
+          "raw": "warm up (6min)\n3 sets\n45sec on/15sec off\ndown ups\nsamson stretch/sumo squat stretch/down dog & seal"
         },
         {
           "ordinal": 2,
@@ -154,20 +152,18 @@
                     "rest": false,
                     "items": [
                       {
-                        "id": "top-push-up-hold",
-                        "name": "Double DB top-of-push-up hold",
+                        "id": "custom:db hollow hold",
+                        "name": "DB hollow hold",
                         "qty": {
                           "mode": "none"
                         },
                         "perSide": false,
                         "load": {
-                          "mode": "implement"
+                          "mode": "none"
                         },
-                        "mods": {
-                          "implement": "double db"
-                        },
+                        "mods": {},
                         "alternatives": [],
-                        "text": "double db top of push up hold"
+                        "text": "db hollow hold"
                       }
                     ]
                   },
@@ -177,20 +173,20 @@
                     "rest": false,
                     "items": [
                       {
-                        "id": "custom:double db side bend",
-                        "name": "Double DB side bend",
+                        "id": "roll-out",
+                        "name": "Barbell roll out",
                         "qty": {
                           "mode": "none"
                         },
                         "perSide": false,
                         "load": {
-                          "mode": "implement"
+                          "mode": "none"
                         },
                         "mods": {
-                          "implement": "double db"
+                          "implement": "barbell"
                         },
                         "alternatives": [],
-                        "text": "double db side bends"
+                        "text": "barbell roll outs"
                       }
                     ]
                   }
@@ -199,78 +195,15 @@
               "riders": [],
               "capSec": null,
               "restAfterSec": null,
-              "raw": "3 sets\n30sec on/10sec"
+              "raw": "3 sets\n30sec on/10sec off"
             }
           ],
           "scale": [],
           "notes": [],
-          "raw": "prehab (5min)\n3 sets\n30sec on/10sec\ndouble db top of push up hold\ndouble db side bends"
+          "raw": "prehab (5min)\n3 sets\n30sec on/10sec off\ndb hollow hold\nbarbell roll outs"
         },
         {
           "ordinal": 3,
-          "letter": null,
-          "kind": "strength",
-          "tags": [
-            "strength"
-          ],
-          "label": "strength",
-          "focus": "box squats",
-          "name": null,
-          "benchmark": false,
-          "minutes": 20,
-          "series": null,
-          "cycleNote": null,
-          "partner": null,
-          "optional": false,
-          "bonus": false,
-          "segments": [
-            {
-              "role": "main",
-              "chain": null,
-              "title": null,
-              "intent": null,
-              "clock": {
-                "type": "emom",
-                "everySec": 120,
-                "rounds": 6,
-                "alternate": false,
-                "ranges": []
-              },
-              "scheme": null,
-              "work": {
-                "mode": "rows",
-                "rows": [
-                  {
-                    "id": "custom:box squat",
-                    "name": "Box squat",
-                    "qty": {
-                      "mode": "reps",
-                      "value": 4
-                    },
-                    "perSide": false,
-                    "load": {
-                      "mode": "pct",
-                      "pct": 75,
-                      "pctOf": "1rm"
-                    },
-                    "mods": {},
-                    "alternatives": [],
-                    "text": "4 reps @75%"
-                  }
-                ]
-              },
-              "riders": [],
-              "capSec": null,
-              "restAfterSec": null,
-              "raw": "box squats\nevery 2min x 6"
-            }
-          ],
-          "scale": [],
-          "notes": [],
-          "raw": "strength (20min)\nbox squats\nevery 2min x 6\n4 reps @75%"
-        },
-        {
-          "ordinal": 4,
           "letter": null,
           "kind": "metcon",
           "tags": [
@@ -280,140 +213,231 @@
           "focus": null,
           "name": null,
           "benchmark": false,
-          "minutes": 16,
+          "minutes": 45,
           "series": null,
           "cycleNote": null,
-          "partner": null,
+          "partner": {
+            "mode": "teams",
+            "note": "teams of two"
+          },
           "optional": false,
           "bonus": false,
           "segments": [
             {
-              "role": "main",
+              "role": "buyin",
               "chain": null,
               "title": null,
-              "intent": null,
+              "intent": "time",
               "clock": {
-                "type": "emom",
-                "everySec": 120,
-                "rounds": 8,
-                "alternate": false,
-                "ranges": []
+                "type": "forTime",
+                "rounds": null,
+                "capSec": null,
+                "roundRestSec": null,
+                "eachForTime": false
               },
               "scheme": null,
               "work": {
-                "mode": "stations",
-                "stations": [
+                "mode": "rows",
+                "rows": [
                   {
-                    "n": 1,
-                    "repeat": 1,
-                    "rest": false,
-                    "items": [
-                      {
-                        "id": "step-up",
-                        "name": "Double DB step up",
-                        "qty": {
-                          "mode": "reps",
-                          "value": 8
-                        },
-                        "perSide": false,
-                        "load": {
-                          "mode": "pair",
-                          "m": 22.5,
-                          "f": 15,
-                          "unit": "kg"
-                        },
-                        "mods": {
-                          "implement": "double db"
-                        },
-                        "alternatives": [],
-                        "text": "8 double db step ups 22,5/15"
-                      },
-                      {
-                        "id": "custom:double db burpee",
-                        "name": "Double DB burpee",
-                        "qty": {
-                          "mode": "reps",
-                          "value": 8
-                        },
-                        "perSide": false,
-                        "load": {
-                          "mode": "pair",
-                          "m": 22.5,
-                          "f": 15,
-                          "unit": "kg"
-                        },
-                        "mods": {
-                          "implement": "double db"
-                        },
-                        "alternatives": [],
-                        "text": "8 double db burpees 22,5/15"
-                      }
-                    ]
-                  },
-                  {
-                    "n": 2,
-                    "repeat": 1,
-                    "rest": false,
-                    "items": [
-                      {
-                        "id": "shuttle-run",
-                        "name": "Shuttle run",
-                        "qty": {
-                          "mode": "reps",
-                          "value": 6
-                        },
-                        "perSide": false,
-                        "load": {
-                          "mode": "none"
-                        },
-                        "mods": {
-                          "distance": "2x5m"
-                        },
-                        "alternatives": [],
-                        "text": "6 shuttle runs (2x5m)"
-                      },
-                      {
-                        "id": "db-hang-power-snatch",
-                        "name": "Double DB hang power snatch",
-                        "qty": {
-                          "mode": "reps",
-                          "value": 6
-                        },
-                        "perSide": false,
-                        "load": {
-                          "mode": "pair",
-                          "m": 22.5,
-                          "f": 15,
-                          "unit": "kg"
-                        },
-                        "mods": {
-                          "implement": "double db"
-                        },
-                        "alternatives": [],
-                        "text": "6 double db hang power snatches 22,5/15"
-                      }
-                    ]
+                    "id": "custom:burpee over bench",
+                    "name": "Burpee over bench",
+                    "qty": {
+                      "mode": "reps",
+                      "value": 100
+                    },
+                    "perSide": false,
+                    "load": {
+                      "mode": "none"
+                    },
+                    "mods": {},
+                    "alternatives": [],
+                    "text": "100 burpees over bench"
                   }
                 ]
               },
               "riders": [],
               "capSec": null,
               "restAfterSec": null,
-              "raw": "e2mom x 8\n1. 8 double db step ups 22,5/15 + 8 double db burpees 22,5/15\n2. 6 shuttle runs (2x5m) + 6 double db hang power snatches 22,5/15"
+              "raw": "for time\nbuy in\n100 burpees over bench"
+            },
+            {
+              "role": "main",
+              "chain": "into",
+              "title": null,
+              "intent": "time",
+              "clock": {
+                "type": "forTime",
+                "rounds": 20,
+                "capSec": null,
+                "roundRestSec": null,
+                "eachForTime": false
+              },
+              "scheme": null,
+              "work": {
+                "mode": "rows",
+                "rows": [
+                  {
+                    "id": "power-snatch",
+                    "name": "Power snatch",
+                    "qty": {
+                      "mode": "reps",
+                      "value": 4
+                    },
+                    "perSide": false,
+                    "load": {
+                      "mode": "pair",
+                      "m": 50,
+                      "f": 35,
+                      "unit": "kg"
+                    },
+                    "mods": {},
+                    "alternatives": [],
+                    "text": "4 power snatches 50/35"
+                  },
+                  {
+                    "id": "pull-up",
+                    "name": "Pull up",
+                    "qty": {
+                      "mode": "reps",
+                      "value": 6
+                    },
+                    "perSide": false,
+                    "load": {
+                      "mode": "none"
+                    },
+                    "mods": {},
+                    "alternatives": [],
+                    "text": "6 pull ups"
+                  },
+                  {
+                    "id": "thruster",
+                    "name": "Thruster",
+                    "qty": {
+                      "mode": "reps",
+                      "value": 4
+                    },
+                    "perSide": false,
+                    "load": {
+                      "mode": "pair",
+                      "m": 50,
+                      "f": 35,
+                      "unit": "kg"
+                    },
+                    "mods": {},
+                    "alternatives": [],
+                    "text": "4 thruster 50/35"
+                  },
+                  {
+                    "id": "custom:single arm db bench press",
+                    "name": "Single arm DB bench press",
+                    "qty": {
+                      "mode": "reps",
+                      "value": 6
+                    },
+                    "perSide": true,
+                    "load": {
+                      "mode": "pair",
+                      "m": 25,
+                      "f": 20,
+                      "unit": "kg"
+                    },
+                    "mods": {},
+                    "alternatives": [],
+                    "text": "6/6 single arm db benchpress 25/20"
+                  },
+                  {
+                    "id": "sit-up",
+                    "name": "Sit up",
+                    "qty": {
+                      "mode": "reps",
+                      "value": 12
+                    },
+                    "perSide": false,
+                    "load": {
+                      "mode": "none"
+                    },
+                    "mods": {},
+                    "alternatives": [],
+                    "text": "12 sit ups"
+                  }
+                ]
+              },
+              "riders": [],
+              "capSec": null,
+              "restAfterSec": null,
+              "raw": "into\n20 rounds"
+            },
+            {
+              "role": "cashout",
+              "chain": "into",
+              "title": null,
+              "intent": "time",
+              "clock": {
+                "type": "forTime",
+                "rounds": null,
+                "capSec": null,
+                "roundRestSec": null,
+                "eachForTime": false
+              },
+              "scheme": null,
+              "work": {
+                "mode": "rows",
+                "rows": [
+                  {
+                    "id": "db-devils-press",
+                    "name": "Alt single arm DB devils press",
+                    "qty": {
+                      "mode": "reps",
+                      "value": 100
+                    },
+                    "perSide": false,
+                    "load": {
+                      "mode": "pair",
+                      "m": 25,
+                      "f": 20,
+                      "unit": "kg"
+                    },
+                    "mods": {
+                      "alternating": true,
+                      "singleArm": true
+                    },
+                    "alternatives": [],
+                    "text": "100 alt single arm db devils press 25/20"
+                  }
+                ]
+              },
+              "riders": [],
+              "capSec": null,
+              "restAfterSec": null,
+              "raw": "into\ncash out\n100 alt single arm db devils press 25/20"
             }
           ],
           "scale": [
             {
-              "target": "load",
+              "target": "barbell load",
               "options": [
-                "scale 15/10"
+                "35/25"
+              ]
+            },
+            {
+              "target": "db load",
+              "options": [
+                "15/10"
+              ]
+            },
+            {
+              "target": "pull-up",
+              "options": [
+                "ring rows"
               ]
             }
           ],
           "notes": [
-            "scale 15/10"
+            "teams of two",
+            "scale 35/25, ring rows, 15/10"
           ],
-          "raw": "metcon (16min)\ne2mom x 8\n1. 8 double db step ups 22,5/15 + 8 double db burpees 22,5/15\n2. 6 shuttle runs (2x5m) + 6 double db hang power snatches 22,5/15\nscale 15/10\n#weloveemoms\nrpe7"
+          "raw": "metcon (45min)\nteams of two\nfor time\nbuy in\n100 burpees over bench\ninto\n20 rounds\n4 power snatches 50/35\n6 pull ups\n4 thruster 50/35\n6/6 single arm db benchpress 25/20\n12 sit ups\ninto\ncash out\n100 alt single arm db devils press 25/20\nscale 35/25, ring rows, 15/10\n#teamday\nrpe8"
         }
       ]
     }

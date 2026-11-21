@@ -1,0 +1,445 @@
+{
+  "date": "2026-11-21",
+  "source": "feed",
+  "schema": 1,
+  "resolver": {
+    "by": "claude-nightly",
+    "at": "2026-11-21T07:39:18Z",
+    "confidence": 0.8,
+    "issues": [
+      "unknown movement: 'burpees over bench' -> custom:burpee over bench",
+      "unknown movement: 'single arm db benchpress' -> custom:single arm db bench press",
+      "metcon (45min) is the block window, not a stated cap: capSec null",
+      "scale mapped loads first in order (35/25 -> barbell 50/35 power snatch + thruster; 15/10 -> db 25/20 benchpress + devils press), then ring rows -> pull-up"
+    ]
+  },
+  "hashtag": "#teamday",
+  "rpe": "8",
+  "flags": [],
+  "programs": [
+    {
+      "name": "class",
+      "title": null,
+      "blocks": [
+        {
+          "ordinal": 1,
+          "letter": null,
+          "kind": "warmup",
+          "tags": [
+            "warmup"
+          ],
+          "label": "warm up",
+          "focus": null,
+          "name": null,
+          "benchmark": false,
+          "minutes": 6,
+          "series": null,
+          "cycleNote": null,
+          "partner": null,
+          "optional": false,
+          "bonus": false,
+          "segments": [
+            {
+              "role": "main",
+              "chain": null,
+              "title": null,
+              "intent": null,
+              "clock": {
+                "type": "interval",
+                "workSec": 45,
+                "restSec": 15,
+                "rounds": 6,
+                "stationMode": "rotate"
+              },
+              "scheme": null,
+              "work": {
+                "mode": "stations",
+                "stations": [
+                  {
+                    "n": 1,
+                    "repeat": 1,
+                    "rest": false,
+                    "items": [
+                      {
+                        "id": "down-up",
+                        "name": "Down up",
+                        "qty": {
+                          "mode": "none"
+                        },
+                        "perSide": false,
+                        "load": {
+                          "mode": "none"
+                        },
+                        "mods": {},
+                        "alternatives": [],
+                        "text": "down ups"
+                      }
+                    ]
+                  },
+                  {
+                    "n": 2,
+                    "repeat": 1,
+                    "rest": false,
+                    "items": [
+                      {
+                        "id": "samson-stretch",
+                        "name": "Samson stretch",
+                        "qty": {
+                          "mode": "none"
+                        },
+                        "perSide": false,
+                        "load": {
+                          "mode": "none"
+                        },
+                        "mods": {},
+                        "alternatives": [
+                          "sumo squat stretch",
+                          "down dog & seal"
+                        ],
+                        "text": "samson stretch/sumo squat stretch/down dog & seal"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "riders": [],
+              "capSec": null,
+              "restAfterSec": null,
+              "raw": "3 sets\n45sec on/15sec off"
+            }
+          ],
+          "scale": [],
+          "notes": [],
+          "raw": "warm up (6min)\n3 sets\n45sec on/15sec off\ndown ups\nsamson stretch/sumo squat stretch/down dog & seal"
+        },
+        {
+          "ordinal": 2,
+          "letter": null,
+          "kind": "prehab",
+          "tags": [
+            "prehab"
+          ],
+          "label": "prehab",
+          "focus": null,
+          "name": null,
+          "benchmark": false,
+          "minutes": 5,
+          "series": null,
+          "cycleNote": null,
+          "partner": null,
+          "optional": false,
+          "bonus": false,
+          "segments": [
+            {
+              "role": "main",
+              "chain": null,
+              "title": null,
+              "intent": null,
+              "clock": {
+                "type": "interval",
+                "workSec": 30,
+                "restSec": 10,
+                "rounds": 6,
+                "stationMode": "rotate"
+              },
+              "scheme": null,
+              "work": {
+                "mode": "stations",
+                "stations": [
+                  {
+                    "n": 1,
+                    "repeat": 1,
+                    "rest": false,
+                    "items": [
+                      {
+                        "id": "custom:db hollow hold",
+                        "name": "DB hollow hold",
+                        "qty": {
+                          "mode": "none"
+                        },
+                        "perSide": false,
+                        "load": {
+                          "mode": "none"
+                        },
+                        "mods": {},
+                        "alternatives": [],
+                        "text": "db hollow hold"
+                      }
+                    ]
+                  },
+                  {
+                    "n": 2,
+                    "repeat": 1,
+                    "rest": false,
+                    "items": [
+                      {
+                        "id": "roll-out",
+                        "name": "Barbell roll out",
+                        "qty": {
+                          "mode": "none"
+                        },
+                        "perSide": false,
+                        "load": {
+                          "mode": "none"
+                        },
+                        "mods": {
+                          "implement": "barbell"
+                        },
+                        "alternatives": [],
+                        "text": "barbell roll outs"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "riders": [],
+              "capSec": null,
+              "restAfterSec": null,
+              "raw": "3 sets\n30sec on/10sec off"
+            }
+          ],
+          "scale": [],
+          "notes": [],
+          "raw": "prehab (5min)\n3 sets\n30sec on/10sec off\ndb hollow hold\nbarbell roll outs"
+        },
+        {
+          "ordinal": 3,
+          "letter": null,
+          "kind": "metcon",
+          "tags": [
+            "metcon"
+          ],
+          "label": "metcon",
+          "focus": null,
+          "name": null,
+          "benchmark": false,
+          "minutes": 45,
+          "series": null,
+          "cycleNote": null,
+          "partner": {
+            "mode": "teams",
+            "note": "teams of two"
+          },
+          "optional": false,
+          "bonus": false,
+          "segments": [
+            {
+              "role": "buyin",
+              "chain": null,
+              "title": null,
+              "intent": "time",
+              "clock": {
+                "type": "forTime",
+                "rounds": null,
+                "capSec": null,
+                "roundRestSec": null,
+                "eachForTime": false
+              },
+              "scheme": null,
+              "work": {
+                "mode": "rows",
+                "rows": [
+                  {
+                    "id": "custom:burpee over bench",
+                    "name": "Burpee over bench",
+                    "qty": {
+                      "mode": "reps",
+                      "value": 100
+                    },
+                    "perSide": false,
+                    "load": {
+                      "mode": "none"
+                    },
+                    "mods": {},
+                    "alternatives": [],
+                    "text": "100 burpees over bench"
+                  }
+                ]
+              },
+              "riders": [],
+              "capSec": null,
+              "restAfterSec": null,
+              "raw": "for time\nbuy in\n100 burpees over bench"
+            },
+            {
+              "role": "main",
+              "chain": "into",
+              "title": null,
+              "intent": "time",
+              "clock": {
+                "type": "forTime",
+                "rounds": 20,
+                "capSec": null,
+                "roundRestSec": null,
+                "eachForTime": false
+              },
+              "scheme": null,
+              "work": {
+                "mode": "rows",
+                "rows": [
+                  {
+                    "id": "power-snatch",
+                    "name": "Power snatch",
+                    "qty": {
+                      "mode": "reps",
+                      "value": 4
+                    },
+                    "perSide": false,
+                    "load": {
+                      "mode": "pair",
+                      "m": 50,
+                      "f": 35,
+                      "unit": "kg"
+                    },
+                    "mods": {},
+                    "alternatives": [],
+                    "text": "4 power snatches 50/35"
+                  },
+                  {
+                    "id": "pull-up",
+                    "name": "Pull up",
+                    "qty": {
+                      "mode": "reps",
+                      "value": 6
+                    },
+                    "perSide": false,
+                    "load": {
+                      "mode": "none"
+                    },
+                    "mods": {},
+                    "alternatives": [],
+                    "text": "6 pull ups"
+                  },
+                  {
+                    "id": "thruster",
+                    "name": "Thruster",
+                    "qty": {
+                      "mode": "reps",
+                      "value": 4
+                    },
+                    "perSide": false,
+                    "load": {
+                      "mode": "pair",
+                      "m": 50,
+                      "f": 35,
+                      "unit": "kg"
+                    },
+                    "mods": {},
+                    "alternatives": [],
+                    "text": "4 thruster 50/35"
+                  },
+                  {
+                    "id": "custom:single arm db bench press",
+                    "name": "Single arm DB bench press",
+                    "qty": {
+                      "mode": "reps",
+                      "value": 6
+                    },
+                    "perSide": true,
+                    "load": {
+                      "mode": "pair",
+                      "m": 25,
+                      "f": 20,
+                      "unit": "kg"
+                    },
+                    "mods": {},
+                    "alternatives": [],
+                    "text": "6/6 single arm db benchpress 25/20"
+                  },
+                  {
+                    "id": "sit-up",
+                    "name": "Sit up",
+                    "qty": {
+                      "mode": "reps",
+                      "value": 12
+                    },
+                    "perSide": false,
+                    "load": {
+                      "mode": "none"
+                    },
+                    "mods": {},
+                    "alternatives": [],
+                    "text": "12 sit ups"
+                  }
+                ]
+              },
+              "riders": [],
+              "capSec": null,
+              "restAfterSec": null,
+              "raw": "into\n20 rounds"
+            },
+            {
+              "role": "cashout",
+              "chain": "into",
+              "title": null,
+              "intent": "time",
+              "clock": {
+                "type": "forTime",
+                "rounds": null,
+                "capSec": null,
+                "roundRestSec": null,
+                "eachForTime": false
+              },
+              "scheme": null,
+              "work": {
+                "mode": "rows",
+                "rows": [
+                  {
+                    "id": "db-devils-press",
+                    "name": "Alt single arm DB devils press",
+                    "qty": {
+                      "mode": "reps",
+                      "value": 100
+                    },
+                    "perSide": false,
+                    "load": {
+                      "mode": "pair",
+                      "m": 25,
+                      "f": 20,
+                      "unit": "kg"
+                    },
+                    "mods": {
+                      "alternating": true,
+                      "singleArm": true
+                    },
+                    "alternatives": [],
+                    "text": "100 alt single arm db devils press 25/20"
+                  }
+                ]
+              },
+              "riders": [],
+              "capSec": null,
+              "restAfterSec": null,
+              "raw": "into\ncash out\n100 alt single arm db devils press 25/20"
+            }
+          ],
+          "scale": [
+            {
+              "target": "barbell load",
+              "options": [
+                "35/25"
+              ]
+            },
+            {
+              "target": "db load",
+              "options": [
+                "15/10"
+              ]
+            },
+            {
+              "target": "pull-up",
+              "options": [
+                "ring rows"
+              ]
+            }
+          ],
+          "notes": [
+            "teams of two",
+            "scale 35/25, ring rows, 15/10"
+          ],
+          "raw": "metcon (45min)\nteams of two\nfor time\nbuy in\n100 burpees over bench\ninto\n20 rounds\n4 power snatches 50/35\n6 pull ups\n4 thruster 50/35\n6/6 single arm db benchpress 25/20\n12 sit ups\ninto\ncash out\n100 alt single arm db devils press 25/20\nscale 35/25, ring rows, 15/10\n#teamday\nrpe8"
+        }
+      ]
+    }
+  ]
+}
