@@ -1,25 +1,370 @@
 {
-  "date": "2026-11-22",
+  "date": "2026-11-23",
   "source": "feed",
   "schema": 1,
   "resolver": {
     "by": "claude-nightly",
-    "at": "2026-11-22T07:39:07Z",
-    "confidence": 0.75,
+    "at": "2026-11-23T07:39:41Z",
+    "confidence": 0.6,
     "issues": [
-      "rounds derived: warm up 6 = 3 sets x 2 stations",
-      "rounds derived: prehab 6 = 3sets x 2 stations",
-      "rounds derived: conditioning 18 = 3 rounds x 3 numbered stations x 2x each (2min on/2min off = 72min total, no block minutes stated)",
-      "conditioning 'in teams of two': partner split of the 2min on/2min off windows not stated — partner.mode teams, note verbatim",
-      "movement ids unverified: prompt/catalog.json absent in repo (erg, down-dog-seal, plank-hold, tuck-up, row, ski, bike)"
+      "rounds derived: hyrox warm up 6 = 3sets x 2 stations; hyrox prehab 6 = 3sets x 2 stations",
+      "class prehab '3 sets' states no work/rest seconds: sets clock with null timing",
+      "strength 'work up to a heavy power clean': heavy clock, windowSec null (20min is block window), load ahap",
+      "metcon T.U.P. benchmark: forTime rounds 5 from 15-12-9-6-3 scheme; capSec 960 from metcon (16min) per 2026-10-29 fixture",
+      "scale '40/30' mapped to barbell load (power clean + front squat 61/43); 'ring rows' mapped to pull ups",
+      "hyrox conditioning: one 'for time' clock across 5 row+burpee pieces; '2min rest' lines modelled as restAfterSec 120 chained 'rest'",
+      "unknown movement: 'burpees over rower' -> custom:burpee over rower",
+      "movement ids unverified: prompt/catalog.json absent in repo"
     ]
   },
-  "hashtag": null,
-  "rpe": null,
+  "hashtag": "#benchmark",
+  "rpe": "8",
   "flags": [],
   "programs": [
     {
       "name": "class",
+      "title": null,
+      "blocks": [
+        {
+          "ordinal": 1,
+          "letter": null,
+          "kind": "warmup",
+          "tags": [
+            "warmup"
+          ],
+          "label": "warm up",
+          "focus": null,
+          "name": null,
+          "benchmark": false,
+          "minutes": 6,
+          "series": null,
+          "cycleNote": null,
+          "partner": null,
+          "optional": false,
+          "bonus": false,
+          "segments": [
+            {
+              "role": "main",
+              "chain": null,
+              "title": null,
+              "intent": null,
+              "clock": {
+                "type": "none"
+              },
+              "scheme": null,
+              "work": {
+                "mode": "rows",
+                "rows": [
+                  {
+                    "id": "custom:dynamic warm up",
+                    "name": "Dynamic warm up",
+                    "qty": {
+                      "mode": "none"
+                    },
+                    "perSide": false,
+                    "load": {
+                      "mode": "none"
+                    },
+                    "mods": {},
+                    "alternatives": [],
+                    "text": "dynamic warm up"
+                  }
+                ]
+              },
+              "riders": [],
+              "capSec": null,
+              "restAfterSec": null,
+              "raw": "dynamic warm up"
+            }
+          ],
+          "scale": [],
+          "notes": [],
+          "raw": "warm up (6min)\ndynamic warm up"
+        },
+        {
+          "ordinal": 2,
+          "letter": null,
+          "kind": "prehab",
+          "tags": [
+            "prehab"
+          ],
+          "label": "prehab",
+          "focus": null,
+          "name": null,
+          "benchmark": false,
+          "minutes": 5,
+          "series": null,
+          "cycleNote": null,
+          "partner": null,
+          "optional": false,
+          "bonus": false,
+          "segments": [
+            {
+              "role": "main",
+              "chain": null,
+              "title": null,
+              "intent": null,
+              "clock": {
+                "type": "sets",
+                "sets": 3,
+                "reps": null,
+                "restSec": null,
+                "restBetweenRepsSec": null,
+                "groups": []
+              },
+              "scheme": null,
+              "work": {
+                "mode": "rows",
+                "rows": [
+                  {
+                    "id": "tuck-sit-hang",
+                    "name": "Tuck sit hang",
+                    "qty": {
+                      "mode": "none"
+                    },
+                    "perSide": false,
+                    "load": {
+                      "mode": "none"
+                    },
+                    "mods": {},
+                    "alternatives": [],
+                    "text": "tuck sit hang"
+                  },
+                  {
+                    "id": "roll-out",
+                    "name": "Barbell roll out",
+                    "qty": {
+                      "mode": "none"
+                    },
+                    "perSide": false,
+                    "load": {
+                      "mode": "implement"
+                    },
+                    "mods": {},
+                    "alternatives": [],
+                    "text": "barbell roll outs"
+                  }
+                ]
+              },
+              "riders": [],
+              "capSec": null,
+              "restAfterSec": null,
+              "raw": "3 sets"
+            }
+          ],
+          "scale": [],
+          "notes": [],
+          "raw": "prehab (5min)\n3 sets\ntuck sit hang\nbarbell roll outs"
+        },
+        {
+          "ordinal": 3,
+          "letter": null,
+          "kind": "strength",
+          "tags": [
+            "strength"
+          ],
+          "label": "strength",
+          "focus": "power clean",
+          "name": null,
+          "benchmark": false,
+          "minutes": 20,
+          "series": null,
+          "cycleNote": null,
+          "partner": null,
+          "optional": false,
+          "bonus": false,
+          "segments": [
+            {
+              "role": "heavy",
+              "chain": null,
+              "title": null,
+              "intent": "heavy",
+              "clock": {
+                "type": "heavy",
+                "windowSec": null,
+                "target": "heavy power clean"
+              },
+              "scheme": null,
+              "work": {
+                "mode": "rows",
+                "rows": [
+                  {
+                    "id": "power-clean",
+                    "name": "Power clean",
+                    "qty": {
+                      "mode": "none"
+                    },
+                    "perSide": false,
+                    "load": {
+                      "mode": "ahap"
+                    },
+                    "mods": {},
+                    "alternatives": [],
+                    "text": "work up to a heavy power clean"
+                  }
+                ]
+              },
+              "riders": [],
+              "capSec": null,
+              "restAfterSec": null,
+              "raw": "work up to a heavy power clean"
+            }
+          ],
+          "scale": [],
+          "notes": [],
+          "raw": "strength (20min)\nwork up to a heavy power clean"
+        },
+        {
+          "ordinal": 4,
+          "letter": null,
+          "kind": "metcon",
+          "tags": [
+            "metcon"
+          ],
+          "label": "metcon",
+          "focus": null,
+          "name": "T.U.P.",
+          "benchmark": true,
+          "minutes": 16,
+          "series": null,
+          "cycleNote": null,
+          "partner": null,
+          "optional": false,
+          "bonus": false,
+          "segments": [
+            {
+              "role": "main",
+              "chain": null,
+              "title": null,
+              "intent": "time",
+              "clock": {
+                "type": "forTime",
+                "rounds": 5,
+                "capSec": 960,
+                "roundRestSec": null,
+                "eachForTime": false
+              },
+              "scheme": {
+                "type": "descending",
+                "steps": [
+                  15,
+                  12,
+                  9,
+                  6,
+                  3
+                ],
+                "unit": "reps",
+                "by": null,
+                "appliesTo": "all",
+                "scaled": null,
+                "pcts": null
+              },
+              "work": {
+                "mode": "rows",
+                "rows": [
+                  {
+                    "id": "power-clean",
+                    "name": "Power clean",
+                    "qty": {
+                      "mode": "reps",
+                      "value": null
+                    },
+                    "perSide": false,
+                    "load": {
+                      "mode": "pair",
+                      "m": 61,
+                      "f": 43,
+                      "unit": "kg"
+                    },
+                    "mods": {},
+                    "alternatives": [],
+                    "text": "power cleans 61/43"
+                  },
+                  {
+                    "id": "pull-up",
+                    "name": "Pull up",
+                    "qty": {
+                      "mode": "reps",
+                      "value": null
+                    },
+                    "perSide": false,
+                    "load": {
+                      "mode": "bw"
+                    },
+                    "mods": {},
+                    "alternatives": [],
+                    "text": "pull ups"
+                  },
+                  {
+                    "id": "front-squat",
+                    "name": "Front squat",
+                    "qty": {
+                      "mode": "reps",
+                      "value": null
+                    },
+                    "perSide": false,
+                    "load": {
+                      "mode": "pair",
+                      "m": 61,
+                      "f": 43,
+                      "unit": "kg"
+                    },
+                    "mods": {},
+                    "alternatives": [],
+                    "text": "frontsquats 61/43"
+                  },
+                  {
+                    "id": "pull-up",
+                    "name": "Pull up",
+                    "qty": {
+                      "mode": "reps",
+                      "value": null
+                    },
+                    "perSide": false,
+                    "load": {
+                      "mode": "bw"
+                    },
+                    "mods": {},
+                    "alternatives": [],
+                    "text": "pull ups"
+                  }
+                ]
+              },
+              "riders": [],
+              "capSec": 960,
+              "restAfterSec": null,
+              "raw": "benchmark\nT.U.P.\nfor time\n15-12-9-6-3 reps"
+            }
+          ],
+          "scale": [
+            {
+              "target": "power-clean",
+              "options": [
+                "40/30"
+              ]
+            },
+            {
+              "target": "front-squat",
+              "options": [
+                "40/30"
+              ]
+            },
+            {
+              "target": "pull-up",
+              "options": [
+                "ring rows"
+              ]
+            }
+          ],
+          "notes": [
+            "scale 40/30, ring rows"
+          ],
+          "raw": "metcon (16min)\nbenchmark\nT.U.P.\n15-12-9-6-3 reps\npower cleans 61/43\npull ups\nfrontsquats 61/43\npull ups\nscale 40/30, ring rows\n#benchmark\nrpe8"
+        }
+      ]
+    },
+    {
+      "name": "hyrox",
       "title": null,
       "blocks": [
         {
@@ -62,8 +407,8 @@
                     "rest": false,
                     "items": [
                       {
-                        "id": "erg",
-                        "name": "Erg (choice)",
+                        "id": "row",
+                        "name": "Row",
                         "qty": {
                           "mode": "none"
                         },
@@ -72,11 +417,8 @@
                           "mode": "none"
                         },
                         "mods": {},
-                        "alternatives": [
-                          "ski",
-                          "bike"
-                        ],
-                        "text": "row/ski/bike"
+                        "alternatives": [],
+                        "text": "row"
                       }
                     ]
                   },
@@ -86,8 +428,8 @@
                     "rest": false,
                     "items": [
                       {
-                        "id": "down-dog-seal",
-                        "name": "Down dog + seal",
+                        "id": "custom:instep stretch + rotation",
+                        "name": "Instep stretch + rotation",
                         "qty": {
                           "mode": "none"
                         },
@@ -95,12 +437,14 @@
                         "load": {
                           "mode": "none"
                         },
-                        "mods": {},
+                        "mods": {
+                          "rotation": "perSet"
+                        },
                         "alternatives": [
-                          "samson stretch",
+                          "handwalk+push up",
                           "sumo squat stretch"
                         ],
-                        "text": "down dog+seal/samson stretch/sumo squat stretch"
+                        "text": "instep stretch+rotation/handwalk+push up/sumo squat stretch"
                       }
                     ]
                   }
@@ -109,12 +453,12 @@
               "riders": [],
               "capSec": null,
               "restAfterSec": null,
-              "raw": "3 sets\n45sec on/15sec off"
+              "raw": "3sets\n45sec on/15sec off"
             }
           ],
           "scale": [],
           "notes": [],
-          "raw": "warm up\n3 sets\n45sec on/15sec off\nrow/ski/bike\ndown dog+seal/samson stretch/sumo squat stretch"
+          "raw": "warm up\n3sets\n45sec on/15sec off\nrow\ninstep stretch+rotation/handwalk+push up/sumo squat stretch"
         },
         {
           "ordinal": 2,
@@ -156,6 +500,27 @@
                     "rest": false,
                     "items": [
                       {
+                        "id": "rower-pike-up",
+                        "name": "Rower pike up",
+                        "qty": {
+                          "mode": "none"
+                        },
+                        "perSide": false,
+                        "load": {
+                          "mode": "none"
+                        },
+                        "mods": {},
+                        "alternatives": [],
+                        "text": "rower pike ups"
+                      }
+                    ]
+                  },
+                  {
+                    "n": 2,
+                    "repeat": 1,
+                    "rest": false,
+                    "items": [
+                      {
                         "id": "plank-hold",
                         "name": "Plank hold",
                         "qty": {
@@ -170,27 +535,6 @@
                         "text": "plank hold"
                       }
                     ]
-                  },
-                  {
-                    "n": 2,
-                    "repeat": 1,
-                    "rest": false,
-                    "items": [
-                      {
-                        "id": "tuck-up",
-                        "name": "Tuck up",
-                        "qty": {
-                          "mode": "none"
-                        },
-                        "perSide": false,
-                        "load": {
-                          "mode": "none"
-                        },
-                        "mods": {},
-                        "alternatives": [],
-                        "text": "tuck ups"
-                      }
-                    ]
                   }
                 ]
               },
@@ -202,7 +546,7 @@
           ],
           "scale": [],
           "notes": [],
-          "raw": "prehab\n3sets\n30sec on/10sec off\nplank hold\ntuck ups"
+          "raw": "prehab\n3sets\n30sec on/10sec off\nrower pike ups\nplank hold"
         },
         {
           "ordinal": 3,
@@ -218,10 +562,7 @@
           "minutes": null,
           "series": null,
           "cycleNote": null,
-          "partner": {
-            "mode": "teams",
-            "note": "in teams of two"
-          },
+          "partner": null,
           "optional": false,
           "bonus": false,
           "segments": [
@@ -229,98 +570,276 @@
               "role": "main",
               "chain": null,
               "title": null,
-              "intent": null,
+              "intent": "time",
               "clock": {
-                "type": "interval",
-                "workSec": 120,
-                "restSec": 120,
-                "rounds": 18,
-                "stationMode": "rotate"
+                "type": "forTime",
+                "rounds": null,
+                "capSec": null,
+                "roundRestSec": null,
+                "eachForTime": false
               },
               "scheme": null,
               "work": {
-                "mode": "stations",
-                "stations": [
+                "mode": "rows",
+                "rows": [
                   {
-                    "n": 1,
-                    "repeat": 2,
-                    "rest": false,
-                    "items": [
-                      {
-                        "id": "row",
-                        "name": "Row",
-                        "qty": {
-                          "mode": "max",
-                          "maxUnit": "m"
-                        },
-                        "perSide": false,
-                        "load": {
-                          "mode": "rpe",
-                          "rpe": "8"
-                        },
-                        "mods": {},
-                        "alternatives": [],
-                        "text": "1. max m row rpe 8"
-                      }
-                    ]
+                    "id": "row",
+                    "name": "Row",
+                    "qty": {
+                      "mode": "m",
+                      "value": 2000,
+                      "f": 1600
+                    },
+                    "perSide": false,
+                    "load": {
+                      "mode": "none"
+                    },
+                    "mods": {},
+                    "alternatives": [],
+                    "text": "2000/1600m row"
                   },
                   {
-                    "n": 2,
-                    "repeat": 2,
-                    "rest": false,
-                    "items": [
-                      {
-                        "id": "ski",
-                        "name": "Ski",
-                        "qty": {
-                          "mode": "max",
-                          "maxUnit": "m"
-                        },
-                        "perSide": false,
-                        "load": {
-                          "mode": "rpe",
-                          "rpe": "8"
-                        },
-                        "mods": {},
-                        "alternatives": [],
-                        "text": "2. max m ski rpe 8"
-                      }
-                    ]
+                    "id": "custom:burpee over rower",
+                    "name": "Burpee over rower",
+                    "qty": {
+                      "mode": "reps",
+                      "value": 40
+                    },
+                    "perSide": false,
+                    "load": {
+                      "mode": "none"
+                    },
+                    "mods": {},
+                    "alternatives": [],
+                    "text": "40 burpees over rower"
+                  }
+                ]
+              },
+              "riders": [],
+              "capSec": null,
+              "restAfterSec": 120,
+              "raw": "for time\n2000/1600m row\n40 burpees over rower\n2min rest"
+            },
+            {
+              "role": "main",
+              "chain": "rest",
+              "title": null,
+              "intent": "time",
+              "clock": {
+                "type": "forTime",
+                "rounds": null,
+                "capSec": null,
+                "roundRestSec": null,
+                "eachForTime": false
+              },
+              "scheme": null,
+              "work": {
+                "mode": "rows",
+                "rows": [
+                  {
+                    "id": "row",
+                    "name": "Row",
+                    "qty": {
+                      "mode": "m",
+                      "value": 1500,
+                      "f": 1200
+                    },
+                    "perSide": false,
+                    "load": {
+                      "mode": "none"
+                    },
+                    "mods": {},
+                    "alternatives": [],
+                    "text": "1500/1200m row"
                   },
                   {
-                    "n": 3,
-                    "repeat": 2,
-                    "rest": false,
-                    "items": [
-                      {
-                        "id": "bike",
-                        "name": "Bike",
-                        "qty": {
-                          "mode": "max",
-                          "maxUnit": "m"
-                        },
-                        "perSide": false,
-                        "load": {
-                          "mode": "rpe",
-                          "rpe": "8"
-                        },
-                        "mods": {},
-                        "alternatives": [],
-                        "text": "3. max m bike rpe 8"
-                      }
-                    ]
+                    "id": "custom:burpee over rower",
+                    "name": "Burpee over rower",
+                    "qty": {
+                      "mode": "reps",
+                      "value": 30
+                    },
+                    "perSide": false,
+                    "load": {
+                      "mode": "none"
+                    },
+                    "mods": {},
+                    "alternatives": [],
+                    "text": "30 burpees over rower"
+                  }
+                ]
+              },
+              "riders": [],
+              "capSec": null,
+              "restAfterSec": 120,
+              "raw": "1500/1200m row\n30 burpees over rower\n2min rest"
+            },
+            {
+              "role": "main",
+              "chain": "rest",
+              "title": null,
+              "intent": "time",
+              "clock": {
+                "type": "forTime",
+                "rounds": null,
+                "capSec": null,
+                "roundRestSec": null,
+                "eachForTime": false
+              },
+              "scheme": null,
+              "work": {
+                "mode": "rows",
+                "rows": [
+                  {
+                    "id": "row",
+                    "name": "Row",
+                    "qty": {
+                      "mode": "m",
+                      "value": 1000,
+                      "f": 800
+                    },
+                    "perSide": false,
+                    "load": {
+                      "mode": "none"
+                    },
+                    "mods": {},
+                    "alternatives": [],
+                    "text": "1000/800m row"
+                  },
+                  {
+                    "id": "custom:burpee over rower",
+                    "name": "Burpee over rower",
+                    "qty": {
+                      "mode": "reps",
+                      "value": 20
+                    },
+                    "perSide": false,
+                    "load": {
+                      "mode": "none"
+                    },
+                    "mods": {},
+                    "alternatives": [],
+                    "text": "20 burpees over rower"
+                  }
+                ]
+              },
+              "riders": [],
+              "capSec": null,
+              "restAfterSec": 120,
+              "raw": "1000/800m row\n20 burpees over rower\n2min rest"
+            },
+            {
+              "role": "main",
+              "chain": "rest",
+              "title": null,
+              "intent": "time",
+              "clock": {
+                "type": "forTime",
+                "rounds": null,
+                "capSec": null,
+                "roundRestSec": null,
+                "eachForTime": false
+              },
+              "scheme": null,
+              "work": {
+                "mode": "rows",
+                "rows": [
+                  {
+                    "id": "row",
+                    "name": "Row",
+                    "qty": {
+                      "mode": "m",
+                      "value": 500,
+                      "f": 400
+                    },
+                    "perSide": false,
+                    "load": {
+                      "mode": "none"
+                    },
+                    "mods": {},
+                    "alternatives": [],
+                    "text": "500/400m row"
+                  },
+                  {
+                    "id": "custom:burpee over rower",
+                    "name": "Burpee over rower",
+                    "qty": {
+                      "mode": "reps",
+                      "value": 10
+                    },
+                    "perSide": false,
+                    "load": {
+                      "mode": "none"
+                    },
+                    "mods": {},
+                    "alternatives": [],
+                    "text": "10 burpees over rower"
+                  }
+                ]
+              },
+              "riders": [],
+              "capSec": null,
+              "restAfterSec": 120,
+              "raw": "500/400m row\n10 burpees over rower\n2min rest"
+            },
+            {
+              "role": "main",
+              "chain": "rest",
+              "title": null,
+              "intent": "time",
+              "clock": {
+                "type": "forTime",
+                "rounds": null,
+                "capSec": null,
+                "roundRestSec": null,
+                "eachForTime": false
+              },
+              "scheme": null,
+              "work": {
+                "mode": "rows",
+                "rows": [
+                  {
+                    "id": "row",
+                    "name": "Row",
+                    "qty": {
+                      "mode": "m",
+                      "value": 250,
+                      "f": 200
+                    },
+                    "perSide": false,
+                    "load": {
+                      "mode": "none"
+                    },
+                    "mods": {},
+                    "alternatives": [],
+                    "text": "250/200m row"
+                  },
+                  {
+                    "id": "custom:burpee over rower",
+                    "name": "Burpee over rower",
+                    "qty": {
+                      "mode": "reps",
+                      "value": 5
+                    },
+                    "perSide": false,
+                    "load": {
+                      "mode": "none"
+                    },
+                    "mods": {},
+                    "alternatives": [],
+                    "text": "5 burpees over rower"
                   }
                 ]
               },
               "riders": [],
               "capSec": null,
               "restAfterSec": null,
-              "raw": "3 rounds\n2x\n2min on/2min off\n1. 2x\n2min on/2min off\n2. 2x\n2min on/2min off\n3."
+              "raw": "250/200m row\n5 burpees over rower"
             }
           ],
           "scale": [],
           "notes": [],
-          "raw": "conditioning\nin teams of two\n3 rounds\n2x\n2min on/2min off\n1. max m row rpe 8\n2x\n2min on/2min off\n2. max m ski rpe 8\n2x\n2min on/2min off\n3. max m bike rpe 8"
+          "raw": "conditioning\nfor time\n2000/1600m row\n40 burpees over rower\n2min rest\n1500/1200m row\n30 burpees over rower\n2min rest\n1000/800m row\n20 burpees over rower\n2min rest\n500/400m row\n10 burpees over rower\n2min rest\n250/200m row\n5 burpees over rower"
         }
       ]
     }
