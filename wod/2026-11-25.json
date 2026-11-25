@@ -1,0 +1,374 @@
+{
+  "date": "2026-11-25",
+  "source": "feed",
+  "schema": 1,
+  "resolver": {
+    "by": "claude-nightly",
+    "at": "2026-11-25T07:39:23Z",
+    "confidence": 0.9,
+    "issues": [
+      "unknown movement 'nose to wall handstand hold' -> custom:nose to wall handstand hold",
+      "strength 'work uup to a heavy rep' read as work up to a heavy rep (typo not corrected by normalize.py); 'deadlift 6/6' = series 6 of 6; heavy clock, windowSec null (18min is block window)"
+    ]
+  },
+  "hashtag": "#upperbodypull",
+  "rpe": "8",
+  "flags": [],
+  "programs": [
+    {
+      "name": "class",
+      "title": null,
+      "blocks": [
+        {
+          "ordinal": 1,
+          "letter": null,
+          "kind": "warmup",
+          "tags": [
+            "warmup"
+          ],
+          "label": "warm up",
+          "focus": null,
+          "name": null,
+          "benchmark": false,
+          "minutes": 6,
+          "series": null,
+          "cycleNote": null,
+          "partner": null,
+          "optional": false,
+          "bonus": false,
+          "segments": [
+            {
+              "role": "main",
+              "chain": null,
+              "title": null,
+              "intent": null,
+              "clock": {
+                "type": "interval",
+                "workSec": 45,
+                "restSec": 15,
+                "rounds": 6,
+                "stationMode": "rotate"
+              },
+              "scheme": null,
+              "work": {
+                "mode": "stations",
+                "stations": [
+                  {
+                    "n": 1,
+                    "repeat": 1,
+                    "rest": false,
+                    "items": [
+                      {
+                        "id": "single-under",
+                        "name": "Single under",
+                        "qty": {
+                          "mode": "none"
+                        },
+                        "perSide": false,
+                        "load": {
+                          "mode": "none"
+                        },
+                        "mods": {},
+                        "alternatives": [],
+                        "text": "rope jumps"
+                      }
+                    ]
+                  },
+                  {
+                    "n": 2,
+                    "repeat": 1,
+                    "rest": false,
+                    "items": [
+                      {
+                        "id": "sumo-squat-stretch",
+                        "name": "Sumo squat stretch",
+                        "qty": {
+                          "mode": "none"
+                        },
+                        "perSide": false,
+                        "load": {
+                          "mode": "none"
+                        },
+                        "mods": {},
+                        "alternatives": [
+                          "down dog & seal",
+                          "instep stretch + rotation"
+                        ],
+                        "text": "sumo squat stretch/down dog & seal/instep stretch + rotation"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "riders": [],
+              "capSec": null,
+              "restAfterSec": null,
+              "raw": "3 sets\n45sec on/15sec off"
+            }
+          ],
+          "scale": [],
+          "notes": [],
+          "raw": "warm up (6min)\n3 sets\n45sec on/15sec off\nrope jumps\nsumo squat stretch/down dog & seal/instep stretch + rotation"
+        },
+        {
+          "ordinal": 2,
+          "letter": null,
+          "kind": "prehab",
+          "tags": [
+            "prehab"
+          ],
+          "label": "prehab",
+          "focus": null,
+          "name": null,
+          "benchmark": false,
+          "minutes": 5,
+          "series": null,
+          "cycleNote": null,
+          "partner": null,
+          "optional": false,
+          "bonus": false,
+          "segments": [
+            {
+              "role": "main",
+              "chain": null,
+              "title": null,
+              "intent": null,
+              "clock": {
+                "type": "interval",
+                "workSec": 30,
+                "restSec": 10,
+                "rounds": 6,
+                "stationMode": "rotate"
+              },
+              "scheme": null,
+              "work": {
+                "mode": "stations",
+                "stations": [
+                  {
+                    "n": 1,
+                    "repeat": 1,
+                    "rest": false,
+                    "items": [
+                      {
+                        "id": "custom:nose to wall handstand hold",
+                        "name": "Nose to wall handstand hold",
+                        "qty": {
+                          "mode": "none"
+                        },
+                        "perSide": false,
+                        "load": {
+                          "mode": "none"
+                        },
+                        "mods": {},
+                        "alternatives": [],
+                        "text": "nose to wall handstand hold"
+                      }
+                    ]
+                  },
+                  {
+                    "n": 2,
+                    "repeat": 1,
+                    "rest": false,
+                    "items": [
+                      {
+                        "id": "good-morning",
+                        "name": "Good morning",
+                        "qty": {
+                          "mode": "none"
+                        },
+                        "perSide": false,
+                        "load": {
+                          "mode": "none"
+                        },
+                        "mods": {},
+                        "alternatives": [],
+                        "text": "barbell good mornings"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "riders": [],
+              "capSec": null,
+              "restAfterSec": null,
+              "raw": "3 sets\n30sec on/10sec off"
+            }
+          ],
+          "scale": [],
+          "notes": [],
+          "raw": "prehab (5min)\n3 sets\n30sec on/10sec off\nnose to wall handstand hold\nbarbell good mornings"
+        },
+        {
+          "ordinal": 3,
+          "letter": null,
+          "kind": "strength",
+          "tags": [
+            "strength"
+          ],
+          "label": "strength",
+          "focus": "deadlift",
+          "name": null,
+          "benchmark": false,
+          "minutes": 18,
+          "series": {
+            "n": 6,
+            "of": 6
+          },
+          "cycleNote": null,
+          "partner": null,
+          "optional": false,
+          "bonus": false,
+          "segments": [
+            {
+              "role": "heavy",
+              "chain": null,
+              "title": null,
+              "intent": "heavy",
+              "clock": {
+                "type": "heavy",
+                "windowSec": null,
+                "target": "heavy rep"
+              },
+              "scheme": null,
+              "work": {
+                "mode": "rows",
+                "rows": [
+                  {
+                    "id": "deadlift",
+                    "name": "Deadlift",
+                    "qty": {
+                      "mode": "none"
+                    },
+                    "perSide": false,
+                    "load": {
+                      "mode": "ahap"
+                    },
+                    "mods": {},
+                    "alternatives": [],
+                    "text": "work uup to a heavy rep"
+                  }
+                ]
+              },
+              "riders": [],
+              "capSec": null,
+              "restAfterSec": null,
+              "raw": "deadlift 6/6\nwork uup to a heavy rep"
+            }
+          ],
+          "scale": [],
+          "notes": [],
+          "raw": "strength (18min)\ndeadlift 6/6\nwork uup to a heavy rep"
+        },
+        {
+          "ordinal": 4,
+          "letter": null,
+          "kind": "metcon",
+          "tags": [
+            "metcon"
+          ],
+          "label": "metcon",
+          "focus": null,
+          "name": null,
+          "benchmark": false,
+          "minutes": 18,
+          "series": null,
+          "cycleNote": null,
+          "partner": null,
+          "optional": false,
+          "bonus": false,
+          "segments": [
+            {
+              "role": "main",
+              "chain": null,
+              "title": null,
+              "intent": "time",
+              "clock": {
+                "type": "forTime",
+                "rounds": 4,
+                "capSec": null,
+                "roundRestSec": null,
+                "eachForTime": false
+              },
+              "scheme": null,
+              "work": {
+                "mode": "rows",
+                "rows": [
+                  {
+                    "id": "db-devils-press",
+                    "name": "DB devils press",
+                    "qty": {
+                      "mode": "reps",
+                      "value": 12
+                    },
+                    "perSide": false,
+                    "load": {
+                      "mode": "pair",
+                      "m": 22.5,
+                      "f": 15,
+                      "unit": "kg"
+                    },
+                    "mods": {},
+                    "alternatives": [],
+                    "text": "12 double db devils press 22,5/15"
+                  },
+                  {
+                    "id": "wall-walk",
+                    "name": "Wall Walk",
+                    "qty": {
+                      "mode": "reps",
+                      "value": 6
+                    },
+                    "perSide": false,
+                    "load": {
+                      "mode": "none"
+                    },
+                    "mods": {},
+                    "alternatives": [],
+                    "text": "6 wall walks"
+                  },
+                  {
+                    "id": "double-under",
+                    "name": "Double Under",
+                    "qty": {
+                      "mode": "reps",
+                      "value": 32
+                    },
+                    "perSide": false,
+                    "load": {
+                      "mode": "none"
+                    },
+                    "mods": {},
+                    "alternatives": [],
+                    "text": "32 double unders"
+                  }
+                ]
+              },
+              "riders": [],
+              "capSec": null,
+              "restAfterSec": null,
+              "raw": "4 rounds\nfor time"
+            }
+          ],
+          "scale": [
+            {
+              "target": "db-devils-press",
+              "options": [
+                "15/10"
+              ]
+            },
+            {
+              "target": "double-under",
+              "options": [
+                "single unders (x2)"
+              ]
+            }
+          ],
+          "notes": [
+            "scale 15/10, single unders (x2)"
+          ],
+          "raw": "metcon (18min)\n4 rounds\nfor time\n12 double db devils press 22,5/15\n6 wall walks\n32 double unders\nscale 15/10, single unders (x2)\n#upperbodypull\nrpe8"
+        }
+      ]
+    }
+  ]
+}
