@@ -1,0 +1,495 @@
+{
+  "date": "2026-11-26",
+  "source": "feed",
+  "schema": 1,
+  "resolver": {
+    "by": "claude-nightly",
+    "at": "2026-11-26T07:39:10Z",
+    "confidence": 0.5,
+    "issues": [
+      "rounds derived: warm up interval rounds = 2 sets x 3 stations = 6; prehab = 3 sets x 2 stations = 6",
+      "unknown movement: 'rope jumps' -> custom:rope jump",
+      "unknown movement: 'samson stretch' -> custom:samson stretch (alt 'handwalk + push up')",
+      "unknown movement: 'nose to wall handstand hold' -> custom:nose to wall handstand hold",
+      "unknown movement: 'tuck sit hang' -> custom:tuck sit hang",
+      "unknown movement: 'pinguine jump' -> custom:pinguin jump",
+      "unknown movement: 'burpees over line' -> custom:burpee over line",
+      "skill scale 'double unders practice for 30sec, 40 single unders' kept as one double-under option (practice + single unders sequence)",
+      "metcon: two amrap 10min segments; '1min rest' modelled as restAfterSec 60 chained 'rest'",
+      "movement ids unverified: prompt/catalog.json absent in repo"
+    ]
+  },
+  "hashtag": "#skillskillskill",
+  "rpe": "7",
+  "flags": [],
+  "programs": [
+    {
+      "name": "class",
+      "title": null,
+      "blocks": [
+        {
+          "ordinal": 1,
+          "letter": null,
+          "kind": "warmup",
+          "tags": [
+            "warmup"
+          ],
+          "label": "warm up",
+          "focus": null,
+          "name": null,
+          "benchmark": false,
+          "minutes": 6,
+          "series": null,
+          "cycleNote": null,
+          "partner": null,
+          "optional": false,
+          "bonus": false,
+          "segments": [
+            {
+              "role": "main",
+              "chain": null,
+              "title": null,
+              "intent": null,
+              "clock": {
+                "type": "interval",
+                "workSec": 45,
+                "restSec": 15,
+                "rounds": 6,
+                "stationMode": "rotate"
+              },
+              "scheme": null,
+              "work": {
+                "mode": "stations",
+                "stations": [
+                  {
+                    "n": 1,
+                    "repeat": 1,
+                    "rest": false,
+                    "items": [
+                      {
+                        "id": "custom:rope jump",
+                        "name": "Rope jump",
+                        "qty": {
+                          "mode": "none"
+                        },
+                        "perSide": false,
+                        "load": {
+                          "mode": "none"
+                        },
+                        "mods": {},
+                        "alternatives": [],
+                        "text": "rope jumps"
+                      }
+                    ]
+                  },
+                  {
+                    "n": 2,
+                    "repeat": 1,
+                    "rest": false,
+                    "items": [
+                      {
+                        "id": "ski-erg",
+                        "name": "Ski",
+                        "qty": {
+                          "mode": "none"
+                        },
+                        "perSide": false,
+                        "load": {
+                          "mode": "none"
+                        },
+                        "mods": {},
+                        "alternatives": [
+                          "bike"
+                        ],
+                        "text": "ski/bike"
+                      }
+                    ]
+                  },
+                  {
+                    "n": 3,
+                    "repeat": 1,
+                    "rest": false,
+                    "items": [
+                      {
+                        "id": "custom:samson stretch",
+                        "name": "Samson stretch",
+                        "qty": {
+                          "mode": "none"
+                        },
+                        "perSide": false,
+                        "load": {
+                          "mode": "none"
+                        },
+                        "mods": {},
+                        "alternatives": [
+                          "handwalk + push up"
+                        ],
+                        "text": "samson stretch/handwalk + push up"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "riders": [],
+              "capSec": null,
+              "restAfterSec": null,
+              "raw": "2 sets\n45sec on/15sec off"
+            }
+          ],
+          "scale": [],
+          "notes": [],
+          "raw": "warm up (6min)\n2 sets\n45sec on/15sec off\nrope jumps\nski/bike\nsamson stretch/handwalk + push up"
+        },
+        {
+          "ordinal": 2,
+          "letter": null,
+          "kind": "prehab",
+          "tags": [
+            "prehab"
+          ],
+          "label": "prehab",
+          "focus": null,
+          "name": null,
+          "benchmark": false,
+          "minutes": 5,
+          "series": null,
+          "cycleNote": null,
+          "partner": null,
+          "optional": false,
+          "bonus": false,
+          "segments": [
+            {
+              "role": "main",
+              "chain": null,
+              "title": null,
+              "intent": null,
+              "clock": {
+                "type": "interval",
+                "workSec": 30,
+                "restSec": 10,
+                "rounds": 6,
+                "stationMode": "rotate"
+              },
+              "scheme": null,
+              "work": {
+                "mode": "stations",
+                "stations": [
+                  {
+                    "n": 1,
+                    "repeat": 1,
+                    "rest": false,
+                    "items": [
+                      {
+                        "id": "custom:nose to wall handstand hold",
+                        "name": "Nose to wall handstand hold",
+                        "qty": {
+                          "mode": "none"
+                        },
+                        "perSide": false,
+                        "load": {
+                          "mode": "none"
+                        },
+                        "mods": {},
+                        "alternatives": [],
+                        "text": "nose to wall handstand hold"
+                      }
+                    ]
+                  },
+                  {
+                    "n": 2,
+                    "repeat": 1,
+                    "rest": false,
+                    "items": [
+                      {
+                        "id": "custom:tuck sit hang",
+                        "name": "Tuck sit hang",
+                        "qty": {
+                          "mode": "none"
+                        },
+                        "perSide": false,
+                        "load": {
+                          "mode": "none"
+                        },
+                        "mods": {},
+                        "alternatives": [],
+                        "text": "tuck sit hang"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "riders": [],
+              "capSec": null,
+              "restAfterSec": null,
+              "raw": "3 sets\n30sec on/10sec off"
+            }
+          ],
+          "scale": [],
+          "notes": [],
+          "raw": "prehab (5min)\n3 sets\n30sec on/10sec off\nnose to wall handstand hold\ntuck sit hang"
+        },
+        {
+          "ordinal": 3,
+          "letter": null,
+          "kind": "skill",
+          "tags": [
+            "strength",
+            "skill"
+          ],
+          "label": "strength/skill",
+          "focus": "double unders 2/4",
+          "name": null,
+          "benchmark": false,
+          "minutes": 15,
+          "series": {
+            "n": 2,
+            "of": 4
+          },
+          "cycleNote": null,
+          "partner": null,
+          "optional": false,
+          "bonus": false,
+          "segments": [
+            {
+              "role": "main",
+              "chain": null,
+              "title": null,
+              "intent": null,
+              "clock": {
+                "type": "emom",
+                "everySec": 120,
+                "rounds": 5,
+                "alternate": false
+              },
+              "scheme": null,
+              "work": {
+                "mode": "rows",
+                "rows": [
+                  {
+                    "id": "custom:pinguin jump",
+                    "name": "Pinguin jump",
+                    "qty": {
+                      "mode": "reps",
+                      "value": 10
+                    },
+                    "perSide": false,
+                    "load": {
+                      "mode": "none"
+                    },
+                    "mods": {},
+                    "alternatives": [],
+                    "text": "10 pinguine jump"
+                  },
+                  {
+                    "id": "double-under",
+                    "name": "Double under",
+                    "qty": {
+                      "mode": "reps",
+                      "value": 20
+                    },
+                    "perSide": false,
+                    "load": {
+                      "mode": "none"
+                    },
+                    "mods": {},
+                    "alternatives": [],
+                    "text": "20 double unders"
+                  }
+                ]
+              },
+              "riders": [],
+              "capSec": null,
+              "restAfterSec": null,
+              "raw": "every 2min x 5"
+            }
+          ],
+          "scale": [
+            {
+              "target": "double-under",
+              "options": [
+                "double unders practice for 30sec, 40 single unders"
+              ]
+            }
+          ],
+          "notes": [
+            "scale double unders practice for 30sec, 40 single unders"
+          ],
+          "raw": "strength/skill (15min)\ndouble unders 2/4\nevery 2min x 5\n10 pinguine jump\n20 double unders\nscale double unders practice for 30sec, 40 single unders"
+        },
+        {
+          "ordinal": 4,
+          "letter": null,
+          "kind": "metcon",
+          "tags": [
+            "metcon"
+          ],
+          "label": "metcon",
+          "focus": null,
+          "name": null,
+          "benchmark": false,
+          "minutes": 21,
+          "series": null,
+          "cycleNote": null,
+          "partner": null,
+          "optional": false,
+          "bonus": false,
+          "segments": [
+            {
+              "role": "main",
+              "chain": null,
+              "title": null,
+              "intent": "reps",
+              "clock": {
+                "type": "amrap",
+                "sec": 600,
+                "maxSec": null
+              },
+              "scheme": null,
+              "work": {
+                "mode": "rows",
+                "rows": [
+                  {
+                    "id": "ski-erg",
+                    "name": "Ski",
+                    "qty": {
+                      "mode": "cal",
+                      "value": 12,
+                      "f": 9
+                    },
+                    "perSide": false,
+                    "load": {
+                      "mode": "none"
+                    },
+                    "mods": {},
+                    "alternatives": [],
+                    "text": "12/9cal ski"
+                  },
+                  {
+                    "id": "toes-to-bar",
+                    "name": "Toes to bar",
+                    "qty": {
+                      "mode": "reps",
+                      "value": 12
+                    },
+                    "perSide": false,
+                    "load": {
+                      "mode": "bw"
+                    },
+                    "mods": {},
+                    "alternatives": [],
+                    "text": "12 toes to bar"
+                  },
+                  {
+                    "id": "handstand-push-up",
+                    "name": "Handstand push up",
+                    "qty": {
+                      "mode": "reps",
+                      "value": 12
+                    },
+                    "perSide": false,
+                    "load": {
+                      "mode": "bw"
+                    },
+                    "mods": {},
+                    "alternatives": [],
+                    "text": "12 handstand push ups"
+                  }
+                ]
+              },
+              "riders": [],
+              "capSec": null,
+              "restAfterSec": 60,
+              "raw": "amrap 10min"
+            },
+            {
+              "role": "main",
+              "chain": "rest",
+              "title": null,
+              "intent": "reps",
+              "clock": {
+                "type": "amrap",
+                "sec": 600,
+                "maxSec": null
+              },
+              "scheme": null,
+              "work": {
+                "mode": "rows",
+                "rows": [
+                  {
+                    "id": "bike",
+                    "name": "Bike",
+                    "qty": {
+                      "mode": "cal",
+                      "value": 12,
+                      "f": 9
+                    },
+                    "perSide": false,
+                    "load": {
+                      "mode": "none"
+                    },
+                    "mods": {},
+                    "alternatives": [],
+                    "text": "12/9cal bike"
+                  },
+                  {
+                    "id": "alt-lunge",
+                    "name": "Alt lunge",
+                    "qty": {
+                      "mode": "reps",
+                      "value": 24
+                    },
+                    "perSide": false,
+                    "load": {
+                      "mode": "bw"
+                    },
+                    "mods": {},
+                    "alternatives": [],
+                    "text": "24 alt lunges"
+                  },
+                  {
+                    "id": "custom:burpee over line",
+                    "name": "Burpee over line",
+                    "qty": {
+                      "mode": "reps",
+                      "value": 12
+                    },
+                    "perSide": false,
+                    "load": {
+                      "mode": "bw"
+                    },
+                    "mods": {},
+                    "alternatives": [],
+                    "text": "12 burpees over line"
+                  }
+                ]
+              },
+              "riders": [],
+              "capSec": null,
+              "restAfterSec": null,
+              "raw": "1min rest\namrap 10min"
+            }
+          ],
+          "scale": [
+            {
+              "target": "toes-to-bar",
+              "options": [
+                "knee raises"
+              ]
+            },
+            {
+              "target": "handstand-push-up",
+              "options": [
+                "elevated hspu",
+                "hand release push ups"
+              ]
+            }
+          ],
+          "notes": [
+            "scale knee raises, elevated hspu, hand release push ups"
+          ],
+          "raw": "metcon (21min)\namrap 10min\n12/9cal ski\n12 toes to bar\n12 handstand push ups\n1min rest\namrap 10min\n12/9cal bike\n24 alt lunges\n12 burpees over line\nscale knee raises, elevated hspu, hand release push ups\n#skillskillskill\nrpe7"
+        }
+      ]
+    }
+  ]
+}
