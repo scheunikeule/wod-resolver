@@ -1,0 +1,471 @@
+{
+  "date": "2026-11-28",
+  "source": "feed",
+  "schema": 1,
+  "resolver": {
+    "by": "claude-nightly",
+    "at": "2026-11-28T07:39:20Z",
+    "confidence": 0.6,
+    "issues": [
+      "rounds derived: class warm up 6 = 3 sets x 2 stations",
+      "rounds derived: class prehab 6 = 3 sets x 2 stations",
+      "warm up '/' line read as per-set rotation (alternatives list the other sets' movements)",
+      "metcon: ascending ladder '1-2-3-4-5-6-etc' open-ended inside amrap 40min; steps kept as written [1..6], by 1 — continuation beyond 6 not enumerated",
+      "metcon: '*complex b/w sets' read as betweenSets rider (6 toes to bar + 4 pull ups + 2 BMU); BMU = bar muscle up",
+      "scale mapped loads first (15/10 -> the three double db movements), then elevated hspu -> hspu, hand release/kneeling push ups -> push ups, knee raises -> toes to bar, ring rows -> pull ups, pull ups/chest to bar -> BMU, burpee to target -> burpees over db's",
+      "unknown movements -> custom: down up, samson stretch, db side bend, burpee over db",
+      "movement ids unverified: prompt/catalog.json absent in repo"
+    ]
+  },
+  "hashtag": "#teamday",
+  "rpe": "8",
+  "flags": [],
+  "programs": [
+    {
+      "name": "class",
+      "title": null,
+      "blocks": [
+        {
+          "ordinal": 1,
+          "letter": null,
+          "kind": "warmup",
+          "tags": [
+            "warmup"
+          ],
+          "label": "warm up",
+          "focus": null,
+          "name": null,
+          "benchmark": false,
+          "minutes": 6,
+          "series": null,
+          "cycleNote": null,
+          "partner": null,
+          "optional": false,
+          "bonus": false,
+          "segments": [
+            {
+              "role": "main",
+              "chain": null,
+              "title": null,
+              "intent": null,
+              "clock": {
+                "type": "interval",
+                "workSec": 45,
+                "restSec": 15,
+                "rounds": 6,
+                "stationMode": "rotate"
+              },
+              "scheme": null,
+              "work": {
+                "mode": "stations",
+                "stations": [
+                  {
+                    "n": 1,
+                    "repeat": 1,
+                    "rest": false,
+                    "items": [
+                      {
+                        "id": "custom:down up",
+                        "name": "Down up",
+                        "qty": {
+                          "mode": "none"
+                        },
+                        "perSide": false,
+                        "load": {
+                          "mode": "none"
+                        },
+                        "mods": {},
+                        "alternatives": [],
+                        "text": "down ups"
+                      }
+                    ]
+                  },
+                  {
+                    "n": 2,
+                    "repeat": 1,
+                    "rest": false,
+                    "items": [
+                      {
+                        "id": "custom:samson stretch",
+                        "name": "Samson stretch",
+                        "qty": {
+                          "mode": "none"
+                        },
+                        "perSide": false,
+                        "load": {
+                          "mode": "none"
+                        },
+                        "mods": {},
+                        "alternatives": [
+                          "instep stretch + rotation",
+                          "down dog & seal"
+                        ],
+                        "text": "samson stretch/instep stretch + rotation/down dog & seal"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "riders": [],
+              "capSec": null,
+              "restAfterSec": null,
+              "raw": "3 sets\n45sec on/15sec off"
+            }
+          ],
+          "scale": [],
+          "notes": [],
+          "raw": "warm up (6min)\n3 sets\n45sec on/15sec off\ndown ups\nsamson stretch/instep stretch + rotation/down dog & seal"
+        },
+        {
+          "ordinal": 2,
+          "letter": null,
+          "kind": "prehab",
+          "tags": [
+            "prehab"
+          ],
+          "label": "prehab",
+          "focus": null,
+          "name": null,
+          "benchmark": false,
+          "minutes": 5,
+          "series": null,
+          "cycleNote": null,
+          "partner": null,
+          "optional": false,
+          "bonus": false,
+          "segments": [
+            {
+              "role": "main",
+              "chain": null,
+              "title": null,
+              "intent": null,
+              "clock": {
+                "type": "interval",
+                "workSec": 30,
+                "restSec": 10,
+                "rounds": 6,
+                "stationMode": "rotate"
+              },
+              "scheme": null,
+              "work": {
+                "mode": "stations",
+                "stations": [
+                  {
+                    "n": 1,
+                    "repeat": 1,
+                    "rest": false,
+                    "items": [
+                      {
+                        "id": "tuck-sit-hang",
+                        "name": "Tuck sit hang",
+                        "qty": {
+                          "mode": "none"
+                        },
+                        "perSide": false,
+                        "load": {
+                          "mode": "none"
+                        },
+                        "mods": {},
+                        "alternatives": [],
+                        "text": "tuck sit hang"
+                      }
+                    ]
+                  },
+                  {
+                    "n": 2,
+                    "repeat": 1,
+                    "rest": false,
+                    "items": [
+                      {
+                        "id": "custom:db side bend",
+                        "name": "DB side bend",
+                        "qty": {
+                          "mode": "none"
+                        },
+                        "perSide": false,
+                        "load": {
+                          "mode": "none"
+                        },
+                        "mods": {},
+                        "alternatives": [],
+                        "text": "db side bends"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "riders": [],
+              "capSec": null,
+              "restAfterSec": null,
+              "raw": "3 sets\n30sec on/10sec off"
+            }
+          ],
+          "scale": [],
+          "notes": [],
+          "raw": "prehab (5min)\n3 sets\n30sec on/10sec off\ntuck sit hang\ndb side bends"
+        },
+        {
+          "ordinal": 3,
+          "letter": null,
+          "kind": "metcon",
+          "tags": [
+            "metcon"
+          ],
+          "label": "metcon",
+          "focus": null,
+          "name": null,
+          "benchmark": false,
+          "minutes": 40,
+          "series": null,
+          "cycleNote": null,
+          "partner": {
+            "mode": "teams",
+            "note": "teams of two"
+          },
+          "optional": false,
+          "bonus": false,
+          "segments": [
+            {
+              "role": "main",
+              "chain": null,
+              "title": null,
+              "intent": "reps",
+              "clock": {
+                "type": "amrap",
+                "sec": 2400,
+                "maxSec": null
+              },
+              "scheme": {
+                "type": "ascending",
+                "steps": [
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6
+                ],
+                "unit": "reps",
+                "by": 1,
+                "appliesTo": "all",
+                "scaled": null,
+                "pcts": null
+              },
+              "work": {
+                "mode": "rows",
+                "rows": [
+                  {
+                    "id": "db-hang-power-clean-and-jerk",
+                    "name": "Double DB hang power clean & jerk",
+                    "qty": {
+                      "mode": "reps",
+                      "value": null
+                    },
+                    "perSide": false,
+                    "load": {
+                      "mode": "pair",
+                      "m": 22.5,
+                      "f": 15,
+                      "unit": "kg"
+                    },
+                    "mods": {},
+                    "alternatives": [],
+                    "text": "double db hang power clean & jerks 22,5/15"
+                  },
+                  {
+                    "id": "handstand-push-up",
+                    "name": "Handstand push up",
+                    "qty": {
+                      "mode": "reps",
+                      "value": null
+                    },
+                    "perSide": false,
+                    "load": {
+                      "mode": "none"
+                    },
+                    "mods": {},
+                    "alternatives": [],
+                    "text": "handstand push ups"
+                  },
+                  {
+                    "id": "db-thruster",
+                    "name": "Double DB thruster",
+                    "qty": {
+                      "mode": "reps",
+                      "value": null
+                    },
+                    "perSide": false,
+                    "load": {
+                      "mode": "pair",
+                      "m": 22.5,
+                      "f": 15,
+                      "unit": "kg"
+                    },
+                    "mods": {},
+                    "alternatives": [],
+                    "text": "double db thruster 22,5/15"
+                  },
+                  {
+                    "id": "push-up",
+                    "name": "Push up",
+                    "qty": {
+                      "mode": "reps",
+                      "value": null
+                    },
+                    "perSide": false,
+                    "load": {
+                      "mode": "none"
+                    },
+                    "mods": {},
+                    "alternatives": [],
+                    "text": "push ups"
+                  },
+                  {
+                    "id": "db-devils-press",
+                    "name": "Double DB devils press",
+                    "qty": {
+                      "mode": "reps",
+                      "value": null
+                    },
+                    "perSide": false,
+                    "load": {
+                      "mode": "pair",
+                      "m": 22.5,
+                      "f": 15,
+                      "unit": "kg"
+                    },
+                    "mods": {},
+                    "alternatives": [],
+                    "text": "double db devils press 22,5/15"
+                  },
+                  {
+                    "id": "custom:burpee over db",
+                    "name": "Burpee over DB",
+                    "qty": {
+                      "mode": "reps",
+                      "value": null
+                    },
+                    "perSide": false,
+                    "load": {
+                      "mode": "none"
+                    },
+                    "mods": {},
+                    "alternatives": [],
+                    "text": "burpees over db's"
+                  }
+                ]
+              },
+              "riders": [
+                {
+                  "kind": "betweenSets",
+                  "everySec": null,
+                  "text": "*complex b/w sets",
+                  "items": [
+                    {
+                      "id": "toes-to-bar",
+                      "name": "Toes to bar",
+                      "qty": {
+                        "mode": "reps",
+                        "value": 6
+                      },
+                      "perSide": false,
+                      "load": {
+                        "mode": "none"
+                      },
+                      "mods": {},
+                      "alternatives": [],
+                      "text": "6 toes to bar"
+                    },
+                    {
+                      "id": "pull-up",
+                      "name": "Pull up",
+                      "qty": {
+                        "mode": "reps",
+                        "value": 4
+                      },
+                      "perSide": false,
+                      "load": {
+                        "mode": "none"
+                      },
+                      "mods": {},
+                      "alternatives": [],
+                      "text": "4 pull ups"
+                    },
+                    {
+                      "id": "bar-muscle-up",
+                      "name": "Bar muscle up",
+                      "qty": {
+                        "mode": "reps",
+                        "value": 2
+                      },
+                      "perSide": false,
+                      "load": {
+                        "mode": "none"
+                      },
+                      "mods": {},
+                      "alternatives": [],
+                      "text": "2 BMU"
+                    }
+                  ]
+                }
+              ],
+              "capSec": null,
+              "restAfterSec": null,
+              "raw": "amrap 40min\n1-2-3-4-5-6-etc reps"
+            }
+          ],
+          "scale": [
+            {
+              "target": "double db hang power clean & jerk / double db thruster / double db devils press",
+              "options": [
+                "15/10"
+              ]
+            },
+            {
+              "target": "handstand push ups",
+              "options": [
+                "elevated hspu"
+              ]
+            },
+            {
+              "target": "push ups",
+              "options": [
+                "hand release push ups",
+                "kneeling push ups"
+              ]
+            },
+            {
+              "target": "toes to bar",
+              "options": [
+                "knee raises"
+              ]
+            },
+            {
+              "target": "pull ups",
+              "options": [
+                "ring rows"
+              ]
+            },
+            {
+              "target": "BMU",
+              "options": [
+                "pull ups",
+                "chest to bar"
+              ]
+            },
+            {
+              "target": "burpees over db's",
+              "options": [
+                "burpee to target"
+              ]
+            }
+          ],
+          "notes": [
+            "scale 15/10, elevated hspu, hand release push ups, kneeling push ups, knee raises, ring rows, pull ups, chest to bar, burpee to target"
+          ],
+          "raw": "metcon (40min)\nteams of two\namrap 40min\n1-2-3-4-5-6-etc reps\ndouble db hang power clean & jerks 22,5/15\nhandstand push ups\ndouble db thruster 22,5/15\npush ups\ndouble db devils press 22,5/15\nburpees over db's\n*complex b/w sets\n6 toes to bar\n4 pull ups\n2 BMU\nscale 15/10, elevated hspu, hand release push ups, kneeling push ups, knee raises, ring rows, pull ups, chest to bar, burpee to target\n#teamday\nrpe8"
+        }
+      ]
+    }
+  ]
+}
